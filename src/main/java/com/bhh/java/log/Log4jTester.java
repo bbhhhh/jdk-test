@@ -1,7 +1,7 @@
 /**   
  *
  */
-package com.bhh.java;
+package com.bhh.java.log;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
