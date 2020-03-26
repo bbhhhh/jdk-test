@@ -31,5 +31,10 @@ public class LongTester {
         logger.info("a!=c is {}", (a != c));
         logger.info("a.equals(c) is {}", (a.equals(c)));
 
+        b = a;
+
+        logger.info("a!=b is {}", (a != b));
+        logger.info("a.equals(b) is {}", (a.equals(b)));
+
     }
 }
