@@ -1,4 +1,4 @@
-/**   
+/**
  *
  */
 package com.bhh.java.lang;
@@ -13,11 +13,11 @@ import org.slf4j.LoggerFactory;
 public class LongTester {
     private static final Logger logger = LoggerFactory.getLogger(LongTester.class);
 
-    /** 
-    * @author haihuab 
-    * @param args
-    * @throws
-    */
+    /**
+     * @author haihuab
+     * @param args
+     * @throws
+     */
     public static void main(String[] args) {
         Long a = 100000000000L;
         Long b = 100000000000L;
@@ -35,6 +35,7 @@ public class LongTester {
 
         logger.info("a!=b is {}", (a != b));
         logger.info("a.equals(b) is {}", (a.equals(b)));
+        logger.info("" + (int) (System.currentTimeMillis() / 1000));
 
     }
 }
