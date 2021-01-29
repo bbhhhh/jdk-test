@@ -25,6 +25,8 @@ public class DoubleTester {
         int a = 0;
         String aa = "";
 
+        Boolean b1 = Boolean.valueOf("true");
+
         try {
             TimeUnit.SECONDS.sleep(10);
         } catch (InterruptedException e) {
