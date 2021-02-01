@@ -3,6 +3,7 @@ package com.hackerrank.warmup;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
 /**
@@ -20,9 +21,10 @@ public class InnerPrivateClassTester {
         try {
             int num = Integer.parseInt(br.readLine().trim());
             Object o;// Must be used to hold the reference of the instance of the class Solution.Inner.Private
-            o = Inner.Private.class.getConstructor().newInstance();
-            Method md = Inner.Private.class.getMethod("powerof2", int.class);
-            
+
+            Inner.Private ip = (new Inner()).new Private();
+            o = (Inner.Private) ip;
+            System.out.println(num + " is " + ip.powerof2(num));
             System.out.println("An instance of class: " + o.getClass().getCanonicalName() + " has been created");
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
