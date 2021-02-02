@@ -110,6 +110,7 @@ public class PriorityQueue {
                 System.out.println(st.getName());
             }
         }
+        scan.close();
     }
 }
 

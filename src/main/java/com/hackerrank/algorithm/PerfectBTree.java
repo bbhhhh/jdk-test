@@ -9,13 +9,13 @@ import java.util.Scanner;
  * @Author : haihuab
  * @Date : 2021/1/31 19:39
  * @Description:
- *                           1------------------------->null
- *               /                        \
- *              2------------------------->3----------->null
- *        /          \               /           \
- *       4----------->5------------>6------------>7---->null
- *     /  \       /     \       /     \       /     \
- *   8---->9---->10----->11--->12---->13---->14----->15->null
+ *                     1------------------>null
+ *             /              \
+ *           2---------------->3--------->null
+ *        /    \           /      \
+ *       4------>5------->6------->7---->null
+ *     /\       /\       /\      /\
+ *    8->9--->10->11-->12->13->14->15->null
  * Input:
  * first input line is the number of total nodes(leafs)
  * second input line is space separated digital value of each nodes(leafs),
@@ -36,10 +36,8 @@ public class PerfectBTree {
         Scanner scanner = new Scanner(System.in);
         int inputNum = scanner.nextInt();
         int nodeNum = 0;
-        int level = 0;
         while (nodeNum < inputNum) {
             nodeNum += nodeNum + 1;
-            level++;
         }
         if (nodeNum != inputNum) {
             System.err.println("input node number is wrong");

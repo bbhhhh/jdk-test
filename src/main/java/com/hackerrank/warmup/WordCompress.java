@@ -25,7 +25,7 @@ public class WordCompress {
         System.out.println("s=" + s + ",k=" + k);
 
         System.out.println(compress(s, k));
-
+        scanner.close();
     }
 
     static String compress(String s, int k) {

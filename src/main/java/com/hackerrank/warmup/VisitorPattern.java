@@ -146,7 +146,7 @@ public class VisitorPattern {
                 parentNode.addChild(childNode);
             }
         }
-
+        scanner.close();
         return inputTree;
     }
 
