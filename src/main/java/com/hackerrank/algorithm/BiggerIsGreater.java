@@ -1,7 +1,6 @@
 package com.hackerrank.algorithm;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -87,8 +86,8 @@ import java.util.Scanner;
  * fedcbabdc
  */
 
-public class GiggerIsGreater {
-    private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(GiggerIsGreater.class);
+public class BiggerIsGreater {
+    private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(BiggerIsGreater.class);
 
     static String biggerIsGreater(String w) {
         //String r = "";
