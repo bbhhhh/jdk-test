@@ -27,5 +27,9 @@ public class StringTester {
         bbb.hashCode();
         aaa.equals(bbb);
         System.out.println(aaa.compareTo(bbb));
+
+        StringBuilder sb = new StringBuilder("adsfadf");
+        sb.deleteCharAt(1);
+        System.out.println(sb.toString());
     }
 }
