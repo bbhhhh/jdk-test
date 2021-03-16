@@ -1,4 +1,4 @@
-package com.bhh.java.thread.synchronize;
+package com.bhh.java.concurrentutil.synchronize;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;

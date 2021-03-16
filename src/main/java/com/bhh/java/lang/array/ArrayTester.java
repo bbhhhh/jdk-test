@@ -1,4 +1,4 @@
-package com.bhh.java.lang;
+package com.bhh.java.lang.array;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,5 +37,7 @@ public class ArrayTester {
         logger.info("ob.length={}", ob.length);
         int[] ia = new int[3];
         logger.info("ia.len={}, ia[2]={}", ia == null ? 0 : ia.length, ia[2]);
+        int[][] a = {{1, 2, 3}, {4, 5, 6}};
+        logger.info("a.length={}", a.length);
     }
 }

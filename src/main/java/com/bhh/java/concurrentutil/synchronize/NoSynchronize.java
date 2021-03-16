@@ -1,4 +1,4 @@
-package com.bhh.java.thread.synchronize;
+package com.bhh.java.concurrentutil.synchronize;
 
 /**
  * @Project: jdk-test

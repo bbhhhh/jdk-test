@@ -1,4 +1,4 @@
-package com.bhh.java.thread.cyclicbarrier;
+package com.bhh.java.concurrentutil.cyclicbarrier;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;

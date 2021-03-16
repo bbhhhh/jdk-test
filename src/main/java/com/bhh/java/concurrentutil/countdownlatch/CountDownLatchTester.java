@@ -1,4 +1,4 @@
-package com.bhh.java.thread.countdownlatch;
+package com.bhh.java.concurrentutil.countdownlatch;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;

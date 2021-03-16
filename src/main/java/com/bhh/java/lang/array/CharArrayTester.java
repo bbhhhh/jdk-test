@@ -1,4 +1,4 @@
-package com.bhh.java.lang;
+package com.bhh.java.lang.array;
 
 import java.util.Arrays;
 
