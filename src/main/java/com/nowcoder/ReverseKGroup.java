@@ -53,12 +53,3 @@ public class ReverseKGroup {
         return root.next;
     }
 }
-
-class ListNode {
-    int val;
-    ListNode next = null;
-
-    public ListNode(int v) {
-        this.val = v;
-    }
-}

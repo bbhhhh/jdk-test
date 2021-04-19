@@ -31,5 +31,7 @@ public class StringTester {
         StringBuilder sb = new StringBuilder("adsfadf");
         sb.deleteCharAt(1);
         System.out.println(sb.toString());
+        String sss = "   ";
+        System.out.println(sss.split(" ").length);
     }
 }

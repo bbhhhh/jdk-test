@@ -25,5 +25,7 @@ public class IntegerTester {
         logger.info("IntegerVar5 == IntegerVar6 is: {}", IntegerVar5 == IntegerVar6);
         logger.info("IntegerVar5.equals(IntegerVar5) is: {}", IntegerVar5.equals(IntegerVar6));
 
+        logger.info("binary of {} = {}", IntegerVar5, Integer.toBinaryString(IntegerVar5));
+        logger.info("binary of {} = {}", -232, Integer.toBinaryString(-232));
     }
 }
