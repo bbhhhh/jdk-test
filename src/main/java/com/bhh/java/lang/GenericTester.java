@@ -3,6 +3,7 @@ package com.bhh.java.lang;
 import javax.management.relation.RoleList;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -22,18 +23,20 @@ public class GenericTester {
         l.add(new ArrayList());
         l.add("");
 
-        List<?> l1 = new ArrayList<Object>();
+        List<?> l1 = new ArrayList<>();
 
         // compile error
         //l1.add(new RoleList());
         //l1.add(new ArrayList());
         //l1.add("");
 
-        List<? extends ArrayList> l2 = new ArrayList<ArrayList>();
+        List<? extends Collection> l2 = new ArrayList<>();
         // compile error
         //l2.add(new RoleList());
         //l2.add(new ArrayList());
         //l2.add("");
+
+
 
         List<? super ArrayList> l3 = new ArrayList<>();
         l3.add(new RoleList());
