@@ -38,7 +38,7 @@
 		&quot;PONRXPower&quot;: ${__Random(1090,14999)}&#xd;
 	},&#xd;
 	&quot;deviceInfo&quot;: {&#xd;
-		&quot;deviceId&quot;: &quot;${__StringFromFile(c:\\data\\code\\jmeter\\deviceid.txt,,,)}&quot;&#xd;
+		&quot;deviceId&quot;: &quot;${__StringFromFile(C:\\data\\gitcode\\java\\jdk-test\\test-tools\\jmeter\\deviceid.txt,,,)}&quot;&#xd;
 	}&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
