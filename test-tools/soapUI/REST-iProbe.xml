@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="70da0737-c79e-4935-a695-0124223053d9" activeEnvironment="Default" name="iprobe" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.LoadTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Print Report Statistics" value="false"/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestSuite 1"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Report to Generate" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="LoadTest" value="periodicmessage-loadtest"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="ThreadCount" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="TestCase 1"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\SoapUI-5.3.0/bin"/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Limit" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="fef70fbd-99e3-406f-a433-b6e2df17ac17" wadlVersion="http://wadl.dev.java.net/2009/02" name="application" type="rest" basePath="/" definitionUrl="http://135.251.218.88:19002/application.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://127.0.0.1:19002</con:endpoint><con:endpoint>http://135.251.218.216:8080</con:endpoint><con:endpoint>http://135.251.218.88:9008</con:endpoint></con:endpoints><con:resource name="rest/cmcc_softprobe/home_gateway" path="rest/cmcc_softprobe/home_gateway" id="b3302077-553a-471c-b6cf-d404226d63b7"><con:settings/><con:parameters/><con:resource name="bootmessage" path="bootmessage" id="ebe77684-2539-4589-a298-02282773ad88"><con:settings/><con:parameters/><con:method name="POST - bootmessage" id="afbd1f38-97a2-45e1-93f8-0c4f217ca21e" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="59ffa318-0da1-4c89-b46e-510357a32514" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://127.0.0.1:19002</con:endpoint><con:request>{
+	"dpiVersionInfo": {
+		"interfaceVersion": "V3.0.0",
+		"version": "3.0.0"
+	},
+	"subDeviceInfo": {
+		"subDeviceNumber": 10,
+		"deviceInfo": [{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		},{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		},{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		},{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		},{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		},{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		},{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		},{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		},{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		},{
+		     "IP":"192.169.1.231",
+		     "LanPort":"LAN1",
+			"deviceType": "PC",
+			"deviceName": "",
+			"manufacture":"Apple",
+			"model": "macbook",
+			"Mac": "54:E1:AD:BF:F1:EE",
+			"WLANRadioType":"2.4G",
+			"WLANRadioPower":"12"
+		}]
+	},
+	"ponInfo": {
+		"PONRXPower": 128,
+		"PONTXPower": 17490
+	},
+	"timeOffset": "0",
+	"eventType": {
+		"eventCode": 1,
+		"subEvent": 0
+	},
+	"potsInfo": {
+		"potsStatus": "UNKNOWN",
+		"potsPhoneNumber": "+864712206542",
+		"potsIndex": 1
+	},
+	"deviceInfo": {
+		"ram_size": 512,
+		"nfcSupport": "NO",
+		"wifiInfoList": [{
+				"SSIDMAC": "40:62:ea:fb:c1:40",
+				"channel": "10",
+				"SSIDEnable": "TRUE",
+				"SSIDEncryptionMode": "MIXED-WPAPSK2",
+				"SSIDname": "CMCC-f3uj",
+				"SSIDStandard": "11bgn",
+				"SSID": 1,
+				"SSIDAdvertisement": "TRUE"
+			},
+			{
+				"SSIDMAC": "",
+				"channel": "10",
+				"SSIDEnable": "FALSE",
+				"SSIDEncryptionMode": "OPEN",
+				"SSIDname": "CMCC-wl2",
+				"SSIDStandard": "11bgn",
+				"SSID": 2,
+				"SSIDAdvertisement": "TRUE"
+			},
+			{
+				"SSIDMAC": "",
+				"channel": "10",
+				"SSIDEnable": "FALSE",
+				"SSIDEncryptionMode": "MIXED-WPAPSK2",
+				"SSIDname": "CMCC-wl3",
+				"SSIDStandard": "11bgn",
+				"SSID": 3,
+				"SSIDAdvertisement": "TRUE"
+			},
+			{
+				"SSIDMAC": "",
+				"channel": "10",
+				"SSIDEnable": "FALSE",
+				"SSIDEncryptionMode": "OPEN",
+				"SSIDname": "CMCC-QLINK",
+				"SSIDStandard": "11bgn",
+				"SSID": 4,
+				"SSIDAdvertisement": "FALSE"
+			},
+			{
+				"SSIDMAC": "40:62:ea:fb:c1:41",
+				"channel": "149",
+				"SSIDEnable": "TRUE",
+				"SSIDEncryptionMode": "MIXED-WPAPSK2",
+				"SSIDname": "CMCC-f3uj-5G",
+				"SSIDStandard": "11ac",
+				"SSID": 5,
+				"SSIDAdvertisement": "TRUE"
+			},
+			{
+				"SSIDMAC": "",
+				"channel": "149",
+				"SSIDEnable": "FALSE",
+				"SSIDEncryptionMode": "MIXED-WPAPSK2",
+				"SSIDname": "CMCC-wl6",
+				"SSIDStandard": "11ac",
+				"SSID": 6,
+				"SSIDAdvertisement": "TRUE"
+			},
+			{
+				"SSIDMAC": "",
+				"channel": "149",
+				"SSIDEnable": "FALSE",
+				"SSIDEncryptionMode": "MIXED-WPAPSK2",
+				"SSIDname": "CMCC-wl7",
+				"SSIDStandard": "11ac",
+				"SSID": 7,
+				"SSIDAdvertisement": "TRUE"
+			},
+			{
+				"SSIDMAC": "",
+				"channel": "149",
+				"SSIDEnable": "FALSE",
+				"SSIDEncryptionMode": "MIXED-WPAPSK2",
+				"SSIDname": "CMCC-wl8",
+				"SSIDStandard": "11ac",
+				"SSID": 8,
+				"SSIDAdvertisement": "TRUE"
+			}
+		],
+		"cpu": "EN7526",
+		"model": "H2-2s",
+		"hardwareVersion": "HWVer-C101",
+		"firmwareVersion": "V1.1.1.00.02",
+		"flashSize": 256,
+		"deviceId": "CIOT04E86088",
+		"mac": "40:62:EA:FB:C1:40",
+		"manufacturer": "CMDC"
+	},
+	"deviceStatus": {
+		"lan4ConnectStatus": "DISCONNECTED",
+		"PPPOEError": "ERROR_NONE",
+		"bootTime": "2019-11-25 09:54:40",
+		"WAN": "CONNECTED",
+		"lan2ConnectStatus": "DISCONNECTED",
+		"lan3ConnectStatus": "DISCONNECTED",
+		"CPU": 83,
+		"lan1ConnectStatus": "CONNECTED",
+		"wanIP": "10.7.18.144",
+		"PPPOEStatus": "CONNECTED",
+		"runingTime": 164,
+		"lanIPV6": "2409:8a10:003e:c890:4262:eaff:fefb:c140,fe80:0000:0000:0000:0000:0000:0000:0001",
+		"wanIPV6": "2409:8a10:3:49a4:4580:f1e1:a0e6:e725",
+		"WIFI": "DISCONNECTED",
+		"RAM": 44,
+		"lanIP": "192.168.1.1"
+	}
+}</con:request><con:originalUri>http://135.251.218.88/rest/cmcc_softprobe/home_gateway/bootmessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="periodicmessage" path="periodicmessage" id="840de30c-bc0f-443d-a09a-7c1a3f506841"><con:settings/><con:parameters><con:parameter><con:name>actualTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST - periodicmessage" id="e00c18eb-f940-40a2-8bfe-f1d8b481f6b3" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="dbc9e4c5-2039-4415-9d5b-417d69a03a0e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://127.0.0.1:19002</con:endpoint><con:request>{
+  "actualTime": 1632469745083,
+  "dpiVersionInfo": {
+    "interfaceVersion": "V3.0.0",
+    "version": "3.0.0"
+  },
+  "WLANNeighbor": {
+    "number": 5,
+    "radioInfo": [
+      {
+        "radioType": "5G",
+        "SSIDName": "asdfd",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "channel": "c1",
+        "WLANRadioPower": "10"
+      },
+      {
+        "radioType": "5G",
+        "SSIDName": "asdfd",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "channel": "c1",
+        "WLANRadioPower": "10"
+      },
+      {
+        "radioType": "5G",
+        "SSIDName": "asdfd",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "channel": "c1",
+        "WLANRadioPower": "10"
+      },
+      {
+        "radioType": "5G",
+        "SSIDName": "asdfd",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "channel": "c1",
+        "WLANRadioPower": "10"
+      },
+      {
+        "radioType": "5G",
+        "SSIDName": "asdfd",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "channel": "c1",
+        "WLANRadioPower": "10"
+      }
+    ]
+  },
+  "subDeviceInfo": {
+    "subDeviceNumber": 10,
+    "deviceInfo": [
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      },
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      },
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      },
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      },
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      },
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      },
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      },
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      },
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      },
+      {
+        "deviceType": "Mobile",
+        "deviceName": "PSS-PC",
+        "manufacture": "Apple",
+        "model": "iPhone12",
+        "Mac": "D8:C4:97:3D:D4:69",
+        "averTxRate": "6.0",
+        "averRxRate": "139.0",
+        "maxTxRate": "54.0",
+        "maxRxRate": "1268.0",
+        "upStaticstics": "513912",
+        "downStaticstics": "10717537",
+        "lanNegBitRate": "23",
+        "duplexMode": "Auto",
+        "WLANRadioPower": "12",
+        "WLANRadioType": "5G",
+        "wlanNegRxRate": "23",
+        "wlanNegTxRate": "32",
+        "IP": "192.168.1.2",
+        "IPv6Address": "10:03:92:23:34:23",
+        "LanPort": "LAN1",
+        "dhcpDeviceType": "PHONE"
+      }
+    ]
+  },
+  "wanTrafficData": {
+    "wanNumber": 4,
+    "wanTrafficInfo": [
+      {
+        "wanName": "1_TR069_R_VID_4005",
+        "maxTxRate": "0.0",
+        "downStaticstics": "920",
+        "averTxRate": "0.0",
+        "averRxRate": "0.0",
+        "upStaticstics": "920",
+        "maxRxRate": "0.0",
+        "wanIndex": 1
+      },
+      {
+        "wanName": "2_INTERNET_R_VID_41",
+        "maxTxRate": "0.0",
+        "downStaticstics": "0",
+        "averTxRate": "0.0",
+        "averRxRate": "0.0",
+        "upStaticstics": "0",
+        "maxRxRate": "0.0",
+        "wanIndex": 2
+      },
+      {
+        "wanName": "3_OTHER_B_VID_48",
+        "maxTxRate": "0.0",
+        "downStaticstics": "0",
+        "averTxRate": "0.0",
+        "averRxRate": "0.0",
+        "upStaticstics": "0",
+        "maxRxRate": "0.0",
+        "wanIndex": 3
+      },
+      {
+        "wanName": "4_VOIP_R_VID_43",
+        "maxTxRate": "0.0",
+        "downStaticstics": "1970",
+        "averTxRate": "0.0",
+        "averRxRate": "0.0",
+        "upStaticstics": "920",
+        "maxRxRate": "0.0",
+        "wanIndex": 4
+      }
+    ]
+  },
+  "ponInfo": {
+    "PONRXPower": 81,
+    "PONTXPower": 12110
+  },
+  "dnsRequestInfo": {
+    "dnsInfoList": [
+      {
+        "dnsRequestTime": 1576654715846,
+        "dnsAddress": "192.168.1.1",
+        "dnsResponseTime": 0,
+        "domain": "s.url.cn",
+        "ipAddress": []
+      },
+      {
+        "dnsRequestTime": 1576654722408,
+        "dnsAddress": "192.168.1.1",
+        "dnsResponseTime": 0,
+        "domain": "sqimg.qq.com",
+        "ipAddress": []
+      },
+      {
+        "dnsRequestTime": 1576654722408,
+        "dnsAddress": "192.168.1.1",
+        "dnsResponseTime": 0,
+        "domain": "sqimg.qq.com",
+        "ipAddress": []
+      },
+      {
+        "dnsRequestTime": 1576654722408,
+        "dnsAddress": "192.168.1.1",
+        "dnsResponseTime": 0,
+        "domain": "sqimg.qq.com",
+        "ipAddress": []
+      },
+      {
+        "dnsRequestTime": 1576654722408,
+        "dnsAddress": "192.168.1.1",
+        "dnsResponseTime": 0,
+        "domain": "sqimg.qq.com",
+        "ipAddress": []
+      },
+      {
+        "dnsRequestTime": 1576654722408,
+        "dnsAddress": "192.168.1.1",
+        "dnsResponseTime": 0,
+        "domain": "sqimg.qq.com",
+        "ipAddress": []
+      },
+      {
+        "dnsRequestTime": 1576654722408,
+        "dnsAddress": "192.168.1.1",
+        "dnsResponseTime": 0,
+        "domain": "sqimg.qq.com",
+        "ipAddress": []
+      },
+      {
+        "dnsRequestTime": 1576654410720,
+        "dnsAddress": "192.168.1.1",
+        "dnsResponseTime": 0,
+        "domain": "static.dingtalk.com",
+        "ipAddress": []
+      }
+    ]
+  },
+  "eventType": {
+    "eventCode": 2,
+    "subEvent": 0
+  },
+  "potsInfo": {
+    "potsStatus": "SUCCESS",
+    "potsPhoneNumber": "+864712564385",
+    "potsIndex": 1
+  },
+  "serviceData": {
+    "serviceNumber": 10,
+    "serviceBasicInfo": [
+      {
+        "serviceType": "NA",
+        "downStaticstics": "5982",
+        "averRxRate": "0.16",
+        "upStaticstics": "2536",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 3,
+          "ipAddress": "[117.161.110.243, 117.161.97.242, 117.161.97.200]"
+        },
+        "url": "www.4399.com",
+        "mac": "40:00:80:06:86:0b",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 3,
+          "httpDownloadRate": 20,
+          "httpResponesDelay": 113,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "0.306",
+        "protocol": "TCP",
+        "averTxRate": "0.067",
+        "domain": "www.4399.com",
+        "startTime": 1528775884724,
+        "maxRxRate": "0.697",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": 372,
+          "tcpConnectAvgTime2": 50,
+          "tcpConnectTimes": 2,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 2,
+          "tcpReconnectRate": 86
+        }
+      },
+      {
+        "serviceType": "NA",
+        "downStaticstics": "5982",
+        "averRxRate": "0.16",
+        "upStaticstics": "2536",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 3,
+          "ipAddress": "[117.161.110.243, 117.161.97.242, 117.161.97.200]"
+        },
+        "url": "www.4399.com",
+        "mac": "40:00:80:06:86:0b",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 3,
+          "httpDownloadRate": 20,
+          "httpResponesDelay": 113,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "0.306",
+        "protocol": "TCP",
+        "averTxRate": "0.067",
+        "domain": "www.4399.com",
+        "startTime": 1528775884724,
+        "maxRxRate": "0.697",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": 372,
+          "tcpConnectAvgTime2": 50,
+          "tcpConnectTimes": 2,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 2,
+          "tcpReconnectRate": 86
+        }
+      },
+      {
+        "serviceType": "NA",
+        "downStaticstics": "5982",
+        "averRxRate": "0.16",
+        "upStaticstics": "2536",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 3,
+          "ipAddress": "[117.161.110.243, 117.161.97.242, 117.161.97.200]"
+        },
+        "url": "www.4399.com",
+        "mac": "40:00:80:06:86:0b",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 3,
+          "httpDownloadRate": 20,
+          "httpResponesDelay": 113,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "0.306",
+        "protocol": "TCP",
+        "averTxRate": "0.067",
+        "domain": "www.4399.com",
+        "startTime": 1528775884724,
+        "maxRxRate": "0.697",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": 372,
+          "tcpConnectAvgTime2": 50,
+          "tcpConnectTimes": 2,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 2,
+          "tcpReconnectRate": 86
+        }
+      },
+      {
+        "serviceType": "NA",
+        "downStaticstics": "5982",
+        "averRxRate": "0.16",
+        "upStaticstics": "2536",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 3,
+          "ipAddress": "[117.161.110.243, 117.161.97.242, 117.161.97.200]"
+        },
+        "url": "www.4399.com",
+        "mac": "40:00:80:06:86:0b",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 3,
+          "httpDownloadRate": 20,
+          "httpResponesDelay": 113,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "0.306",
+        "protocol": "TCP",
+        "averTxRate": "0.067",
+        "domain": "www.4399.com",
+        "startTime": 1528775884724,
+        "maxRxRate": "0.697",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": 372,
+          "tcpConnectAvgTime2": 50,
+          "tcpConnectTimes": 2,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 2,
+          "tcpReconnectRate": 86
+        }
+      },
+      {
+        "serviceType": "NA",
+        "downStaticstics": "5982",
+        "averRxRate": "0.16",
+        "upStaticstics": "2536",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 3,
+          "ipAddress": "[117.161.110.243, 117.161.97.242, 117.161.97.200]"
+        },
+        "url": "www.4399.com",
+        "mac": "40:00:80:06:86:0b",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 3,
+          "httpDownloadRate": 20,
+          "httpResponesDelay": 113,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "0.306",
+        "protocol": "TCP",
+        "averTxRate": "0.067",
+        "domain": "www.4399.com",
+        "startTime": 1528775884724,
+        "maxRxRate": "0.697",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": 372,
+          "tcpConnectAvgTime2": 50,
+          "tcpConnectTimes": 2,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 2,
+          "tcpReconnectRate": 86
+        }
+      },
+      {
+        "serviceType": "NA",
+        "downStaticstics": "1138488",
+        "averRxRate": "30.461",
+        "upStaticstics": "418114",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 5,
+          "ipAddress": "[117.161.110.243, 117.161.97.242, 117.161.97.200]"
+        },
+        "url": "www.youku.com",
+        "mac": "40:00:40:06:3c:ea",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 3,
+          "httpDownloadRate": 3807,
+          "httpResponesDelay": 11547,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "53.455",
+        "protocol": "TCP",
+        "averTxRate": "11.186",
+        "domain": "www.youku.com",
+        "startTime": 1528775884710,
+        "maxRxRate": "150.352",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": 261,
+          "tcpConnectAvgTime2": 47,
+          "tcpConnectTimes": 4,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 3,
+          "tcpReconnectRate": 49
+        }
+      },
+      {
+        "serviceType": "NA",
+        "downStaticstics": "796367",
+        "averRxRate": "21.236",
+        "upStaticstics": "260294",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 5,
+          "ipAddress": "[111.13.140.139, 111.13.180.19, 111.13.140.140, 111.13.180.16]"
+        },
+        "url": "www.toutiao.com",
+        "mac": "40:00:80:06:e8:d5",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 3,
+          "httpDownloadRate": 2654,
+          "httpResponesDelay": 20842,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "31.218",
+        "protocol": "TCP",
+        "averTxRate": "6.941",
+        "domain": "www.toutiao.com",
+        "startTime": 1528775884587,
+        "maxRxRate": "103.335",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": 388,
+          "tcpConnectAvgTime2": 136,
+          "tcpConnectTimes": 15,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 5,
+          "tcpReconnectRate": 57
+        }
+      },
+      {
+        "serviceType": "NA",
+        "downStaticstics": "87644",
+        "averRxRate": "2.337",
+        "upStaticstics": "7734",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 4,
+          "ipAddress": "[117.161.110.243, 117.161.97.242, 117.161.97.200]"
+        },
+        "url": "www.dianping.com",
+        "mac": "40:00:80:06:a1:ee",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 4,
+          "httpDownloadRate": 292,
+          "httpResponesDelay": 1689,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "0.908",
+        "protocol": "TCP",
+        "averTxRate": "0.206",
+        "domain": "www.dianping.com",
+        "startTime": 1528775884567,
+        "maxRxRate": "11.221",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": 304,
+          "tcpConnectAvgTime2": 20,
+          "tcpConnectTimes": 4,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 3,
+          "tcpReconnectRate": 63
+        }
+      },
+      {
+        "serviceType": "NA",
+        "downStaticstics": "885629",
+        "averRxRate": "23.695",
+        "upStaticstics": "79819",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 6,
+          "ipAddress": "[112.17.251.144, 112.17.10.165, 112.17.251.150]"
+        },
+        "url": "www.10jqka.com.cn",
+        "mac": "40:00:80:06:99:66",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 2,
+          "httpDownloadRate": 2961,
+          "httpResponesDelay": 4429,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "9.869",
+        "protocol": "TCP",
+        "averTxRate": "2.135",
+        "domain": "www.10jqka.com.cn",
+        "startTime": 1528775884547,
+        "maxRxRate": "117.37",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": 103,
+          "tcpConnectAvgTime2": 3355,
+          "tcpConnectTimes": 53,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 3,
+          "tcpReconnectRate": 69
+        }
+      },
+      {
+        "serviceType": "NA",
+        "downStaticstics": "305245",
+        "averRxRate": "8.167",
+        "upStaticstics": "20557",
+        "runningTime": 65,
+        "dnsInfo": {
+          "dnsResponseTime": 3,
+          "ipAddress": "[111.13.57.32, 111.13.57.31]"
+        },
+        "url": "www.iqiyi.com",
+        "mac": "40:00:80:06:2d:38",
+        "httpConnectInfo": {
+          "httpRequestErrorList": " ",
+          "httpRequestTimes": 4,
+          "httpDownloadRate": 1020,
+          "httpResponesDelay": 1490,
+          "httpRequestFailTimes": 0
+        },
+        "maxTxRate": "2.687",
+        "protocol": "TCP",
+        "averTxRate": "0.55",
+        "domain": "www.iqiyi.com",
+        "startTime": 1528775884525,
+        "maxRxRate": "40.651",
+        "tcpConnectInfo": {
+          "tcpConnectAvgTime1": -1,
+          "tcpConnectAvgTime2": -1,
+          "tcpConnectTimes": 2,
+          "tcpTTLInfo": "{52=8,63=3}",
+          "tcpConnectSuccessTimes": 0,
+          "tcpReconnectRate": 0
+        }
+      }
+    ]
+  },
+  "deviceInfo": {
+    "ram_size": 512,
+    "nfcSupport": "NO",
+    "wifiInfoList": [
+      {
+        "SSID": 1,
+        "SSIDname": "CMCC-aJwP",
+        "SSIDMAC": "C0:98:DA:E8:60:88",
+        "SSIDEnable": "TRUE",
+        "channel": "12",
+        "SSIDAdvertisement": "TRUE",
+        "SSIDStandard": "11bgn",
+        "SSIDEncryptionMode": "MIXED-WPAPSK2",
+        "transmitPower": "40",
+        "noiseLevel": "12",
+        "interferencePercent": "23",
+        "nfcSupport": "Yes",
+        "flashSize": "121",
+        "ram_size": "232"
+      },
+      {
+        "SSIDMAC": "C0:98:DA:E8:60:88",
+        "channel": "12",
+        "SSIDEnable": "FALSE",
+        "SSIDEncryptionMode": "MIXED-WPAPSK2",
+        "SSIDname": "CMCC-Share",
+        "SSIDStandard": "11bgn",
+        "SSID": 2,
+        "SSIDAdvertisement": "TRUE"
+      },
+      {
+        "SSIDMAC": "C0:98:DA:E8:60:88",
+        "channel": "12",
+        "SSIDEnable": "FALSE",
+        "SSIDEncryptionMode": "MIXED-WPAPSK2",
+        "SSIDname": "CMCC-AP3",
+        "SSIDStandard": "11bgn",
+        "SSID": 3,
+        "SSIDAdvertisement": "TRUE"
+      },
+      {
+        "SSIDMAC": "C0:98:DA:E8:60:88",
+        "channel": "12",
+        "SSIDEnable": "FALSE",
+        "SSIDEncryptionMode": "OPEN",
+        "SSIDname": "CMCC-QLINK",
+        "SSIDStandard": "11bgn",
+        "SSID": 4,
+        "SSIDAdvertisement": "FALSE"
+      },
+      {
+        "SSIDMAC": "C2:98:DA:D8:60:88",
+        "channel": "48",
+        "SSIDEnable": "TRUE",
+        "SSIDEncryptionMode": "MIXED-WPAPSK2",
+        "SSIDname": "CMCC-aJwP-5G",
+        "SSIDStandard": "11ac",
+        "SSID": 5,
+        "SSIDAdvertisement": "TRUE"
+      },
+      {
+        "SSIDMAC": "C2:98:DA:D8:60:88",
+        "channel": "48",
+        "SSIDEnable": "FALSE",
+        "SSIDEncryptionMode": "MIXED-WPAPSK2",
+        "SSIDname": "CMCC-AP2-5G",
+        "SSIDStandard": "11ac",
+        "SSID": 6,
+        "SSIDAdvertisement": "TRUE"
+      },
+      {
+        "SSIDMAC": "C2:98:DA:D8:60:88",
+        "channel": "48",
+        "SSIDEnable": "FALSE",
+        "SSIDEncryptionMode": "MIXED-WPAPSK2",
+        "SSIDname": "CMCC-AP3-5G",
+        "SSIDStandard": "11ac",
+        "SSID": 7,
+        "SSIDAdvertisement": "TRUE"
+      },
+      {
+        "SSIDMAC": "C2:98:DA:D8:60:88",
+        "channel": "48",
+        "SSIDEnable": "FALSE",
+        "SSIDEncryptionMode": "MIXED-WPAPSK2",
+        "SSIDname": "CMCC-AP4-5G",
+        "SSIDStandard": "11ac",
+        "SSID": 8,
+        "SSIDAdvertisement": "TRUE"
+      }
+    ],
+    "cpu": "EN7526GT",
+    "model": "GM619",
+    "hardwareVersion": "HV1.0.00.092",
+    "flashSize": 256,
+    "firmwareVersion": "V1.6.10.052",
+    "deviceId": "000001",
+    "mac": "C0:98:DA:E8:60:88",
+    "manufacturer": "CIOT"
+  },
+  "deviceStatus": {
+    "lan4ConnectStatus": "DISCONNECTED",
+    "PPPOEError": "ERROR_NONE",
+    "bootTime": "2019-12-18 15:15:07",
+    "WAN": "CONNECTED",
+    "lan2ConnectStatus": "DISCONNECTED",
+    "lan3ConnectStatus": "DISCONNECTED",
+    "CPU": 9,
+    "lan1ConnectStatus": "CONNECTED",
+    "wanIP": "10.131.10.178",
+    "PPPOEStatus": "CONNECTED",
+    "Username": "18748152412",
+    "runingTime": 1507,
+    "wanIPV6": "",
+    "PPPOEUpTime": "2021-02-04 10:10:10",
+    "WIFI": "DISCONNECTED",
+    "sampleTime": "2019-12-18 15:40:14",
+    "RAM": 27,
+    "MainChipTemperature": "45",
+    "lanIP": "192.168.1.1",
+    "lanIPV6": "23:23:23:23:23:23",
+    "wanIPV6": "44:44:44:44:44:44"
+  }
+}</con:request><con:originalUri>http://135.251.218.88/rest/cmcc_softprobe/home_gateway/periodicmessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>actualTime</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="realtime" path="realtime" id="65b3c6dc-f17e-45a6-9b14-edeb55eea44f"><con:settings/><con:parameters/><con:method name="POST - realtime" id="5c469f55-0d4a-4d2d-8f3c-ef27edde5780" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="381dc7be-91fc-46a0-9729-c224b3c42912" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://135.251.218.88:9008</con:endpoint><con:request>{
+	"eventType": {
+		"eventCode": 4,
+		"subEvent": 21
+	},
+	"actualTime": 1604645567000,
+	"taskSource":1,
+	"taskId": 15994346546,
+	"deviceInfo": {
+		"deviceId": "CIOT1117777777"
+	},
+	"dpiVersionInfo": {
+		"version": "3.0.0",
+		"interfaceVersion": "V3.0.0"
+	},
+	"pingTestInfo": {
+		"host": "10.10.10.10",
+		"averageResponseTime": 18,
+		"maximumResponseTime": 34,
+		"minimumResponseTime": 12,
+		"dataBlockSize": 23234,
+		"numberOfRepetitions": 3,
+		"successCount": 5
+	},
+	"tracerouteTestInfo": {
+		"host": "10.10.10.10",
+		"responseTime": 18,
+		"hopsNumberOfEntries": 34,
+		"routeHopsInfo": [
+		{"HopRTTimes":"55.8,3.2,2.8","HopHost":"2409:8010::71:1007","HopHostAddress":"2409:8010::71:1007","HopErrorCode":0},
+		{"HopRTTimes":"3.3,4.7,3.0","HopHost":"2409:8010:1:2::20","HopHostAddress":"2409:8010:1:2::20","HopErrorCode":0},
+		{"HopRTTimes":"6.3,3.8,3.7","HopHost":"2409:8010:0:4::50","HopHostAddress":"2409:8010:0:4::50","HopErrorCode":0},
+		{"HopRTTimes":"4.4,4.5,4.5","HopHost":"2409:8080:0:2:1701:1774:1:0","HopHostAddress":"2409:8080:0:2:1701:1774:1:0","HopErrorCode":0},
+		{"HopRTTimes":"6.7,6.3,6.3","HopHost":"2409:8080:0:2:1701:1762:1:1","HopHostAddress":"2409:8080:0:2:1701:1762:1:1","HopErrorCode":0},
+		{"HopRTTimes":"32.5,7.0,7.4","HopHost":"2409:8010:3000:2::3","HopHostAddress":"2409:8010:3000:2::3","HopErrorCode":0},
+		{"HopRTTimes":"5.4,5.5,5.3","HopHost":"2409:8010:3000:1:1::5","HopHostAddress":"2409:8010:3000:1:1::5","HopErrorCode":0},
+		{"HopRTTimes":"5.4,5.5,5.3","HopHost":"2409:8010:3000:1:1::5","HopHostAddress":"2409:8010:3000:1:1::5","HopErrorCode":0},
+		{"HopRTTimes":"5.4,5.5,5.3","HopHost":"2409:8010:3000:1:1::5","HopHostAddress":"2409:8010:3000:1:1::5","HopErrorCode":0},
+		{"HopRTTimes":"5.4,5.5,5.3","HopHost":"2409:8010:3000:1:1::5","HopHostAddress":"2409:8010:3000:1:1::5","HopErrorCode":0},
+		{"HopRTTimes":"11.8,5.2,5.5","HopHost":"2409:8c10::69","HopHostAddress":"2409:8c10::69","HopErrorCode":4}
+		]
+	},
+	"ftpTestInfo": {
+		"url": "10.10.10.10",
+		"connectTime": 18,
+		"speed": 34,
+		"successRate": 39,
+		"duration": 23223,
+		"connectSuccessRate": 23,
+		"integrityRate": 32,
+		"size": 232324
+	},
+	"httpDownloadTestInfo": {
+		"url": "10.10.10.10",
+		"connectTime": 18,
+		"speed": 34,
+		"successRate": 39,
+		"size": 23223,
+		"sizePerSconds": ""
+	},
+	"httpUploadTestInfo": {
+		"url": "10.10.10.10",
+		"connectTime": 18,
+		"speed": 34,
+		"size": 23223
+	},
+	"osgiDownloadTestInfo": {
+		"url": "10.10.10.10",
+        "TestDownloadRate":234232,
+        "TotalDownloadRate":17177,
+        "EOMTime":"2019-12-17T11:31:47.00001",
+        "TCPOpenRequestTime":"2019-12-17T11:30:38.000000",
+        "BOMTime":"2019-12-17T11:30:38.021",
+        "TCPOpenResponseTime":"2019-12-17T11:30:38.000000",
+        "TotalBytesReceived":21472057,
+        "TestBytesReceived":2224343467,
+        "Result":0,
+        "ROMTime":"2019-12-17T11:30:38.000000"
+	},
+	"osgiUploadTestInfo": {
+		"url": "10.10.10.10",
+		"TestUploadRate": 123234,
+		"TotalUploadRate": 34,
+		"ROMTime": "2008-04-09 15:01:05.1236",
+		"BOMTime": "2008-04-09 15:01:05.12456",
+		"EOMTime": "2008-04-09 15:01:45.12",
+		"TestBytesSent": 2324323,
+		"TotalBytesSend": 23223,
+		"TCPOpenRequestTime": "2008-04-09 15:01:05.123456",
+		"TCPOpenResponseTime": "2008-04-09 15:01:05.123456"
+	},
+	"webTestInfo": {
+		"url": "10.10.10.10",
+		"connectDelay": 18,
+		"firstResponseDelay": 34,
+		"fistPageTime": 23,
+		"packetLostRate": 2,
+		"dnsParseDelay": 4,
+		"dnsParseResult": "",
+		"size": 23
+	},
+	"tcpPingTestInfo": {
+		"host": "10.10.10.10",
+		"result": 1,
+		"rtt": "23",
+		"lost": "13"
+	},
+	"intraPingTestInfo": {
+		"number":10,
+		"intraPingInfo":[
+			{"host": "10.10.10.11",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		},{"host": "10.10.10.11",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		},{"host": "10.10.10.11",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		},{"host": "10.10.10.11",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		},{"host": "10.10.10.11",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		},{"host": "10.10.10.11",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		},{"host": "10.10.10.11",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		},{"host": "10.10.10.11",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		},{"host": "10.10.10.11",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		},
+		{"host": "10.10.10.14",
+		"averageResponseTime": 1,
+		"maximumResponseTime": 3,
+		"minimumResponseTime": 1,
+		"dataBlockSize": 1024,
+		"numberOfRepetitions": 3,
+		"successCount": 3
+		}
+		]
+	},
+	"DialingTestErrorInfo":{
+		"testName": "HttpDownload",
+		"errorCode": -6
+		}		
+}</con:request><con:originalUri>http://135.251.218.88/rest/cmcc_softprobe/home_gateway/realtime</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="alarm" path="alarm" id="364242a1-d8bd-4da1-a16c-6be4e05313fc"><con:settings/><con:parameters/><con:method name="POST - alarm" id="d2cbee8f-41d3-4257-9dbd-f5e8b6039e9b" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="38bba4ed-aea5-4831-a7c6-57e1c85681e9" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://135.251.218.88:9008</con:endpoint><con:request/><con:originalUri>http://135.251.218.88/rest/cmcc_softprobe/home_gateway/alarm</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:resource></con:interface><con:testSuite id="749c720a-3cee-4a53-8239-788d8e8201e3" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c9a8ee86-3dfc-40c7-92ed-a5da2a2cbd3b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="POST - periodicmessage - Request 1" id="ff764b3b-2313-4bd6-b3f1-ac206fbd78a2"><con:settings/><con:config service="application" resourcePath="/rest/cmcc_softprobe/home_gateway/periodicmessage" methodName="POST - periodicmessage" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST - periodicmessage - Request 1" id="dbc9e4c5-2039-4415-9d5b-417d69a03a0e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://135.251.218.216:8080</con:endpoint><con:request>{"eventType":{"eventCode":2,"subEvent":0},"actualTime":1519449440330,"dpiprovider":"1","deviceInfo":{"deviceId":"817","manufacturer":"2","cpu":"cpu-a11","hardwareVersion":"h-v1.0","firmwareVersion":"f-v1.0","model":"model2","mac":"64:F8:8A:39:7C:60","wifiInfo":{"SSID":"ssid","SSIDname":"CMCC-et6v","SSIDMAC":"A1:F8:8A:39:7C:00","SSIDEnable":"true","SSIDAdvertisement":"false","SSIDStandard":"11bgn","SSIDEncryptionMode":"MIXED-WPAPSK2"},"nfcSupport":"true","flashSize":"128","ram_size":"256"},"dpiVersionInfo":{"version":"dpi-v1.0","interfaceVersion":"interface-v1.0"},"deviceStatus":{"bootTime":"2018-02-24 12:46:23","runingTime":"1857","sampleTime":"2018-02-24 13:17:20","lanIP":"192.168.0.1","wanIP":"10.29.129.92","lan1ConnectStatus":"DISCONNECTED","lan2ConnectStatus":"CONNECTED","lan3ConnectStatus":"DISCONNECTED","lan4ConnectStatus":"CONNECTED","CPU":"51","RAM":"61","WAN":"CONNECTED","WIFI":"CONNECTED","PPPOEError":"ERROR_NONE","PPPOEStatus":"CONNECTED"},"ponInfo":{"PONTXPower":10,"PONRXPower":200},"potsInfo":{"potsIndex":1,"potsPhoneNumber":"","potsStatus":"IADERROR"},"tcpConnectInfo":{"tcpConnectTimes":"","tcpConnectSuccessTimes":"","tcpConnectAvgTime":"","tcpReconnectRate":""},"httpConnectInfo":{"httpResponesDelay":"","httpRequestError":"","httpDownloadRate":"","httpRequestTimes":"","httpRequestFailTimes":""},"dnsInfo":{"dnsResponseTime":""},"webRequestInfo":{"webDownloadRate":""},"imsInfo":{"imsResponseTime":""},"gameInfo":{"gameMaxDelay":"","gameAverageDelay":""},"avInfo":{"avServerReponseTime":"","avRate":"","avResolution":""},"WLANNeighbor":{"number":0,"radioInfo":[]},"subDeviceInfo":{"subDeviceNumber":1,"deviceInfo":[{"deviceType":"phone","deviceName":"apple","sub_manufacture":"apple","model":"iphoneX","averTxRate":"0.227","averRxRate":"0.333","maxTxRate":"0.324","maxRxRate":"0.425","otherInfo":"","Mac":"a1:b3:c4:e3:a5:ff","WLANRadioPower":"-62","WLANRadioType":"2.4G"}]},"serviceData":{"serviceNumber":0,"serviceInfo":[]},"wanTrafficData":{"wanNumber":2,"wanTrafficInfo":[{"wanIndex":"1","wanName":"1_TR069_R_VID_4005","averTxRate":"0.194","averRxRate":"0.088","maxTxRate":"0.561","maxRxRate":"0.238","otherInfo":""},{"wanIndex":"1","wanName":"1_TR069_R_VID_4005","averTxRate":"0.194","averRxRate":"0.088","maxTxRate":"0.561","maxRxRate":"0.238","otherInfo":""}]}}</con:request><con:originalUri>http://135.251.218.216/rest/cmcc_softprobe/home_gateway/periodicmessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="actualTime" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>actualTime</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:loadTest id="ee68b50d-5dcd-49fd-8507-a2a2c80f2e3c" name="periodicmessage-loadtest"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>100</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>5</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>0</testDelay><randomFactor>0.0</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:loadTest id="c8739d90-a0b7-49cc-94ff-75077a20fc51" name="LoadTest 2"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>1000</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>0</testDelay><randomFactor>0.0</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

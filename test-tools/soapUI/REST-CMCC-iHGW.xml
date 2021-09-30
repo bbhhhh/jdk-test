@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1183c17f-6fd5-4977-8717-c02ac9ebb445" activeEnvironment="Default" name="CMCC-iHGW-RESTFul" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="54dbe79e-237d-4a80-a51d-c5c3fa6ef694" wadlVersion="http://wadl.dev.java.net/2009/02" name="CMCC-iHGW-RESTFul" type="rest" basePath="/nbitktws/" definitionUrl="http://135.251.218.88:8098/nbitktws/application.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://135.251.218.88:8098/nbitktws/application.wadl"><con:part><con:url>http://135.251.218.88:8098/nbitktws/application.wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc jersey:generatedBy="Jersey: 2.23.2 2016-08-08 17:14:55" xmlns:jersey="http://jersey.java.net/"/>
+  <doc jersey:hint="This is simplified WADL with user and core resources only. To get full WADL with extended resources use the query parameter detail. Link: http://135.251.218.88:8098/nbitktws/application.wadl?detail=true" xmlns:jersey="http://jersey.java.net/"/>
+  <grammars/>
+  <resources base="http://135.251.218.88:8098/nbitktws/">
+    <resource path="apdevice">
+      <resource path="control/{interfaceName}">
+        <param name="interfaceName" style="template" type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method id="control" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="query/{interfaceName}">
+        <param name="interfaceName" style="template" type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method id="query" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="command/{interfaceName}">
+        <param name="interfaceName" style="template" type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method id="command" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+    <resource path="public/{deviceType}/{interfaceType}">
+      <resource path="equInfo">
+        <method id="queryEquInfo" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="lanInfo">
+        <method id="queryLanInfo" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="enableSSID">
+        <method id="settingEnableSsid" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="disableSSID">
+        <method id="settingDisableSsid" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="modifySSIDPwd">
+        <method id="settingModifySsidPwd" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="factoryReset">
+        <method id="settingFactoryReset" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="reboot">
+        <method id="settingReboot" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="resetpppoe">
+        <method id="settingResetPppoe" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="ping">
+        <method id="testingPing" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="ping/getpinginfo">
+        <method id="testingPingGetPingInfo" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="pppoediag">
+        <method id="testingPppoeDiag" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="pppoediag/getpppoeinfo">
+        <method id="testingPppoeDiagGetPppoeInfo" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="traceroute">
+        <method id="testingTraceroute" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="traceroute/gettrinfo">
+        <method id="testingTracerouteGetTrinfo" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="dealOrder">
+        <method id="dealOrder" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="servInfo">
+        <method id="queryServInfo" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="dnsdhcpInfo">
+        <method id="queryDnsDhcpInfo" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="alarminfo">
+        <method id="queryAlarmInfo" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+    <resource path="/">
+      <resource path="{interfaceName}">
+        <param name="interfaceName" style="template" type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method id="run" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://135.251.218.88:8098</con:endpoint></con:endpoints><con:resource name="apdevice" path="apdevice" id="aa68a630-8346-459a-a4b1-1ca4690fda7f"><con:settings/><con:parameters/><con:resource name="control/{interfaceName}" path="control/{interfaceName}" id="693b6cba-1603-4b84-aeb7-dd56322aae02"><con:settings/><con:parameters><con:parameter><con:name>interfaceName</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST - control" id="16772f22-7b64-4118-b1e3-6938af4e3de2" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="6b7ea168-b7d9-417e-ba37-95e3fb0ddb59" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="query/{interfaceName}" path="query/{interfaceName}" id="77d30c83-431d-4d97-8c48-57568722902b"><con:settings/><con:parameters><con:parameter><con:name>interfaceName</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST - query" id="02f95241-f427-4c30-84a5-d92c436ad1a7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="05064061-b35f-40d3-adc6-c231036da713" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="command/{interfaceName}" path="command/{interfaceName}" id="6f81d7d3-736b-4ab0-9d45-d77ac804f5eb"><con:settings/><con:parameters><con:parameter><con:name>interfaceName</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST - command" id="dedcbb8f-5290-4e4b-a4cc-42030c343c1f" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a157f78f-10bd-4f44-9c52-6d83b8e42712" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:resource><con:resource name="public/{deviceType}/{interfaceType}" path="public/{deviceType}/{interfaceType}" id="4c3218a5-dc5a-4dbf-84f7-92cbfb33f68f"><con:settings/><con:parameters/><con:resource name="equInfo" path="equInfo" id="ccf03b25-3940-4ca8-8e33-4aa48498accb"><con:settings/><con:parameters/><con:method name="POST - queryEquInfo" id="50081cb9-3382-4d9d-b23d-402adfb9b9d3" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="1c8f50c7-cadf-4acd-9c12-91a7ed3ccb9e" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="lanInfo" path="lanInfo" id="30c0d088-bf7f-41d8-b312-bfcb855b03f9"><con:settings/><con:parameters/><con:method name="POST - queryLanInfo" id="73d2decd-aa17-47be-9831-19e9236e6cc4" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="185dc532-aeb1-4af3-a358-a178cd9c88cb" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="enableSSID" path="enableSSID" id="d82b3a96-8c9c-456d-ab7c-aa487afc80db"><con:settings/><con:parameters/><con:method name="POST - settingEnableSsid" id="b4edacd3-0112-4f03-ae92-2f8c45b87372" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="02ab9740-28b8-47e4-8390-3378a8b609ee" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="disableSSID" path="disableSSID" id="102fb813-49cf-4eaf-a94c-18113398b793"><con:settings/><con:parameters/><con:method name="POST - settingDisableSsid" id="95186b8b-58cf-431b-9f8d-c3f77fcc5aa4" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="fa1ebc2b-0ac0-4007-8530-41886bd883a9" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="modifySSIDPwd" path="modifySSIDPwd" id="05b923c7-4b8b-45e0-b52c-c8dc79a5a583"><con:settings/><con:parameters/><con:method name="POST - settingModifySsidPwd" id="8c10a77f-3857-4b12-88f9-8f9712b6682f" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="510e3b54-ee81-4a9b-9ee6-d949609f3ef3" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="factoryReset" path="factoryReset" id="9e0b1f53-39c1-4858-8ffb-5905143f5960"><con:settings/><con:parameters/><con:method name="POST - settingFactoryReset" id="6422b577-d6e1-418a-b8a3-f9839a57db8f" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3076499a-1bb0-4562-b06c-bf60497f901a" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="reboot" path="reboot" id="be428905-38f9-45f8-a2cf-8595d46afa2e"><con:settings/><con:parameters/><con:method name="POST - settingReboot" id="dc43f3bf-862d-4068-8842-ac5457aa454a" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="34f44fa1-01e2-46c3-b88e-7c05dfe8706a" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="resetpppoe" path="resetpppoe" id="a9331c90-ca50-48fc-b0a5-cc14b892e441"><con:settings/><con:parameters/><con:method name="POST - settingResetPppoe" id="71560f2f-164c-4454-a787-1d92cb7682bf" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="da9cfc83-0ed4-4e46-a8b6-203ce334f1d2" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="ping" path="ping" id="b905aad0-5076-46c2-bb8d-a1e8e0cc94fb"><con:settings/><con:parameters/><con:method name="POST - testingPing" id="723e42a2-82fd-4f94-9d71-6035d92a0728" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ece22525-592b-4c2d-b6a3-65e9197ce354" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="ping/getpinginfo" path="ping/getpinginfo" id="8405cc5f-36ba-48df-97bd-aca1bec95bd3"><con:settings/><con:parameters/><con:method name="POST - testingPingGetPingInfo" id="707e7f0b-410b-4b55-8905-2e67da38497c" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3367cbc7-2e03-4586-bb34-40f095305600" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="pppoediag" path="pppoediag" id="5eca9a5d-1913-4b37-a8df-48e7eaab552d"><con:settings/><con:parameters/><con:method name="POST - testingPppoeDiag" id="3b433a1c-8a9d-4dc2-8bbf-347f96e6eaf7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="2d6e1de9-76b0-4b1f-b3f6-81d9437b0d2e" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="pppoediag/getpppoeinfo" path="pppoediag/getpppoeinfo" id="8b602042-8a40-4c02-a98a-5fff5ba885c4"><con:settings/><con:parameters/><con:method name="POST - testingPppoeDiagGetPppoeInfo" id="4b166411-3009-4e5a-a5fb-9c2e37623ebb" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="243b7298-8ea2-40f8-845e-e408e3188dfa" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="traceroute" path="traceroute" id="5c9c909b-f5fd-4312-967a-5a5a179f60fa"><con:settings/><con:parameters/><con:method name="POST - testingTraceroute" id="99de74db-ead1-4313-986d-0828275c42bf" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9bc8beaa-b894-471c-a2d6-9381260f7096" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="traceroute/gettrinfo" path="traceroute/gettrinfo" id="96ff0f94-b8b0-4f2a-9b14-b0735cd97ec3"><con:settings/><con:parameters/><con:method name="POST - testingTracerouteGetTrinfo" id="cc7f73ea-42b5-4698-a190-f5986386342d" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3c393dae-d0a3-47a4-bb51-fd466a48aeaa" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="dealOrder" path="dealOrder" id="ed65bb3e-e5b3-4bde-8116-8141c8027a39"><con:settings/><con:parameters/><con:method name="POST - dealOrder" id="b472d241-af0d-4ab9-a7b3-0a8ed0a6bf8d" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="57e34c1e-e1b1-4402-8475-5689d190541b" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="servInfo" path="servInfo" id="94fd2dad-489d-4a38-a187-a459beed5189"><con:settings/><con:parameters/><con:method name="POST - queryServInfo" id="f666d580-0e15-4bcd-b249-80695056d856" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="8d9ee859-9bd1-4b2d-b8be-3b73baad369e" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="dnsdhcpInfo" path="dnsdhcpInfo" id="894d175f-615e-44cd-90e6-881482d1f797"><con:settings/><con:parameters/><con:method name="POST - queryDnsDhcpInfo" id="813fe642-84df-4c18-97bd-eb370ce11d4c" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="8ef9173e-dc2f-453b-ad12-c306f02299ff" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="alarminfo" path="alarminfo" id="7b8024a8-ebb9-4004-8238-b1a6bf30ba1d"><con:settings/><con:parameters/><con:method name="POST - queryAlarmInfo" id="1e38e57d-aa68-459a-a600-695f832c4441" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3d3db523-1e0f-48ea-9550-e3b5cf8a822c" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:resource><con:resource name="/" path="/" id="37ff2311-8c3a-44e0-8643-8ab30b643672"><con:settings/><con:parameters/><con:resource name="{interfaceName}" path="{interfaceName}" id="426c223a-47fc-4846-a7ad-6e44c9f1463b"><con:settings/><con:parameters><con:parameter><con:name>interfaceName</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST - run" id="74153b73-b7e3-417e-bbb6-fee28a5de83d" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="56d7166c-185c-4578-9014-cc0895835ee9" mediaType="application/json"><con:settings/><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:resource></con:interface><con:interface xsi:type="con:RestService" id="0bd12801-ba46-4f39-b51e-7501bbb6a891" wadlVersion="http://wadl.dev.java.net/2009/02" name="CMCC-iHGW-RESTFul" type="rest" basePath="/nbitktws/cmcconline/" definitionUrl="http://135.251.218.88:8098/nbitktws/cmcconline/application.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://135.251.218.88:8098</con:endpoint></con:endpoints><con:resource name="homegatewayservice" path="homegatewayservice" id="24234dee-8f41-4232-8793-5a6054849b70"><con:settings/><con:parameters/><con:resource name="QueryGatewayLightInfo" path="QueryGatewayLightInfo" id="82586720-4c62-49d7-885b-3634f8f1fbf0"><con:settings/><con:parameters/><con:method name="POST - run" id="5afd2a54-7bc0-4815-aedc-d714db92f8b7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="34302804-f575-430c-9c3a-b82dbb46cd4c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:request>{
+    "params": {
+        "srvCode": "0809002",
+        "queryType": "0",
+        "provinceId": "471",
+        "regionId": "0471",
+        "channelId": "ngcrmpf_nm"
+    }
+}
+</con:request><con:originalUri>http://135.251.218.88/nbitktws/cmcconline/homegatewayservice/QueryGatewayLightInfo</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="QueryLanState" path="QueryLanState" id="82586720-4c62-49d7-885b-3634f8f1fbf0"><con:settings/><con:parameters/><con:method name="POST - run" id="5afd2a54-7bc0-4815-aedc-d714db92f8b7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="34302804-f575-430c-9c3a-b82dbb46cd4c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:request>{
+    "params": {
+        "srvCode": "0809002",
+        "queryType": "0",
+        "provinceId": "471",
+        "regionId": "0471",
+        "channelId": "ngcrmpf_nm"
+    }
+}
+</con:request><con:originalUri>http://135.251.218.88/nbitktws/cmcconline/homegatewayservice/QueryGatewayLightInfo</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="QueryWanLinkState" path="QueryWanLinkState" id="82586720-4c62-49d7-885b-3634f8f1fbf0"><con:settings/><con:parameters/><con:method name="POST - run" id="5afd2a54-7bc0-4815-aedc-d714db92f8b7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="34302804-f575-430c-9c3a-b82dbb46cd4c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:request>{
+    "params": {
+        "srvCode": "0809002",
+        "operateNumType": "0",
+        "provinceId": "471",
+        "regionId": "0471",
+        "channelId": "ngcrmpf_nm"
+    }
+}
+</con:request><con:originalUri>http://135.251.218.88/nbitktws/cmcconline/homegatewayservice/QueryGatewayLightInfo</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="QueryOnlineStateInfo" path="QueryOnlineStateInfo" id="82586720-4c62-49d7-885b-3634f8f1fbf0"><con:settings/><con:parameters/><con:method name="POST - run" id="5afd2a54-7bc0-4815-aedc-d714db92f8b7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="34302804-f575-430c-9c3a-b82dbb46cd4c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://135.251.218.88:8098</con:endpoint><con:request>{
+    "params": {
+        "srvCode": "0809002",
+        "operateNumType": "0",
+        "provinceId": "471",
+        "regionId": "0471",
+        "channelId": "ngcrmpf_nm"
+    }
+}
+</con:request><con:originalUri>http://135.251.218.88/nbitktws/cmcconline/homegatewayservice/QueryGatewayLightInfo</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

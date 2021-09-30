@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a16bb46c-a0c7-46d4-acf4-c76f3b48bde0" activeEnvironment="Default" name="MobileOperationWS" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="b9e99c7d-62f8-453c-99c8-93a70e77660e" wsaVersion="NONE" name="MobileOperationInterfaceSoapBinding" type="wsdl" bindingName="{http://mo.nbi.hdm.alcatel.com}MobileOperationInterfaceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService?wsdl"><con:part><con:url>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://mo.nbi.hdm.alcatel.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:impl="http://mo.nbi.hdm.alcatel.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:intf="http://mo.nbi.hdm.alcatel.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl">
+  <wsdl:documentation>MobileOperationInterfaceService</wsdl:documentation>
+  <wsdl:types>
+    <schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://mo.nbi.hdm.alcatel.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="queryTerminalPassword">
+        <complexType>
+          <sequence>
+            <element name="request" type="impl:QueryTerminalPasswordRequest"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryTerminalPasswordRequest">
+        <sequence>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="queryTerminalPasswordResponse">
+        <complexType>
+          <sequence>
+            <element name="queryTerminalPasswordReturn" type="impl:QueryTerminalPasswordResponse"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryTerminalPasswordResponse">
+        <sequence>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="terminalPassword" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="queryBindInfo">
+        <complexType>
+          <sequence>
+            <element name="request" type="impl:QueryBindInfoRequest"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryBindInfoRequest">
+        <sequence>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="queryBindInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="queryBindInfoReturn" type="impl:QueryBindInfoResponse"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryBindInfoResponse">
+        <sequence>
+          <element name="hardwareVersion" nillable="true" type="string"/>
+          <element name="ipAddress" nillable="true" type="string"/>
+          <element name="result" type="int"/>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="serialNumber" nillable="true" type="string"/>
+          <element name="softwareVersion" nillable="true" type="string"/>
+          <element name="terminalName" nillable="true" type="string"/>
+          <element name="terminalType" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="factoryReset">
+        <complexType>
+          <sequence>
+            <element name="request" type="impl:FactoryResetRequest"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="FactoryResetRequest">
+        <sequence>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="factoryResetResponse">
+        <complexType>
+          <sequence>
+            <element name="factoryResetReturn" type="impl:FactoryResetResponse"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="FactoryResetResponse">
+        <sequence>
+          <element name="failedReason" nillable="true" type="string"/>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="status" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="queryBussinessInfo">
+        <complexType>
+          <sequence>
+            <element name="request" type="impl:QueryBussinessInfoRequest"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryBussinessInfoRequest">
+        <sequence>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="queryBussinessInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="queryBussinessInfoReturn" type="impl:QueryBussinessInfoResponse"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryBussinessInfoResponse">
+        <sequence>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="serial_number" nillable="true" type="string"/>
+          <element name="result" type="int"/>
+          <element name="serviceList" nillable="true" type="string"/>
+          <element name="terminalType" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="queryActionInfo">
+        <complexType>
+          <sequence>
+            <element name="request" type="impl:QueryActionInfoRequest"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryActionInfoRequest">
+        <sequence>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="queryActionInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="queryActionInfoReturn" type="impl:QueryActionInfoResponse"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="QueryActionInfoResponse">
+        <sequence>
+          <element name="actionResult" nillable="true" type="string"/>
+          <element name="loId" nillable="true" type="string"/>
+          <element name="pppoe" nillable="true" type="string"/>
+          <element name="uplinkType" nillable="true" type="string"/>
+          <element name="workId" nillable="true" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="startGetUserInfoDiag">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="long"/>
+            <element name="logic_id" type="string"/>
+            <element name="ppp_usename" type="string"/>
+            <element name="customer_id" type="string"/>
+            <element name="serial_number" type="string"/>
+            <element name="auth_username" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="startGetUserInfoDiagResponse">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="long"/>
+            <element name="result" type="int"/>
+            <element name="userinfo" type="impl:UserInfo"/>
+            <element name="err_msg" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="startPingDiag">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="long"/>
+            <element name="logic_id" type="string"/>
+            <element name="ppp_usename" type="string"/>
+            <element name="serial_number" type="string"/>
+            <element name="customer_id" type="string"/>
+            <element name="ping_para" type="impl:PingPara"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="startPingDiagResponse">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="long"/>
+            <element name="result" type="int"/>
+            <element name="ping_result" type="impl:PingResult"/>
+            <element name="err_msg" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="startRebootDiag">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="long"/>
+            <element name="logic_id" type="string"/>
+            <element name="ppp_usename" type="string"/>
+            <element name="customer_id" type="string"/>
+            <element name="serial_number" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="startRebootDiagResponse">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="long"/>
+            <element name="result" type="int"/>
+            <element name="err_msg" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getFactoryResetDiag">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="long"/>
+            <element name="logic_id" type="string"/>
+            <element name="ppp_usename" type="string"/>
+            <element name="customer_id" type="string"/>
+            <element name="serial_number" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getFactoryResetDiagResponse">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="long"/>
+            <element name="result" type="int"/>
+            <element name="err_msg" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getGetServiceStatus">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="long"/>
+            <element name="logic_id" type="string"/>
+            <element name="ppp_usename" type="string"/>
+            <element name="customer_id" type="string"/>
+            <element name="serial_number" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getGetServiceStatusResponse">
+        <complexType>
+          <sequence>
+            <element name="op_id" type="string"/>
+            <element name="result" type="int"/>
+            <element name="service_status" type="impl:ServiceStatus"/>
+            <element name="err_msg" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="queryTerminalInfo">
+        <complexType>
+          <sequence>
+            <element name="logic_id" type="string"/>
+            <element name="ppp_usename" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="queryTerminalInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="manufactory" type="string"/>
+            <element name="device_type" type="string"/>
+            <element name="version" type="string"/>
+            <element name="OUI" type="string"/>
+            <element name="serial_number" type="string"/>
+            <element name="terminal_type" type="string"/>
+            <element name="is_online" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="UserInfo">
+        <sequence>
+          <element name="logic_id" type="string"/>
+          <element name="ppp_usename" type="string"/>
+          <element name="serial_number" type="string"/>
+          <element name="ppp_password" type="string"/>
+          <element name="customer_id" type="string"/>
+          <element name="auth_username" type="string"/>
+        </sequence>
+      </complexType>
+      <complexType name="PingPara">
+        <sequence>
+          <element name="ping_host" type="string"/>
+          <element name="ping_times" type="string"/>
+          <element name="block_size" type="string"/>
+        </sequence>
+      </complexType>
+      <complexType name="PingResult">
+        <sequence>
+          <element name="success_count" type="int"/>
+          <element name="failure_count" type="int"/>
+          <element name="average_responsetime" type="int"/>
+          <element name="minimum_responsetime" type="int"/>
+          <element name="maximum_responsetime" type="int"/>
+        </sequence>
+      </complexType>
+      <complexType name="ServiceStatus">
+        <sequence>
+          <element name="wband_status" type="int"/>
+          <element name="iptv_status" type="int"/>
+          <element name="voip1_status" type="int"/>
+          <element name="voip2_status" type="int"/>
+        </sequence>
+      </complexType>
+      <element name="feedbackWorkTicketsInfo">
+        <complexType>
+          <sequence>
+            <element name="work_id" type="string"/>
+            <element name="LOID_ARRAY" type="impl:LOID_ARRAYType"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="feedbackWorkTicketsInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="work_id" type="string"/>
+            <element name="RESULT_ARRAY" type="impl:RESULT_ARRAYType"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="LOID_ARRAYType">
+        <sequence>
+          <element maxOccurs="unbounded" name="loid" type="string"/>
+        </sequence>
+      </complexType>
+      <complexType name="RESULT_ARRAYType">
+        <sequence>
+          <element maxOccurs="unbounded" name="loid_result" type="impl:loid_resultType"/>
+        </sequence>
+      </complexType>
+      <complexType name="loid_resultType">
+        <sequence>
+          <element name="loid" type="string"/>
+          <element name="serial_number" type="string"/>
+          <element name="service_status" type="int"/>
+          <element name="service_list" type="string"/>
+          <element name="error_msg" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="queryWorkTicketsInfo">
+        <complexType>
+          <sequence>
+            <element name="logic_id" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="queryWorkTicketsInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="result" type="string"/>
+            <element name="work_asgn_id" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="queryRgModeInfo">
+        <complexType>
+          <sequence>
+            <element name="logic_id" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="queryRgModeInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="rgMode" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="queryLanInfo">
+        <complexType>
+          <sequence>
+            <element name="logic_id" type="string"/>
+            <element name="ppp_username" type="string"/>
+            <element name="serial_number" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="queryLanInfoResponse">
+        <complexType>
+          <sequence>
+            <element maxOccurs="unbounded" name="lan_info" type="impl:LanInfoType"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="LanInfoType">
+        <sequence>
+          <element name="name" type="string"/>
+          <element name="connection_rate" type="string"/>
+          <element name="status" type="string"/>
+          <element name="accept_byte_count" type="string"/>
+          <element name="send_byte_count" type="string"/>
+          <element name="accept_package_count" type="string"/>
+          <element name="send_package_count" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="unbindWorkTicket">
+        <complexType>
+          <sequence>
+            <element name="logic_id" type="string"/>
+            <element name="serial_number" type="string"/>
+            <element name="keep_user_info" type="int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="unbindWorkTicketResponse">
+        <complexType>
+          <sequence>
+            <element name="result" type="int"/>
+            <element name="err_msg" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="queryConnectionInfo">
+        <complexType>
+          <sequence>
+            <element name="logic_id" type="string"/>
+            <element name="ppp_username" type="string"/>
+            <element name="serial_number" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="queryConnectionInfoResponse">
+        <complexType>
+          <sequence>
+            <element name="result" type="int"/>
+            <element name="err_msg" type="string"/>
+            <element name="dial_connect_status" type="string"/>
+            <element name="dns" type="string"/>
+            <element name="send_power" type="string"/>
+            <element name="receive_power" type="string"/>
+            <element name="dhcp" type="impl:DHCPType"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="DHCPType">
+        <sequence>
+          <element maxOccurs="unbounded" name="address" type="impl:DHCPAddressType"/>
+        </sequence>
+      </complexType>
+      <complexType name="DHCPAddressType">
+        <sequence>
+          <element name="ip_address" type="string"/>
+          <element name="mac_address" type="string"/>
+        </sequence>
+      </complexType>
+      <element name="commonInterfaceOperation">
+        <complexType>
+          <sequence>
+            <element name="request_xml" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="commonInterfaceOperationResponse">
+        <complexType>
+          <sequence>
+            <element name="response_xml" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="unbindWorkTicketRequest">
+    <wsdl:part name="parameters" element="impl:unbindWorkTicket"/>
+  </wsdl:message>
+  <wsdl:message name="unbindWorkTicketResponse">
+    <wsdl:part name="parameters" element="impl:unbindWorkTicketResponse"/>
+  </wsdl:message>
+  <wsdl:message name="startGetUserInfoDiagRequest">
+    <wsdl:part name="parameters" element="impl:startGetUserInfoDiag"/>
+  </wsdl:message>
+  <wsdl:message name="startGetUserInfoDiagResponse">
+    <wsdl:part name="parameters" element="impl:startGetUserInfoDiagResponse"/>
+  </wsdl:message>
+  <wsdl:message name="queryActionInfoRequest">
+    <wsdl:part name="parameters" element="impl:queryActionInfo"/>
+  </wsdl:message>
+  <wsdl:message name="queryActionInfoResponse">
+    <wsdl:part name="parameters" element="impl:queryActionInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="factoryResetRequest">
+    <wsdl:part name="parameters" element="impl:factoryReset"/>
+  </wsdl:message>
+  <wsdl:message name="factoryResetResponse">
+    <wsdl:part name="parameters" element="impl:factoryResetResponse"/>
+  </wsdl:message>
+  <wsdl:message name="feedbackWorkTicketsInfoRequest">
+    <wsdl:part name="parameters" element="impl:feedbackWorkTicketsInfo"/>
+  </wsdl:message>
+  <wsdl:message name="feedbackWorkTicketsInfoResponse">
+    <wsdl:part name="parameters" element="impl:feedbackWorkTicketsInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getGetServiceStatusRequest">
+    <wsdl:part name="parameters" element="impl:getGetServiceStatus"/>
+  </wsdl:message>
+  <wsdl:message name="getGetServiceStatusResponse">
+    <wsdl:part name="parameters" element="impl:getGetServiceStatusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="queryConnectionInfoRequest">
+    <wsdl:part name="parameters" element="impl:queryConnectionInfo"/>
+  </wsdl:message>
+  <wsdl:message name="queryConnectionInfoResponse">
+    <wsdl:part name="parameters" element="impl:queryConnectionInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="queryBindInfoRequest">
+    <wsdl:part name="parameters" element="impl:queryBindInfo"/>
+  </wsdl:message>
+  <wsdl:message name="queryBindInfoResponse">
+    <wsdl:part name="parameters" element="impl:queryBindInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="queryTerminalPasswordRequest">
+    <wsdl:part name="parameters" element="impl:queryTerminalPassword"/>
+  </wsdl:message>
+  <wsdl:message name="queryTerminalPasswordResponse">
+    <wsdl:part name="parameters" element="impl:queryTerminalPasswordResponse"/>
+  </wsdl:message>
+  <wsdl:message name="commonInterfaceOperationRequest">
+    <wsdl:part name="parameters" element="impl:commonInterfaceOperation"/>
+  </wsdl:message>
+  <wsdl:message name="commonInterfaceOperationResponse">
+    <wsdl:part name="parameters" element="impl:commonInterfaceOperationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="queryTerminalInfoRequest">
+    <wsdl:part name="parameters" element="impl:queryTerminalInfo"/>
+  </wsdl:message>
+  <wsdl:message name="queryTerminalInfoResponse">
+    <wsdl:part name="parameters" element="impl:queryTerminalInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="startPingDiagRequest">
+    <wsdl:part name="parameters" element="impl:startPingDiag"/>
+  </wsdl:message>
+  <wsdl:message name="startPingDiagResponse">
+    <wsdl:part name="parameters" element="impl:startPingDiagResponse"/>
+  </wsdl:message>
+  <wsdl:message name="queryWorkTicketsInfoRequest">
+    <wsdl:part name="parameters" element="impl:queryWorkTicketsInfo"/>
+  </wsdl:message>
+  <wsdl:message name="queryWorkTicketsInfoResponse">
+    <wsdl:part name="parameters" element="impl:queryWorkTicketsInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getFactoryResetDiagRequest">
+    <wsdl:part name="parameters" element="impl:getFactoryResetDiag"/>
+  </wsdl:message>
+  <wsdl:message name="getFactoryResetDiagResponse">
+    <wsdl:part name="parameters" element="impl:getFactoryResetDiagResponse"/>
+  </wsdl:message>
+  <wsdl:message name="queryBussinessInfoRequest">
+    <wsdl:part name="parameters" element="impl:queryBussinessInfo"/>
+  </wsdl:message>
+  <wsdl:message name="queryBussinessInfoResponse">
+    <wsdl:part name="parameters" element="impl:queryBussinessInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="startRebootDiagRequest">
+    <wsdl:part name="parameters" element="impl:startRebootDiag"/>
+  </wsdl:message>
+  <wsdl:message name="startRebootDiagResponse">
+    <wsdl:part name="parameters" element="impl:startRebootDiagResponse"/>
+  </wsdl:message>
+  <wsdl:message name="queryRgModeInfoRequest">
+    <wsdl:part name="parameters" element="impl:queryRgModeInfo"/>
+  </wsdl:message>
+  <wsdl:message name="queryRgModeInfoResponse">
+    <wsdl:part name="parameters" element="impl:queryRgModeInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="queryLanInfoRequest">
+    <wsdl:part name="parameters" element="impl:queryLanInfo"/>
+  </wsdl:message>
+  <wsdl:message name="queryLanInfoResponse">
+    <wsdl:part name="parameters" element="impl:queryLanInfoResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="MobileOperationInterfaceServicePortType">
+    <wsdl:operation name="unbindWorkTicket">
+      <wsdl:input message="impl:unbindWorkTicketRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/unbindWorkTicket"/>
+      <wsdl:output message="impl:unbindWorkTicketResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/unbindWorkTicketResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="startGetUserInfoDiag">
+      <wsdl:input message="impl:startGetUserInfoDiagRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/startGetUserInfoDiag"/>
+      <wsdl:output message="impl:startGetUserInfoDiagResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/startGetUserInfoDiagResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryActionInfo">
+      <wsdl:input message="impl:queryActionInfoRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryActionInfoRequest"/>
+      <wsdl:output message="impl:queryActionInfoResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryActionInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="factoryReset">
+      <wsdl:input message="impl:factoryResetRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/factoryResetRequest"/>
+      <wsdl:output message="impl:factoryResetResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/factoryResetResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="feedbackWorkTicketsInfo">
+      <wsdl:input message="impl:feedbackWorkTicketsInfoRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/feedbackWorkTicketsInfo"/>
+      <wsdl:output message="impl:feedbackWorkTicketsInfoResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/feedbackWorkTicketsInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getGetServiceStatus">
+      <wsdl:input message="impl:getGetServiceStatusRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/getGetServiceStatus"/>
+      <wsdl:output message="impl:getGetServiceStatusResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/getGetServiceStatusResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryConnectionInfo">
+      <wsdl:input message="impl:queryConnectionInfoRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/queryConnectionInfo"/>
+      <wsdl:output message="impl:queryConnectionInfoResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryConnectionInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryBindInfo">
+      <wsdl:input message="impl:queryBindInfoRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryBindInfoRequest"/>
+      <wsdl:output message="impl:queryBindInfoResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryBindInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryTerminalPassword">
+      <wsdl:input message="impl:queryTerminalPasswordRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryTerminalPasswordRequest"/>
+      <wsdl:output message="impl:queryTerminalPasswordResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryTerminalPasswordResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="commonInterfaceOperation">
+      <wsdl:input message="impl:commonInterfaceOperationRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/commonInterfaceOperation"/>
+      <wsdl:output message="impl:commonInterfaceOperationResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/commonInterfaceOperationResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryTerminalInfo">
+      <wsdl:input message="impl:queryTerminalInfoRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/queryTerminalInfo"/>
+      <wsdl:output message="impl:queryTerminalInfoResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryTerminalInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="startPingDiag">
+      <wsdl:input message="impl:startPingDiagRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/startPingDiag"/>
+      <wsdl:output message="impl:startPingDiagResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/startPingDiagResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryWorkTicketsInfo">
+      <wsdl:input message="impl:queryWorkTicketsInfoRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/queryWorkTicketsInfo"/>
+      <wsdl:output message="impl:queryWorkTicketsInfoResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryWorkTicketsInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getFactoryResetDiag">
+      <wsdl:input message="impl:getFactoryResetDiagRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/getFactoryResetDiag"/>
+      <wsdl:output message="impl:getFactoryResetDiagResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/getFactoryResetDiagResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryBussinessInfo">
+      <wsdl:input message="impl:queryBussinessInfoRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryBussinessInfoRequest"/>
+      <wsdl:output message="impl:queryBussinessInfoResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryBussinessInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="startRebootDiag">
+      <wsdl:input message="impl:startRebootDiagRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/startRebootDiag"/>
+      <wsdl:output message="impl:startRebootDiagResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/startRebootDiagResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryRgModeInfo">
+      <wsdl:input message="impl:queryRgModeInfoRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/queryRgModeInfo"/>
+      <wsdl:output message="impl:queryRgModeInfoResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryRgModeInfoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="queryLanInfo">
+      <wsdl:input message="impl:queryLanInfoRequest" wsaw:Action="http://mo.nbi.hdm.alcatel.com/queryLANInfo"/>
+      <wsdl:output message="impl:queryLanInfoResponse" wsaw:Action="http://mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryLanInfoResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MobileOperationInterfaceSoapBinding" type="impl:MobileOperationInterfaceServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="unbindWorkTicket">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/unbindWorkTicket" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startGetUserInfoDiag">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/startGetUserInfoDiag" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryActionInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="factoryReset">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="feedbackWorkTicketsInfo">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/feedbackWorkTicketsInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGetServiceStatus">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/getGetServiceStatus" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryConnectionInfo">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/queryConnectionInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryBindInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryTerminalPassword">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="commonInterfaceOperation">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/commonInterfaceOperation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryTerminalInfo">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/queryTerminalInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startPingDiag">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/startPingDiag" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryWorkTicketsInfo">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/queryWorkTicketsInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFactoryResetDiag">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/getFactoryResetDiag" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryBussinessInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="startRebootDiag">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/startRebootDiag" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryRgModeInfo">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/queryRgModeInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryLanInfo">
+      <soap:operation soapAction="http://mo.nbi.hdm.alcatel.com/queryLANInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MobileOperationInterfaceService">
+    <wsdl:port name="MobileOperationInterface" binding="impl:MobileOperationInterfaceSoapBinding">
+      <soap:address location="http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint></con:endpoints><con:operation id="39790973-aa7e-407f-852a-f8cfddba73d8" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/commonInterfaceOperation" name="commonInterfaceOperation" bindingOperationName="commonInterfaceOperation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="06c7bd08-ca78-4c39-97dd-258cb1e7afba" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:commonInterfaceOperation>\r
+         <mo:request_xml>?</mo:request_xml>\r
+      </mo:commonInterfaceOperation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/commonInterfaceOperation"/></con:call></con:operation><con:operation id="202cce62-4d66-421a-8ecb-e8e8ba6881f8" isOneWay="false" action="" name="factoryReset" bindingOperationName="factoryReset" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="acade447-5fca-4abd-b165-d289d2557cb7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:factoryReset>\r
+         <mo:request>\r
+            <mo:loId>?</mo:loId>\r
+            <mo:pppoe>?</mo:pppoe>\r
+            <mo:workId>?</mo:workId>\r
+         </mo:request>\r
+      </mo:factoryReset>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="{http://schemas.xmlsoap.org/wsdl/http/}//mo.nbi.hdm.alcatel.com/MobileOperationInterface/factoryResetRequest"/></con:call></con:operation><con:operation id="f0bda69e-9582-46aa-94bc-005a847bc29d" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/feedbackWorkTicketsInfo" name="feedbackWorkTicketsInfo" bindingOperationName="feedbackWorkTicketsInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="12e71497-b278-40ec-8791-98b14a0df99d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:feedbackWorkTicketsInfo>\r
+         <mo:work_id>?</mo:work_id>\r
+         <mo:LOID_ARRAY>\r
+            <!--1 or more repetitions:-->\r
+            <mo:loid>?</mo:loid>\r
+         </mo:LOID_ARRAY>\r
+      </mo:feedbackWorkTicketsInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/feedbackWorkTicketsInfo"/></con:call></con:operation><con:operation id="df8abe89-0ab9-46d0-a8ba-0bcb50e6b322" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/getFactoryResetDiag" name="getFactoryResetDiag" bindingOperationName="getFactoryResetDiag" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="45b925ee-7883-42cf-b2ce-3f6032585199" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:getFactoryResetDiag>\r
+         <mo:op_id>?</mo:op_id>\r
+         <mo:logic_id>?</mo:logic_id>\r
+         <mo:ppp_usename>?</mo:ppp_usename>\r
+         <mo:customer_id>?</mo:customer_id>\r
+         <mo:serial_number>?</mo:serial_number>\r
+      </mo:getFactoryResetDiag>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/getFactoryResetDiag"/></con:call></con:operation><con:operation id="885a7c0c-c066-4b38-aa55-53323256d724" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/getGetServiceStatus" name="getGetServiceStatus" bindingOperationName="getGetServiceStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c95e0417-da55-4b65-a6ad-b24d9a28c652" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:getGetServiceStatus>\r
+         <mo:op_id>?</mo:op_id>\r
+         <mo:logic_id>?</mo:logic_id>\r
+         <mo:ppp_usename>?</mo:ppp_usename>\r
+         <mo:customer_id>?</mo:customer_id>\r
+         <mo:serial_number>?</mo:serial_number>\r
+      </mo:getGetServiceStatus>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/getGetServiceStatus"/></con:call></con:operation><con:operation id="8f34e0b7-7aee-4a61-b36f-b8d5ba7fea88" isOneWay="false" action="" name="queryActionInfo" bindingOperationName="queryActionInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a647158a-8656-4613-be54-f8084916b67a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:queryActionInfo>\r
+         <mo:request>\r
+            <mo:loId>?</mo:loId>\r
+            <mo:pppoe>?</mo:pppoe>\r
+            <mo:workId>?</mo:workId>\r
+         </mo:request>\r
+      </mo:queryActionInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="{http://schemas.xmlsoap.org/wsdl/http/}//mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryActionInfoRequest"/></con:call></con:operation><con:operation id="dc227b77-2938-46ca-a784-508b47885b40" isOneWay="false" action="" name="queryBindInfo" bindingOperationName="queryBindInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a40255c2-0d9d-4d03-823a-d3282dc11363" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:queryBindInfo>\r
+         <mo:request>\r
+            <mo:loId>?</mo:loId>\r
+            <mo:pppoe>?</mo:pppoe>\r
+            <mo:workId>?</mo:workId>\r
+         </mo:request>\r
+      </mo:queryBindInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="{http://schemas.xmlsoap.org/wsdl/http/}//mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryBindInfoRequest"/></con:call></con:operation><con:operation id="9aced923-220e-469b-acc8-9f11206fdb9e" isOneWay="false" action="" name="queryBussinessInfo" bindingOperationName="queryBussinessInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="18590a53-79c5-4f8e-962f-d93d3f90f34c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:queryBussinessInfo>\r
+         <mo:request>\r
+            <mo:loId>?</mo:loId>\r
+            <mo:pppoe>?</mo:pppoe>\r
+            <mo:workId>?</mo:workId>\r
+         </mo:request>\r
+      </mo:queryBussinessInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="{http://schemas.xmlsoap.org/wsdl/http/}//mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryBussinessInfoRequest"/></con:call></con:operation><con:operation id="22dbcaab-b6f8-4776-99b3-24d7cec9688c" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/queryConnectionInfo" name="queryConnectionInfo" bindingOperationName="queryConnectionInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="99732d57-80b5-4b9e-b60a-a0fe8dd04bcc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:queryConnectionInfo>\r
+         <mo:logic_id>?</mo:logic_id>\r
+         <mo:ppp_username>?</mo:ppp_username>\r
+         <mo:serial_number>?</mo:serial_number>\r
+      </mo:queryConnectionInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/queryConnectionInfo"/></con:call></con:operation><con:operation id="2b59526d-fb54-4b04-993d-4ce9bac5f2ae" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/queryLANInfo" name="queryLanInfo" bindingOperationName="queryLanInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3582f84f-9352-4882-9aaf-1a6f5fa7e2f0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:queryLanInfo>\r
+         <mo:logic_id>?</mo:logic_id>\r
+         <mo:ppp_username>?</mo:ppp_username>\r
+         <mo:serial_number>?</mo:serial_number>\r
+      </mo:queryLanInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/queryLANInfo"/></con:call></con:operation><con:operation id="ec4206d7-ed4d-41a3-8c13-9c4b823b56fb" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/queryRgModeInfo" name="queryRgModeInfo" bindingOperationName="queryRgModeInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9f89be7f-2bd6-4cf8-a232-6e63aece99a0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:queryRgModeInfo>\r
+         <mo:logic_id>?</mo:logic_id>\r
+      </mo:queryRgModeInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/queryRgModeInfo"/></con:call></con:operation><con:operation id="1c3cdf2f-bdcf-4eb3-a13c-7c5e134c0493" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/queryTerminalInfo" name="queryTerminalInfo" bindingOperationName="queryTerminalInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c882e336-f8a4-439f-9fd4-7e6562c94d28" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:queryTerminalInfo>\r
+         <mo:logic_id>?</mo:logic_id>\r
+         <mo:ppp_usename>?</mo:ppp_usename>\r
+      </mo:queryTerminalInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/queryTerminalInfo"/></con:call></con:operation><con:operation id="ab54e38f-bfb1-403b-9cc6-79e3d5909865" isOneWay="false" action="" name="queryTerminalPassword" bindingOperationName="queryTerminalPassword" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e1348e03-aa3f-4859-98ba-c3a22e1017eb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:queryTerminalPassword>\r
+         <mo:request>\r
+            <mo:loId>?</mo:loId>\r
+            <mo:pppoe>?</mo:pppoe>\r
+            <mo:workId>?</mo:workId>\r
+         </mo:request>\r
+      </mo:queryTerminalPassword>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="{http://schemas.xmlsoap.org/wsdl/http/}//mo.nbi.hdm.alcatel.com/MobileOperationInterface/queryTerminalPasswordRequest"/></con:call></con:operation><con:operation id="d826e0d2-8d9a-4bd1-886b-8b5f250faad6" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/queryWorkTicketsInfo" name="queryWorkTicketsInfo" bindingOperationName="queryWorkTicketsInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8bf0ed47-5651-47d8-9821-57531afc1d41" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:queryWorkTicketsInfo>\r
+         <mo:logic_id>?</mo:logic_id>\r
+      </mo:queryWorkTicketsInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/queryWorkTicketsInfo"/></con:call></con:operation><con:operation id="8fae19eb-ace1-4a4b-8701-b9a7159d84a1" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/startGetUserInfoDiag" name="startGetUserInfoDiag" bindingOperationName="startGetUserInfoDiag" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8f8ef476-b04c-4acb-b579-ed454867479f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:startGetUserInfoDiag>\r
+         <mo:op_id>?</mo:op_id>\r
+         <mo:logic_id>?</mo:logic_id>\r
+         <mo:ppp_usename>?</mo:ppp_usename>\r
+         <mo:customer_id>?</mo:customer_id>\r
+         <mo:serial_number>?</mo:serial_number>\r
+         <mo:auth_username>?</mo:auth_username>\r
+      </mo:startGetUserInfoDiag>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/startGetUserInfoDiag"/></con:call></con:operation><con:operation id="596bce48-6c69-4a1c-b585-69bf9eb0cee9" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/startPingDiag" name="startPingDiag" bindingOperationName="startPingDiag" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f9802fae-7e58-4d23-8588-7800654e3326" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:startPingDiag>\r
+         <mo:op_id>?</mo:op_id>\r
+         <mo:logic_id>?</mo:logic_id>\r
+         <mo:ppp_usename>?</mo:ppp_usename>\r
+         <mo:serial_number>?</mo:serial_number>\r
+         <mo:customer_id>?</mo:customer_id>\r
+         <mo:ping_para>\r
+            <mo:ping_host>?</mo:ping_host>\r
+            <mo:ping_times>?</mo:ping_times>\r
+            <mo:block_size>?</mo:block_size>\r
+         </mo:ping_para>\r
+      </mo:startPingDiag>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/startPingDiag"/></con:call></con:operation><con:operation id="decebdee-880b-43cb-9723-bd0113ce8c8c" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/startRebootDiag" name="startRebootDiag" bindingOperationName="startRebootDiag" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6572b59f-0070-486e-9e93-7537938957c7" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:startRebootDiag>\r
+         <mo:op_id>1</mo:op_id>\r
+         <mo:logic_id>0809002</mo:logic_id>\r
+         <mo:ppp_usename></mo:ppp_usename>\r
+         <mo:customer_id></mo:customer_id>\r
+         <mo:serial_number></mo:serial_number>\r
+      </mo:startRebootDiag>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/startRebootDiag"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="4c68e443-f579-4ae5-9e52-541147c7d39a" isOneWay="false" action="http://mo.nbi.hdm.alcatel.com/unbindWorkTicket" name="unbindWorkTicket" bindingOperationName="unbindWorkTicket" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ada9130d-29ce-4e85-b609-2a644b110704" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/MobileOperationInterfaceService.MobileOperationInterface/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mo="http://mo.nbi.hdm.alcatel.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <mo:unbindWorkTicket>\r
+         <mo:logic_id>?</mo:logic_id>\r
+         <mo:serial_number>?</mo:serial_number>\r
+         <mo:keep_user_info>?</mo:keep_user_info>\r
+      </mo:unbindWorkTicket>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mo.nbi.hdm.alcatel.com/unbindWorkTicket"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

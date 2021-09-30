@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">30</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">14</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="periodicmessage-request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;actualTime&quot;: ${__time()},&#xd;
+	&quot;dpiVersionInfo&quot;: {&#xd;
+		&quot;interfaceVersion&quot;: &quot;V3.0.0&quot;,&#xd;
+		&quot;version&quot;: &quot;2.2.2&quot;&#xd;
+	},&#xd;
+	&quot;subDeviceInfo&quot;: {&#xd;
+		&quot;subDeviceNumber&quot;: 1,&#xd;
+		&quot;deviceInfo&quot;: [{&#xd;
+			&quot;maxTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+			&quot;downStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;averTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+			&quot;averRxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+			&quot;IP&quot;: &quot;192.168.1.2&quot;,&#xd;
+			&quot;LanPort&quot;: &quot;LAN1&quot;,&#xd;
+			&quot;upStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;maxRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;deviceName&quot;: &quot;PSS-PC&quot;,&#xd;
+			&quot;Mac&quot;: &quot;D8:C4:97:3D:D4:69&quot;&#xd;
+		}]&#xd;
+	},&#xd;
+	&quot;wanTrafficData&quot;: {&#xd;
+		&quot;wanNumber&quot;: 4,&#xd;
+		&quot;wanTrafficInfo&quot;: [{&#xd;
+			&quot;wanName&quot;: &quot;1_TR069_R_VID_4005&quot;,&#xd;
+			&quot;maxTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;downStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;averTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;averRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;upStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;maxRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;wanIndex&quot;: 1&#xd;
+		}, {&#xd;
+			&quot;wanName&quot;: &quot;2_INTERNET_R_VID_41&quot;,&#xd;
+			&quot;maxTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;downStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;averTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;averRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;upStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;maxRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;wanIndex&quot;: 2&#xd;
+		}, {&#xd;
+			&quot;wanName&quot;: &quot;3_OTHER_B_VID_48&quot;,&#xd;
+			&quot;maxTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;downStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;averTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;averRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;upStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;maxRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;wanIndex&quot;: 3&#xd;
+		}, {&#xd;
+			&quot;wanName&quot;: &quot;4_VOIP_R_VID_43&quot;,&#xd;
+			&quot;maxTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;downStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;averTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;averRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;upStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;maxRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;wanIndex&quot;: 4&#xd;
+		}]&#xd;
+	},&#xd;
+	&quot;ponInfo&quot;: {&#xd;
+		&quot;PONRXPower&quot;: ${__Random(100,999999)},&#xd;
+		&quot;PONTXPower&quot;: ${__Random(100,999999)}&#xd;
+	},&#xd;
+	&quot;dnsRequestInfo&quot;: {&#xd;
+		&quot;dnsInfoList&quot;: [{&#xd;
+			&quot;dnsRequestTime&quot;: ${__timeShift(,${__time()},-PT${__Random(10,999)}S,)},&#xd;
+			&quot;dnsAddress&quot;: &quot;192.168.1.1&quot;,&#xd;
+			&quot;dnsResponseTime&quot;: 0,&#xd;
+			&quot;domain&quot;: &quot;s.url.cn&quot;,&#xd;
+			&quot;ipAddress&quot;: []&#xd;
+		}, {&#xd;
+			&quot;dnsRequestTime&quot;: ${__timeShift(,${__time()},-PT${__Random(10,999)}S,)},&#xd;
+			&quot;dnsAddress&quot;: &quot;192.168.1.1&quot;,&#xd;
+			&quot;dnsResponseTime&quot;: 0,&#xd;
+			&quot;domain&quot;: &quot;sqimg.qq.com&quot;,&#xd;
+			&quot;ipAddress&quot;: []&#xd;
+		}, {&#xd;
+			&quot;dnsRequestTime&quot;: ${__timeShift(,${__time()},-PT${__Random(10,999)}S,)},&#xd;
+			&quot;dnsAddress&quot;: &quot;192.168.1.1&quot;,&#xd;
+			&quot;dnsResponseTime&quot;: 0,&#xd;
+			&quot;domain&quot;: &quot;static.dingtalk.com&quot;,&#xd;
+			&quot;ipAddress&quot;: []&#xd;
+		}, {&#xd;
+			&quot;dnsRequestTime&quot;: ${__timeShift(,${__time()},-PT${__Random(10,999)}S,)},&#xd;
+			&quot;dnsAddress&quot;: &quot;192.168.1.1&quot;,&#xd;
+			&quot;dnsResponseTime&quot;: 0,&#xd;
+			&quot;domain&quot;: &quot;t10.baidu.com&quot;,&#xd;
+			&quot;ipAddress&quot;: []&#xd;
+		}]&#xd;
+	},&#xd;
+	&quot;eventType&quot;: {&#xd;
+		&quot;eventCode&quot;: 2,&#xd;
+		&quot;subEvent&quot;: 0&#xd;
+	},&#xd;
+	&quot;potsInfo&quot;: {&#xd;
+		&quot;potsStatus&quot;: &quot;SUCCESS&quot;,&#xd;
+		&quot;potsPhoneNumber&quot;: &quot;+${__Random(8647100000001,8647199999999)}&quot;,&#xd;
+		&quot;potsIndex&quot;: 1&#xd;
+	},&#xd;
+	&quot;deviceInfo&quot;: {&#xd;
+		&quot;ram_size&quot;: 512,&#xd;
+		&quot;nfcSupport&quot;: &quot;NO&quot;,&#xd;
+		&quot;wifiInfoList&quot;: [{&#xd;
+			&quot;SSIDMAC&quot;: &quot;C0:98:DA:E8:60:88&quot;,&#xd;
+			&quot;channel&quot;: &quot;12&quot;,&#xd;
+			&quot;SSIDEnable&quot;: &quot;TRUE&quot;,&#xd;
+			&quot;SSIDEncryptionMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
+			&quot;SSIDname&quot;: &quot;CMCC-aJwP&quot;,&#xd;
+			&quot;SSIDStandard&quot;: &quot;11bgn&quot;,&#xd;
+			&quot;SSID&quot;: 1,&#xd;
+			&quot;SSIDAdvertisement&quot;: &quot;TRUE&quot;&#xd;
+		}, {&#xd;
+			&quot;SSIDMAC&quot;: &quot;C0:98:DA:E8:60:88&quot;,&#xd;
+			&quot;channel&quot;: &quot;12&quot;,&#xd;
+			&quot;SSIDEnable&quot;: &quot;FALSE&quot;,&#xd;
+			&quot;SSIDEncryptionMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
+			&quot;SSIDname&quot;: &quot;CMCC-Share&quot;,&#xd;
+			&quot;SSIDStandard&quot;: &quot;11bgn&quot;,&#xd;
+			&quot;SSID&quot;: 2,&#xd;
+			&quot;SSIDAdvertisement&quot;: &quot;TRUE&quot;&#xd;
+		}, {&#xd;
+			&quot;SSIDMAC&quot;: &quot;C0:98:DA:E8:60:88&quot;,&#xd;
+			&quot;channel&quot;: &quot;12&quot;,&#xd;
+			&quot;SSIDEnable&quot;: &quot;FALSE&quot;,&#xd;
+			&quot;SSIDEncryptionMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
+			&quot;SSIDname&quot;: &quot;CMCC-AP3&quot;,&#xd;
+			&quot;SSIDStandard&quot;: &quot;11bgn&quot;,&#xd;
+			&quot;SSID&quot;: 3,&#xd;
+			&quot;SSIDAdvertisement&quot;: &quot;TRUE&quot;&#xd;
+		}, {&#xd;
+			&quot;SSIDMAC&quot;: &quot;C0:98:DA:E8:60:88&quot;,&#xd;
+			&quot;channel&quot;: &quot;12&quot;,&#xd;
+			&quot;SSIDEnable&quot;: &quot;FALSE&quot;,&#xd;
+			&quot;SSIDEncryptionMode&quot;: &quot;OPEN&quot;,&#xd;
+			&quot;SSIDname&quot;: &quot;CMCC-QLINK&quot;,&#xd;
+			&quot;SSIDStandard&quot;: &quot;11bgn&quot;,&#xd;
+			&quot;SSID&quot;: 4,&#xd;
+			&quot;SSIDAdvertisement&quot;: &quot;FALSE&quot;&#xd;
+		}],&#xd;
+		&quot;cpu&quot;: &quot;EN7526GT&quot;,&#xd;
+		&quot;model&quot;: &quot;GM619&quot;,&#xd;
+		&quot;hardwareVersion&quot;: &quot;HV1.0.00.092&quot;,&#xd;
+		&quot;flashSize&quot;: 256,&#xd;
+		&quot;firmwareVersion&quot;: &quot;V1.6.10.052&quot;,&#xd;
+		&quot;deviceId&quot;: &quot;${__StringFromFile(c:\\data\\code\\jmeter\\deviceid.txt,,,)}&quot;,&#xd;
+		&quot;mac&quot;: &quot;C0:98:DA:E8:60:88&quot;,&#xd;
+		&quot;manufacturer&quot;: &quot;CIOT&quot;&#xd;
+	},&#xd;
+	&quot;deviceStatus&quot;: {&#xd;
+		&quot;lan4ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
+		&quot;PPPOEError&quot;: &quot;ERROR_NONE&quot;,&#xd;
+		&quot;bootTime&quot;: &quot;${__dateTimeConvert(${__timeShift(,${__time()},-PT${__Random(10,999)}H,)},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
+		&quot;WAN&quot;: &quot;CONNECTED&quot;,&#xd;
+		&quot;lan2ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
+		&quot;lan3ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
+		&quot;CPU&quot;: 9,&#xd;
+		&quot;lan1ConnectStatus&quot;: &quot;CONNECTED&quot;,&#xd;
+		&quot;wanIP&quot;: &quot;${__machineIP}&quot;,&#xd;
+		&quot;PPPOEStatus&quot;: &quot;CONNECTED&quot;,&#xd;
+		&quot;Username&quot;: &quot;${__Random(18900100101,18999999999)}&quot;,&#xd;
+		&quot;runingTime&quot;: ${__Random(100,999999)},&#xd;
+		&quot;wanIPV6&quot;: &quot;&quot;,&#xd;
+		&quot;PPPOEUpTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+		&quot;WIFI&quot;: &quot;DISCONNECTED&quot;,&#xd;
+		&quot;sampleTime&quot;: &quot;${__time(yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
+		&quot;RAM&quot;: 27,&#xd;
+		&quot;lanIP&quot;: &quot;${__machineIP}&quot;&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.port">19002</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">rest/cmcc_softprobe/home_gateway/periodicmessage</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

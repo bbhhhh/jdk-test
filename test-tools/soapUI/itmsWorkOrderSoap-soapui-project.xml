@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="eca956bc-28e2-4b2b-9b05-a0a020456fd5" activeEnvironment="Default" name="itmsWorkOrderSoap" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d78916af-4466-49bc-931b-fd3500b00d6d" wsaVersion="NONE" name="WorkOrderHandlerSoapBinding" type="wsdl" bindingName="{http://nbi.hdm.alcatel.com}WorkOrderHandlerSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://135.251.218.88:8098/nbitktws/services/WorkOrderHandlerService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://135.251.218.88:8098/nbitktws/services/WorkOrderHandlerService?wsdl"><con:part><con:url>http://135.251.218.88:8098/nbitktws/services/WorkOrderHandlerService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://nbi.hdm.alcatel.com" xmlns:impl="http://nbi.hdm.alcatel.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:intf="http://nbi.hdm.alcatel.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://nbi.hdm.alcatel.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="user_name" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="workOrderHandler">
+        <complexType>
+          <sequence>
+            <element name="request" type="impl:WorkOrderRequest"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="WorkOrderRequest">
+        <sequence>
+          <element name="areaCode" nillable="true" type="xsd:string"/>
+          <element name="contactPerson" nillable="true" type="xsd:string"/>
+          <element name="deviceId" nillable="true" type="xsd:string"/>
+          <element name="deviceWan" nillable="true" type="xsd:string"/>
+          <element name="orderId" nillable="true" type="xsd:string"/>
+          <element name="orderNo" nillable="true" type="xsd:string"/>
+          <element name="orderTime" nillable="true" type="xsd:string"/>
+          <element name="orderType" nillable="true" type="xsd:string"/>
+          <element name="orderRemark" nillable="true" type="xsd:string"/>
+          <element name="phoneNumber" nillable="true" type="xsd:string"/>
+          <element name="pppoeAccount" nillable="true" type="xsd:string"/>
+          <element name="serviceCode" nillable="true" type="xsd:string"/>
+          <element name="subAreaCode" nillable="true" type="xsd:string"/>
+          <element name="userAddress" nillable="true" type="xsd:string"/>
+          <element name="userId" nillable="true" type="xsd:string"/>
+          <element name="oldUserId" nillable="true" type="xsd:string"/>
+          <element name="userName" nillable="true" type="xsd:string"/>
+          <element name="userType" nillable="true" type="xsd:string"/>
+          <element name="vectorArgues" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="workOrderHandlerResponse">
+        <complexType>
+          <sequence>
+            <element name="workOrderHandlerReturn" type="impl:WorkOrderResponse"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="WorkOrderResponse">
+        <sequence>
+          <element name="orderNo" nillable="true" type="xsd:string"/>
+          <element name="finishDate" nillable="true" type="xsd:string"/>
+          <element name="finshReason" nillable="true" type="xsd:string"/>
+          <element name="orderId" nillable="true" type="xsd:string"/>
+          <element name="orderResult" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="workOrderHandlerResponse">
+    <wsdl:part name="parameters" element="impl:workOrderHandlerResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="workOrderHandlerRequest">
+    <wsdl:part name="username_header" element="impl:user_name"></wsdl:part>
+    <wsdl:part name="password_header" element="impl:password"></wsdl:part>
+    <wsdl:part name="parameters" element="impl:workOrderHandler"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WorkOrderHandlerPortType">
+    <wsdl:operation name="workOrderHandler">
+      <wsdl:input name="workOrderHandlerRequest" message="impl:workOrderHandlerRequest"></wsdl:input>
+      <wsdl:output name="workOrderHandlerResponse" message="impl:workOrderHandlerResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WorkOrderHandlerSoapBinding" type="impl:WorkOrderHandlerPortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="workOrderHandler">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="workOrderHandlerRequest">
+        <wsdlsoap:header message="impl:workOrderHandlerRequest" part="username_header" use="literal"></wsdlsoap:header>
+        <wsdlsoap:header message="impl:workOrderHandlerRequest" part="password_header" use="literal"></wsdlsoap:header>
+        <wsdlsoap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="workOrderHandlerResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkOrderHandlerService">
+    <wsdl:port name="WorkOrderHandlerHttpPort" binding="impl:WorkOrderHandlerSoapBinding">
+      <wsdlsoap:address location="http://135.251.218.88:8098/nbitktws/services/WorkOrderHandlerService/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://135.251.208.86:8090/services/WorkOrderHandlerService/</con:endpoint><con:endpoint>http://135.251.218.88:8098/nbitktws/services/WorkOrderHandlerService/</con:endpoint></con:endpoints><con:operation id="e62790e6-69a1-42fe-9e53-888608bd015a" isOneWay="false" action="" name="workOrderHandler" bindingOperationName="workOrderHandler" type="Request-Response" outputName="workOrderHandlerResponse" inputName="workOrderHandlerRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a9a42e95-23e8-4608-ba9b-9277e4349184" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.218.88:8098/nbitktws/services/WorkOrderHandlerService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nbi="http://nbi.hdm.alcatel.com">\r
+   <soapenv:Header>\r
+      <nbi:password>?</nbi:password>\r
+      <nbi:user_name>?</nbi:user_name>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <nbi:workOrderHandler>\r
+         <nbi:request>\r
+            <nbi:areaCode>?</nbi:areaCode>\r
+            <nbi:contactPerson>?</nbi:contactPerson>\r
+            <nbi:deviceId>?</nbi:deviceId>\r
+            <nbi:deviceWan>?</nbi:deviceWan>\r
+            <nbi:orderId>?</nbi:orderId>\r
+            <nbi:orderNo>?</nbi:orderNo>\r
+            <nbi:orderTime>?</nbi:orderTime>\r
+            <nbi:orderType>?</nbi:orderType>\r
+            <nbi:orderRemark>?</nbi:orderRemark>\r
+            <nbi:phoneNumber>?</nbi:phoneNumber>\r
+            <nbi:pppoeAccount>?</nbi:pppoeAccount>\r
+            <nbi:serviceCode>?</nbi:serviceCode>\r
+            <nbi:subAreaCode>?</nbi:subAreaCode>\r
+            <nbi:userAddress>?</nbi:userAddress>\r
+            <nbi:userId>?</nbi:userId>\r
+            <nbi:oldUserId>?</nbi:oldUserId>\r
+            <nbi:userName>?</nbi:userName>\r
+            <nbi:userType>?</nbi:userType>\r
+            <nbi:vectorArgues>?</nbi:vectorArgues>\r
+         </nbi:request>\r
+      </nbi:workOrderHandler>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nbi.hdm.alcatel.com/WorkOrderHandlerPortType/workOrderHandlerRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="122f7b66-a32b-4ce6-92b4-4da39f6d430f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://135.251.208.86:8090/services/WorkOrderHandlerService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nbi="http://nbi.hdm.alcatel.com">\r
+   <soapenv:Header>\r
+      <nbi:password>?</nbi:password>\r
+      <nbi:user_name>?</nbi:user_name>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <nbi:workOrderHandler>\r
+         <nbi:request>\r
+            <nbi:areaCode>?</nbi:areaCode>\r
+            <nbi:contactPerson>?</nbi:contactPerson>\r
+            <nbi:deviceId>?</nbi:deviceId>\r
+            <nbi:deviceWan>?</nbi:deviceWan>\r
+            <nbi:orderId>?</nbi:orderId>\r
+            <nbi:orderNo>?</nbi:orderNo>\r
+            <nbi:orderTime>?</nbi:orderTime>\r
+            <nbi:orderType>?</nbi:orderType>\r
+            <nbi:orderRemark>?</nbi:orderRemark>\r
+            <nbi:phoneNumber>?</nbi:phoneNumber>\r
+            <nbi:pppoeAccount>?</nbi:pppoeAccount>\r
+            <nbi:serviceCode>?</nbi:serviceCode>\r
+            <nbi:subAreaCode>?</nbi:subAreaCode>\r
+            <nbi:userAddress>?</nbi:userAddress>\r
+            <nbi:userId>?</nbi:userId>\r
+            <nbi:oldUserId>?</nbi:oldUserId>\r
+            <nbi:userName>?</nbi:userName>\r
+            <nbi:userType>?</nbi:userType>\r
+            <nbi:vectorArgues>?</nbi:vectorArgues>\r
+         </nbi:request>\r
+      </nbi:workOrderHandler>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nbi.hdm.alcatel.com/WorkOrderHandlerPortType/workOrderHandlerRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

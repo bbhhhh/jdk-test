@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="673315ae-7486-4f5c-9e25-16e5349b8d6e" activeEnvironment="Default" name="ap_probe" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="7057b5e1-e317-4bf2-8fab-7f48e05e9731" wadlVersion="http://wadl.dev.java.net/2009/02" name="application" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints/><con:resource name="rest/softprobe/periodic-message" path="rest/softprobe/periodic-message" id="688f3e41-b8bc-4348-a376-f2d95880fd40"><con:settings/><con:parameters/><con:resource name="uplinkStatus" path="uplinkStatus" id="de275918-4a9e-4439-b0b3-303a9db52de1"><con:settings/><con:parameters/><con:method name="POST" id="4767c6ad-9cff-401e-9106-d4e7d72cf7e7" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/plain</con:mediaType><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=ISO-8859-1</con:mediaType><con:status>500</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>403</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>503</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="23e140e1-33c9-4b4a-9daa-0aebcdc31b21" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://192.168.56.102:39986</con:endpoint><con:request>{"MAC":"a1b2c3d4e5f6",
+"timestamp":734354788,
+"data":
+{"UplinkType":"Ethernet"
+,"WorkingMode":1,
+"RuningTime":"100","CPUOccupancyRate":"30","RamOccupancyRate":"50","Radio":"2.4G","SSID":"CMCC-12345",
+"Channel":"1,6","Noise":"-80",
+"SNR":"35","RSSI":"-55","RXRate":"100","TxRtae":"100","AverRXRate":"100","AverTXRate":"100",
+"MaxRXRate":"100","MaxTXRate":"100"}}</con:request><con:originalUri>https://127.0.0.1/rest/softprobe/periodic-message/uplinkStatus</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="staInfo" path="staInfo" id="df480b87-777c-475a-b9e0-7cb101123fe9"><con:settings/><con:parameters/><con:method name="POST" id="bbbaad2f-991f-4b6b-9c64-482841368078" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sta="https://127.0.0.1/rest/softprobe/periodic-message/staInfo">sta:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="3d726983-3a8d-41df-b48a-76cd4c9f1192" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://192.168.56.104:39986</con:endpoint><con:request>{
+"MAC": "xxxxxxxx",
+"timestamp": 734354788,
+	   "data" :{
+	    " STANumber ": 2,
+" Devices ":[
+	{
+" IPAddress ": "192.168.10.1",
+" HostName ": "AP1",
+" MacAddress ": "012233445566",
+" VMacAddress ": "012233445566",
+" UpTime ": "100",
+" Radio ":"2.4G",
+" SSID": "CMCC-12345",
+" RSSI ": "-55",
+" RxRate ":"1000",
+" TxRate ":"1000",
+" AverRxRate ":"100",
+" AverRxRate ":"100",
+" MaxRxRate ":"150",
+" MaxRxRate ":"150"
+
+
+},
+{
+" IPAddress ": "192.168.10.3",
+" HostName ": "AP2",
+" MacAddress ": "012233445566",
+" VMacAddress ": "012233445566",
+" UpTime ": "100",
+" Radio ":"5G",
+" SSID": "CMCC-12345-5G",
+" RSSI ": "-55",
+" RxRate ":"1000",
+" TxRate ":"1000",
+" AverRXRate ":"100",
+" AverRXRate ":"100",
+" MaxRXRate ":"150",
+" MaxRXRate ":"150"
+
+}
+]
+}
+}
+</con:request><con:originalUri>https://127.0.0.1/rest/softprobe/periodic-message/staInfo</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="WifiStatus" path="WiFiStatus" id="4af8e660-315e-493c-a9ed-d1b0a6cb9d76"><con:settings/><con:parameters/><con:method name="POST" id="2af80108-a4ad-4311-815f-c61790bd6115" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:wif="https://127.0.0.1/rest/softprobe/periodic-message/WifiStatus">wif:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="f3818e47-c2f7-49b5-a9b6-e0cda545016f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://192.168.56.102:50080</con:endpoint><con:request>{
+"MAC": "xxxxxxxx",
+"timestamp": 734354788,
+	   "data" :{
+	  "Radios":[
+{
+"Radio": "2.4G",
+"Enable": 1,
+"TransmitPower ": "100",
+"Channel": "1,6"
+},
+{
+"Radio": "5G",
+"Enable": 1,
+"TransmitPower ": "100",
+"Channel": "36"
+}
+		],
+"Configurations":[
+{
+"Radio": "2.4G",
+"Index": 1,
+"Enable": 1,
+"SSID": "CMCC-2341",
+"SecurityMode": "MIXED-WPAPSK2",
+"Pwd ": "*******",
+"MaxAssociateNum": 10,
+"SSIDAdvertisementEnabled": 1
+},
+{
+"Radio": "5G",
+"Index": 1,
+"Enable": 1,
+"SSID": "CMCC-2341-5G",
+"SecurityMode": "MIXED-WPAPSK2",
+"Pwd": "*******",
+"MaxAssociateNum": 10,
+"SSIDAdvertisementEnabled": 1
+}
+]
+}
+}
+</con:request><con:originalUri>https://127.0.0.1/rest/softprobe/periodic-message/WifiStatus</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="wlanNeighbor" path="wlanNeighbor" id="b6467931-3ae5-4843-8f2b-6ba2e3415350"><con:settings/><con:parameters/><con:method name="POST" id="be17179b-c8d3-43ba-b0c2-67cea96f0128" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:wlan="https://127.0.0.1/rest/softprobe/periodic-message/wlanNeighbor">wlan:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/plain</con:mediaType><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="a13ee764-4a38-4c4b-a1f9-270811bf5e8c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://192.168.56.104:50080</con:endpoint><con:request>{
+"MAC": "xxxxxxxx",
+"timestamp": 734354788,
+	   "data" :{
+	    " Number ": 2,
+     "Radios": [
+{
+"Radio": "2.4G",
+"SSID": "CMCC-1234", 
+"MacAddress": "0A2233445568", 
+"Channel": "1,6",
+"RSSI": "-60" 
+},
+{
+"Radio": "5G",
+"SSID": "CMCC-1234",
+"MacAddress": "0B2233445566",
+"Channel": "36",
+"RSSI": "-50"
+}
+]
+}
+}
+</con:request><con:originalUri>https://127.0.0.1/rest/softprobe/periodic-message/wlanNeighbor</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="serviceDataInfo" path="serviceDataInfo" id="a8543e09-071f-4e9c-8bc9-afd32efb20e5"><con:settings/><con:parameters/><con:method name="POST" id="a5a9acbc-3743-4a0a-b2c8-173d83aedaaa" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ser="https://127.0.0.1/rest/softprobe/periodic-message/serviceDataInfo">ser:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/plain</con:mediaType><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="f5ac44a4-a55a-4de9-939b-98094c2331b4" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://192.168.56.104:50080</con:endpoint><con:request>{
+"MAC": "xxxxxxxx", 
+"timestamp": 734354788,
+	   "data" :{
+	    " ServiceNumber ": 1,
+     " ServiceBaseInfo ": [
+{
+" MacAddress ": "0A2233445568",
+" StartTime ": "2020-01-19 17:33:26", 
+" RuningTime": "1000", 
+" URL ": "www.baidu.com",
+" Protocol ": "TCP", 
+" AverTxRate ": "100",
+" AverRxRate ": "100",
+" MaxTxRate ": "-100",
+" MaxRxRate ": "100",
+" UpStaticstics ": 123456,
+" DownStaticstics ": 3456,
+" TcpConnectTimes ": 10,
+" TcpSucessTimes ":  9,
+" TcpAvgTime ": 10,
+" TcpReconnectRate ": 10,
+" HttpResponesDelay ": 5,
+" HttpRequestErrorList ": "203,204",
+" HttpRequestTimes ": 10,
+" HttpRequestFailTimes ": 1,
+" DnsParseResponesDelay ": 3
+
+}
+]
+}
+}
+</con:request><con:originalUri>https://127.0.0.1/rest/softprobe/periodic-message/serviceDataInfo</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
