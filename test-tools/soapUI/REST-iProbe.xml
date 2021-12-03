@@ -58,7 +58,75 @@
   <con:entry key="Domain" value=""/>
   <con:entry key="Tool Args" value=""/>
   <con:entry key="Save Project" value="false"/>
-</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="fef70fbd-99e3-406f-a433-b6e2df17ac17" wadlVersion="http://wadl.dev.java.net/2009/02" name="application" type="rest" basePath="/" definitionUrl="http://135.251.218.88:19002/application.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://127.0.0.1:19002</con:endpoint><con:endpoint>http://135.251.218.216:8080</con:endpoint><con:endpoint>http://135.251.218.88:9008</con:endpoint></con:endpoints><con:resource name="rest/cmcc_softprobe/home_gateway" path="rest/cmcc_softprobe/home_gateway" id="b3302077-553a-471c-b6cf-d404226d63b7"><con:settings/><con:parameters/><con:resource name="bootmessage" path="bootmessage" id="ebe77684-2539-4589-a298-02282773ad88"><con:settings/><con:parameters/><con:method name="POST - bootmessage" id="afbd1f38-97a2-45e1-93f8-0c4f217ca21e" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="59ffa318-0da1-4c89-b46e-510357a32514" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://127.0.0.1:19002</con:endpoint><con:request>{
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="fef70fbd-99e3-406f-a433-b6e2df17ac17" wadlVersion="http://wadl.dev.java.net/2009/02" name="application" type="rest" basePath="/" definitionUrl="http://135.251.218.88:19002/application.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://135.251.218.88:19002/application.wadl"><con:part><con:url>http://135.251.218.88:19002/application.wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc jersey:generatedBy="Jersey: 2.23.2 2016-08-08 17:14:55" xmlns:jersey="http://jersey.java.net/"/>
+  <doc jersey:hint="This is simplified WADL with user and core resources only. To get full WADL with extended resources use the query parameter detail. Link: http://135.251.218.88:19002/application.wadl?detail=true" xmlns:jersey="http://jersey.java.net/"/>
+  <grammars/>
+  <resources base="http://135.251.218.88:19002/">
+    <resource path="rest/cmcc_softprobe/home_gateway">
+      <resource path="secure_key_stage_one">
+        <method id="secure_key_stage_one" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="alarm">
+        <method id="alarm" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="periodicmessage">
+        <method id="periodicmessage" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="bootmessage">
+        <method id="bootmessage" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="realtime">
+        <method id="realtime" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="secure_key_stage_two">
+        <method id="secure_key_stage_two" name="POST">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://127.0.0.1:19002</con:endpoint><con:endpoint>http://135.251.218.216:8080</con:endpoint><con:endpoint>http://135.251.218.88:9008</con:endpoint></con:endpoints><con:resource name="rest/cmcc_softprobe/home_gateway" path="rest/cmcc_softprobe/home_gateway" id="b3302077-553a-471c-b6cf-d404226d63b7"><con:settings/><con:parameters/><con:resource name="bootmessage" path="bootmessage" id="ebe77684-2539-4589-a298-02282773ad88"><con:settings/><con:parameters/><con:method name="POST - bootmessage" id="afbd1f38-97a2-45e1-93f8-0c4f217ca21e" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="59ffa318-0da1-4c89-b46e-510357a32514" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://127.0.0.1:19002</con:endpoint><con:request>{
 	"dpiVersionInfo": {
 		"interfaceVersion": "V3.0.0",
 		"version": "3.0.0"
@@ -292,7 +360,7 @@
 		"RAM": 44,
 		"lanIP": "192.168.1.1"
 	}
-}</con:request><con:originalUri>http://135.251.218.88/rest/cmcc_softprobe/home_gateway/bootmessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="periodicmessage" path="periodicmessage" id="840de30c-bc0f-443d-a09a-7c1a3f506841"><con:settings/><con:parameters><con:parameter><con:name>actualTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST - periodicmessage" id="e00c18eb-f940-40a2-8bfe-f1d8b481f6b3" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="dbc9e4c5-2039-4415-9d5b-417d69a03a0e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://127.0.0.1:19002</con:endpoint><con:request>{
+}</con:request><con:originalUri>http://135.251.218.88/rest/cmcc_softprobe/home_gateway/bootmessage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="periodicmessage" path="periodicmessage" id="840de30c-bc0f-443d-a09a-7c1a3f506841"><con:settings/><con:parameters><con:parameter><con:name>actualTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST - periodicmessage" id="e00c18eb-f940-40a2-8bfe-f1d8b481f6b3" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="dbc9e4c5-2039-4415-9d5b-417d69a03a0e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://135.251.218.88:19002</con:endpoint><con:request>{
   "actualTime": 1632469745083,
   "dpiVersionInfo": {
     "interfaceVersion": "V3.0.0",
@@ -1132,7 +1200,7 @@
     "hardwareVersion": "HV1.0.00.092",
     "flashSize": 256,
     "firmwareVersion": "V1.6.10.052",
-    "deviceId": "000001",
+    "deviceId": "822",
     "mac": "C0:98:DA:E8:60:88",
     "manufacturer": "CIOT"
   },
