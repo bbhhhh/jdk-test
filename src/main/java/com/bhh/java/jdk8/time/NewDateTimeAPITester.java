@@ -4,6 +4,7 @@
 package com.bhh.java.jdk8.time;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
@@ -70,6 +71,13 @@ public class NewDateTimeAPITester {
         logger.info("seconds between ldt1 and ldt2 ={}",
                 ldt2.toEpochSecond(ZoneOffset.ofHours(8)) - ldt1.toEpochSecond(ZoneOffset.ofHours(8)));
         //LocalDateTime.parse("2019-12-17T11:30:38.000000", formatter2);
+
+        DateTimeFormatter dtf3 = new DateTimeFormatterBuilder()
+                .appendPattern("yyyy-MM-dd")
+                .toFormatter();
+        LocalDate ldt7 = LocalDate.parse("2022-08-09",dtf3);
+
+        logger.info(ldt7.atStartOfDay().toString());
 
     }
 }
