@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">stoptest</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">500</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="uplinkStatus-request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;MAC&quot;:&quot;a1b2c3d4e5f6&quot;,&#xd;
+&quot;timestamp&quot;:${__time()},&#xd;
+&quot;data&quot;:&#xd;
+{&quot;UplinkType&quot;:&quot;Ethernet&quot;&#xd;
+,&quot;WorkingMode&quot;:1,&#xd;
+&quot;RuningTime&quot;:&quot;100&quot;,&quot;CPUOccupancyRate&quot;:&quot;30&quot;,&quot;RamOccupancyRate&quot;:&quot;50&quot;,&quot;Radio&quot;:&quot;2.4G&quot;,&quot;SSID&quot;:&quot;CMCC-12345&quot;,&#xd;
+&quot;Channel&quot;:&quot;1,6&quot;,&quot;Noise&quot;:&quot;-80&quot;,&#xd;
+&quot;SNR&quot;:&quot;35&quot;,&quot;RSSI&quot;:&quot;-55&quot;,&quot;RXRate&quot;:&quot;100&quot;,&quot;TxRtae&quot;:&quot;100&quot;,&quot;AverRXRate&quot;:&quot;100&quot;,&quot;AverTXRate&quot;:&quot;100&quot;,&#xd;
+&quot;MaxRXRate&quot;:&quot;100&quot;,&quot;MaxTXRate&quot;:&quot;100&quot;}}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.85</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">rest/softprobe/periodic-message/uplinkStatus</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="staInfo" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+&quot;MAC&quot;: &quot;xxxxxxxx&quot;,&#xd;
+&quot;timestamp&quot;:${__time()},&#xd;
+	   &quot;data&quot; :{&#xd;
+	    &quot; STANumber &quot;: 2,&#xd;
+&quot; Devices &quot;:[&#xd;
+	{&#xd;
+&quot; IPAddress &quot;: &quot;192.168.10.1&quot;,&#xd;
+&quot; HostName &quot;: &quot;AP1&quot;,&#xd;
+&quot; MacAddress &quot;: &quot;012233445566&quot;,&#xd;
+&quot; VMacAddress &quot;: &quot;012233445566&quot;,&#xd;
+&quot; UpTime &quot;: &quot;100&quot;,&#xd;
+&quot; Radio &quot;:&quot;2.4G&quot;,&#xd;
+&quot; SSID&quot;: &quot;CMCC-12345&quot;,&#xd;
+&quot; RSSI &quot;: &quot;-55&quot;,&#xd;
+&quot; RxRate &quot;:&quot;1000&quot;,&#xd;
+&quot; TxRate &quot;:&quot;1000&quot;,&#xd;
+&quot; AverRxRate &quot;:&quot;100&quot;,&#xd;
+&quot; AverRxRate &quot;:&quot;100&quot;,&#xd;
+&quot; MaxRxRate &quot;:&quot;150&quot;,&#xd;
+&quot; MaxRxRate &quot;:&quot;150&quot;&#xd;
+&#xd;
+&#xd;
+},&#xd;
+{&#xd;
+&quot; IPAddress &quot;: &quot;192.168.10.3&quot;,&#xd;
+&quot; HostName &quot;: &quot;AP2&quot;,&#xd;
+&quot; MacAddress &quot;: &quot;012233445566&quot;,&#xd;
+&quot; VMacAddress &quot;: &quot;012233445566&quot;,&#xd;
+&quot; UpTime &quot;: &quot;100&quot;,&#xd;
+&quot; Radio &quot;:&quot;5G&quot;,&#xd;
+&quot; SSID&quot;: &quot;CMCC-12345-5G&quot;,&#xd;
+&quot; RSSI &quot;: &quot;-55&quot;,&#xd;
+&quot; RxRate &quot;:&quot;1000&quot;,&#xd;
+&quot; TxRate &quot;:&quot;1000&quot;,&#xd;
+&quot; AverRXRate &quot;:&quot;100&quot;,&#xd;
+&quot; AverRXRate &quot;:&quot;100&quot;,&#xd;
+&quot; MaxRXRate &quot;:&quot;150&quot;,&#xd;
+&quot; MaxRXRate &quot;:&quot;150&quot;&#xd;
+&#xd;
+}&#xd;
+]&#xd;
+}&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.85</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/rest/softprobe/periodic-message/staInfo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="WifiStatus-Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+&quot;MAC&quot;: &quot;xxxxxxxx&quot;,&#xd;
+&quot;timestamp&quot;: ${__time()},&#xd;
+	   &quot;data&quot; :{&#xd;
+	  &quot;Radios&quot;:[&#xd;
+{&#xd;
+&quot;Radio&quot;: &quot;2.4G&quot;,&#xd;
+&quot;Enable&quot;: 1,&#xd;
+&quot;TransmitPower &quot;: &quot;100&quot;,&#xd;
+&quot;Channel&quot;: &quot;1,6&quot;&#xd;
+},&#xd;
+{&#xd;
+&quot;Radio&quot;: &quot;5G&quot;,&#xd;
+&quot;Enable&quot;: 1,&#xd;
+&quot;TransmitPower &quot;: &quot;100&quot;,&#xd;
+&quot;Channel&quot;: &quot;36&quot;&#xd;
+}&#xd;
+		],&#xd;
+&quot;Configurations&quot;:[&#xd;
+{&#xd;
+&quot;Radio&quot;: &quot;2.4G&quot;,&#xd;
+&quot;Index&quot;: 1,&#xd;
+&quot;Enable&quot;: 1,&#xd;
+&quot;SSID&quot;: &quot;CMCC-2341&quot;,&#xd;
+&quot;SecurityMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
+&quot;Pwd &quot;: &quot;*******&quot;,&#xd;
+&quot;MaxAssociateNum&quot;: 10,&#xd;
+&quot;SSIDAdvertisementEnabled&quot;: 1&#xd;
+},&#xd;
+{&#xd;
+&quot;Radio&quot;: &quot;5G&quot;,&#xd;
+&quot;Index&quot;: 1,&#xd;
+&quot;Enable&quot;: 1,&#xd;
+&quot;SSID&quot;: &quot;CMCC-2341-5G&quot;,&#xd;
+&quot;SecurityMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
+&quot;Pwd&quot;: &quot;*******&quot;,&#xd;
+&quot;MaxAssociateNum&quot;: 10,&#xd;
+&quot;SSIDAdvertisementEnabled&quot;: 1&#xd;
+}&#xd;
+]&#xd;
+}&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.85</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/rest/softprobe/periodic-message/WiFiStatus</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wlanNeighbor-Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+&quot;MAC&quot;: &quot;xxxxxxxx&quot;,&#xd;
+&quot;timestamp&quot;: ${__time()},&#xd;
+	   &quot;data&quot; :{&#xd;
+	    &quot; Number &quot;: 2,&#xd;
+     &quot;Radios&quot;: [&#xd;
+{&#xd;
+&quot;Radio&quot;: &quot;2.4G&quot;,&#xd;
+&quot;SSID&quot;: &quot;CMCC-1234&quot;, &#xd;
+&quot;MacAddress&quot;: &quot;0A2233445568&quot;, &#xd;
+&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
+&quot;RSSI&quot;: &quot;-60&quot; &#xd;
+},&#xd;
+{&#xd;
+&quot;Radio&quot;: &quot;5G&quot;,&#xd;
+&quot;SSID&quot;: &quot;CMCC-1234&quot;,&#xd;
+&quot;MacAddress&quot;: &quot;0B2233445566&quot;,&#xd;
+&quot;Channel&quot;: &quot;36&quot;,&#xd;
+&quot;RSSI&quot;: &quot;-50&quot;&#xd;
+}&#xd;
+]&#xd;
+}&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.85</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/rest/softprobe/periodic-message/wlanNeighbor</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="serviceDataInfo-Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+&quot;MAC&quot;: &quot;xxxxxxxx&quot;, &#xd;
+&quot;timestamp&quot;: ${__time()},&#xd;
+	   &quot;data&quot; :{&#xd;
+	    &quot; ServiceNumber &quot;: 1,&#xd;
+     &quot; ServiceBaseInfo &quot;: [&#xd;
+{&#xd;
+&quot; MacAddress &quot;: &quot;0A2233445568&quot;,&#xd;
+&quot; StartTime &quot;: &quot;2020-01-19 17:33:26&quot;, &#xd;
+&quot; RuningTime&quot;: &quot;1000&quot;, &#xd;
+&quot; URL &quot;: &quot;www.baidu.com&quot;,&#xd;
+&quot; Protocol &quot;: &quot;TCP&quot;, &#xd;
+&quot; AverTxRate &quot;: &quot;100&quot;,&#xd;
+&quot; AverRxRate &quot;: &quot;100&quot;,&#xd;
+&quot; MaxTxRate &quot;: &quot;-100&quot;,&#xd;
+&quot; MaxRxRate &quot;: &quot;100&quot;,&#xd;
+&quot; UpStaticstics &quot;: 123456,&#xd;
+&quot; DownStaticstics &quot;: 3456,&#xd;
+&quot; TcpConnectTimes &quot;: 10,&#xd;
+&quot; TcpSucessTimes &quot;:  9,&#xd;
+&quot; TcpAvgTime &quot;: 10,&#xd;
+&quot; TcpReconnectRate &quot;: 10,&#xd;
+&quot; HttpResponesDelay &quot;: 5,&#xd;
+&quot; HttpRequestErrorList &quot;: &quot;203,204&quot;,&#xd;
+&quot; HttpRequestTimes &quot;: 10,&#xd;
+&quot; HttpRequestFailTimes &quot;: 1,&#xd;
+&quot; DnsParseResponesDelay &quot;: 3&#xd;
+&#xd;
+}&#xd;
+]&#xd;
+}&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.85</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/rest/softprobe/periodic-message/serviceDataInfo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
