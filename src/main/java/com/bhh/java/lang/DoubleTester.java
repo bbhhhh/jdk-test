@@ -27,6 +27,13 @@ public class DoubleTester {
 
         Boolean b1 = Boolean.valueOf("true");
 
+        long aaa = 1000;
+        int bbb = 2000;
+        double ccc = 0.8;
+
+        Logger.info("{}",(double)aaa/bbb);
+        Logger.info("{}",ccc<=((double)aaa/bbb));
+
         try {
             TimeUnit.SECONDS.sleep(10);
         } catch (InterruptedException e) {

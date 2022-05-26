@@ -16,6 +16,11 @@ public class ApacheCommonsLang3StringUtilsTester {
         String a = "abc.efg.efg.ggg";
         logger.info("{}", StringUtils.substringAfterLast(a, "."));
         logger.info("{}", StringUtils.substringBeforeLast(a, "."));
-
+        String b = "asdfe\r\nfe";
+        String c = "\n\r";
+        logger.info("{}",b);
+        logger.info("{}",StringUtils.containsAny(b,c));
+        logger.info("{}",StringUtils.contains(b,c));
+        logger.info("{}",StringUtils.containsAny(b,'\r','\n'));
     }
 }

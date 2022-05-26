@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
@@ -79,5 +80,19 @@ public class NewDateTimeAPITester {
 
         logger.info(ldt7.atStartOfDay().toString());
 
+        DateTimeFormatter dtf33 = new DateTimeFormatterBuilder()
+                .appendPattern("yyyyMMddHHmmss")
+                .toFormatter();
+
+        logger.info(LocalDateTime.now().format(dtf3));
+        logger.info(LocalDateTime.now().format(dtf33));
+
+        DateTimeFormatter dtf4 = new DateTimeFormatterBuilder()
+                .appendPattern("yyyy-MM-dd['T']HH:mm:ss.SSSXXX")
+                .toFormatter();
+        logger.info(ZonedDateTime.now().format(dtf4));
+
+
+        logger.info(String.valueOf(new java.util.Date().getTime()));
     }
 }

@@ -24,7 +24,7 @@ public class TimeTester {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
         sdf.setLenient(false);
-        sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+//        sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
         try {
             timeStr = timeStr.substring(0, 23);
             newTime = sdf.parse(timeStr);
@@ -35,6 +35,7 @@ public class TimeTester {
     }
 
     public static void main(String[] args){
-        logger.info("{}",parseTime("2021-05-08T02:13:22.780Z"));
+        logger.info("{}",parseTime("2021-05-08T02:13:22.78Z"));
+//        logger.info("{}",parseTime("2021-05-08T02:13:22Z"));
     }
 }
