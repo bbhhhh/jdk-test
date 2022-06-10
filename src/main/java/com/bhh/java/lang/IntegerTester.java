@@ -27,5 +27,12 @@ public class IntegerTester {
 
         logger.info("binary of {} = {}", IntegerVar5, Integer.toBinaryString(IntegerVar5));
         logger.info("binary of {} = {}", -232, Integer.toBinaryString(-232));
+
+
+        Integer i1 = 1;
+        Integer i2 = i1;
+        i2++;
+        logger.info("i1={},i2={}",i1,i2);
+
     }
 }
