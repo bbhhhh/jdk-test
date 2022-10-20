@@ -34,5 +34,11 @@ public class IntegerTester {
         i2++;
         logger.info("i1={},i2={}",i1,i2);
 
+        Integer cc = null;
+        test(cc);
+    }
+
+    static void test(int a){
+        logger.info("a={}",a);
     }
 }

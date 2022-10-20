@@ -3,6 +3,7 @@ package com.bhh.java.lang.list;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -41,6 +42,20 @@ public class ConvertArrayToListTester {
         int[] input = {5, 3, 1, 6, 4, 7, 8, 9};
         Arrays.sort(input);
         ArrayList<Integer> list2 = new ArrayList<>();
+        List<Integer> l3 = Arrays.asList(a);
+        logger.info("l3 size={}",l3.size());
+        l3 = new ArrayList<>();
+        l3.add(1);
+        l3.add(2);
+        logger.info("l3 size={}",l3.size());
+        Integer x=null;
+        for (Iterator<Integer> i = l3.iterator();i.hasNext();){
+            x = i.next();
+            i.remove();
+            break;
+        }
+        logger.info("l3 size={}",l3.size());
+        logger.info("x is null?={}",x==null);
         //wrong code,
         //Collections.addAll(list2, Arrays.copyOfRange(input, 0, 3));
 

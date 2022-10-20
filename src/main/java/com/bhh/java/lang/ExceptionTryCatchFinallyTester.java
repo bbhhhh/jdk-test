@@ -1,5 +1,9 @@
 package com.bhh.java.lang;
 
+import java.sql.SQLException;
+
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @Project: jdk-test
  * @author : haihuab
@@ -7,6 +11,7 @@ package com.bhh.java.lang;
  * @Description: TODO
  */
 
+@Slf4j
 public class ExceptionTryCatchFinallyTester {
 
     public static void test() throws Exception {
@@ -20,12 +25,32 @@ public class ExceptionTryCatchFinallyTester {
         }
     }
 
-    public static void main(String... args) {
+    static void tt2() throws SQLException{
+        Integer a = null;
         try {
-            test();
-        } catch (Exception e) {
-            System.err.println("catch by main");
-            e.printStackTrace();
+            int b = a;
+            System.out.println(b);
+        }catch(Exception e){
+            throw e;
+        }
+    }
+
+    public static void main(String... args) {
+//        try {
+//            test();
+//        } catch (Exception e) {
+//            System.err.println("catch by main");
+//            e.printStackTrace();
+//        }
+
+        try{
+            tt2();
+            int a = Integer.parseInt("a1");
+        }catch(Exception e){
+            //e.printStackTrace();
+            log.error(e.getMessage());
+            log.error(e.getLocalizedMessage());
+            log.error(e.toString());
         }
     }
 }
