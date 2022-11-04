@@ -330,7 +330,7 @@
 		"hardwareVersion": "HWVer-C101",
 		"firmwareVersion": "V1.1.1.00.02",
 		"flashSize": 256,
-		"deviceId": "ZTEGCA0A972C",
+		"deviceId": "FHTT1B4E0380",
 		"mac": "40:62:EA:FB:C1:40",
 		"manufacturer": "CMDC",
 		"style":"style-a"
@@ -1194,7 +1194,7 @@
     "hardwareVersion": "HV1.0.00.092",
     "flashSize": 256,
     "firmwareVersion": "V1.6.10.052",
-    "deviceId": "CMCC100099D5",
+    "deviceId": "ZTEGCA0A97FF",
     "mac": "C0:98:DA:E8:60:88",
     "manufacturer": "CIOT"
   },
