@@ -1,4 +1,4 @@
-Huawei Technologies Co., Ltd
+Huawei
 nsb_sh
 CIOT
 ZTE
