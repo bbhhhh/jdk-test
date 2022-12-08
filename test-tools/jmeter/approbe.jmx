@@ -53,6 +53,11 @@
             <stringProp name="Argument.value">Cable</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="time-stamp" elementType="Argument">
+            <stringProp name="Argument.name">time-stamp</stringProp>
+            <stringProp name="Argument.value">${__time()}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
@@ -62,7 +67,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1000</stringProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
@@ -85,7 +90,7 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
     &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__time()},&#xd;
+    &quot;timestamp&quot;:${TIMESTAMP},&#xd;
     &quot;data&quot;:&#xd;
     {&#xd;
 	&quot;UplinkType&quot;: &quot;${__RandomFromMultipleVars(wlan|eth|plc|cable)}&quot;,&#xd;
@@ -141,28 +146,10 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
 	&quot;MAC&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-	&quot;timestamp&quot;: ${__time()},&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 	&quot;data&quot;: {&#xd;
 		&quot;STANumber&quot;: 2,&#xd;
 		&quot;Devices&quot;: [{&#xd;
-				&quot;IPAddress&quot;: &quot;192.168.10.${__Random(10,200)}&quot;,&#xd;
-				&quot;STAIPv6IPAddress&quot;: &quot;&quot;,&#xd;
-				&quot;HostName&quot;: &quot;${__RandomString(6,0123456789abcdef)}&quot;,&#xd;
-				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;VMacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;STAType&quot;: &quot;${__RandomFromMultipleVars(phone|pc|pad)}&quot;,&#xd;
-				&quot;UpTime&quot;: &quot;${__Random(100,9999)}&quot;,&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G)}&quot;,&#xd;
-				&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
-				&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
-				&quot;RxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;TxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;AverRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;AverTxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;MaxRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;MaxTxRate&quot;: &quot;${__Random(100,100)}&quot;&#xd;
-			},&#xd;
-			{&#xd;
 				&quot;IPAddress&quot;: &quot;192.168.10.${__Random(10,200)}&quot;,&#xd;
 				&quot;STAIPv6IPAddress&quot;: &quot;&quot;,&#xd;
 				&quot;HostName&quot;: &quot;${__RandomString(6,0123456789abcdef)}&quot;,&#xd;
@@ -174,10 +161,10 @@
 				&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
 				&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
 				&quot;RxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-				&quot;TxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-				&quot;AverRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-				&quot;AverTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-				&quot;MaxRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+				&quot;TxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;AverRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;AverTxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;MaxRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
 				&quot;MaxTxRate&quot;: &quot;${__Random(100,1000)}&quot;&#xd;
 			}&#xd;
 		]&#xd;
@@ -215,7 +202,7 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
 	&quot;MAC&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-	&quot;timestamp&quot;: ${__time()},&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 	&quot;data&quot;: {&#xd;
 		&quot;Radios&quot;: [{&#xd;
 				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
@@ -294,7 +281,7 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
 	&quot;MAC&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-	&quot;timestamp&quot;: ${__time()},&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 	&quot;data&quot;: {&#xd;
 		&quot;Number&quot;: 3,&#xd;
 		&quot;Radios&quot;: [{&#xd;
@@ -308,7 +295,7 @@
 				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
 				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;Channel&quot;: &quot;36&quot;,&#xd;
+				&quot;Channel&quot;: &quot;3,6&quot;,&#xd;
 				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
 			},&#xd;
 			{&#xd;
@@ -353,7 +340,7 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
 	&quot;MAC&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-	&quot;timestamp&quot;: ${__time()},&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 	&quot;data&quot;: {&#xd;
 		&quot;ServiceNumber&quot;: 1,&#xd;
 		&quot;ServiceBaseInfo&quot;: [{&#xd;
@@ -428,7 +415,7 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
     &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__time()},&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;data&quot;: {&#xd;
 &quot;HostIp&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
@@ -499,7 +486,7 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
     &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__time()},&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;data&quot;: {&#xd;
 &quot;DownloadRate&quot;: &quot;${__Random(40,100)}&quot;&#xd;
@@ -537,7 +524,7 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
     &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__time()},&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;data&quot;: {&#xd;
 &quot;URL&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
@@ -581,7 +568,7 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
     &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__time()},&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;data&quot;: {&#xd;
 &quot;VideoServer&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
@@ -620,7 +607,7 @@
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
     &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__time()},&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;data&quot;: {&#xd;
 &quot;GameServer&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
@@ -665,7 +652,7 @@
         <boolProp name="ignoreFirstLine">true</boolProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
-        <stringProp name="shareMode">shareMode.all</stringProp>
+        <stringProp name="shareMode">shareMode.thread</stringProp>
         <boolProp name="stopThread">false</boolProp>
         <stringProp name="variableNames">areaCode,areaName</stringProp>
       </CSVDataSet>

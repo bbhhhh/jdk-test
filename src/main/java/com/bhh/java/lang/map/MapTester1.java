@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -25,6 +26,8 @@ public class MapTester1 {
         val2++;
         log.info("{}",myMap.get(key));
 
+        log.info("{}",(Integer)myMap.get(key+1)) ;
+
         log.info("val2={}",val2);
         Integer val3 = val2;
         val3++;
@@ -36,6 +39,8 @@ public class MapTester1 {
         s[0] = "aa";
         log.info("{}",map2.get(key)[0]);
 
+        Map<String,String> map3 = new ConcurrentHashMap<>();
+        map3.containsKey(null);
 
 
     }

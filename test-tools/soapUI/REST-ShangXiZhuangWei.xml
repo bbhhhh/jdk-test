@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4e9390c1-adde-4777-b02a-79693a8eda0b" activeEnvironment="Default" name="REST-ShangXiZhuangWei" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="e58d3ec3-4e45-4e1a-9ce8-db376599471b" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://127.0.0.1:8099" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://127.0.0.1:8099</con:endpoint></con:endpoints><con:resource name="0" path="/esb/ottxRmsOrderReceive/0" id="79b436a1-7820-4648-8e37-d669063d9a89"><con:settings/><con:parameters><con:parameter><con:name>authcode</con:name><con:value>U1hfQ01TTl9STVMjQGF1dGhAI3YwdEFVQk9C</con:value><con:style>QUERY</con:style><con:default>U1hfQ01TTl9STVMjQGF1dGhAI3YwdEFVQk9C</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="0 1" id="652200ca-c166-4fce-8e1e-9ec16e498eb9" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://127.0.0.1/esb/ottxRmsOrderReceive/0">ns:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://127.0.0.1/esb/ottxRmsOrderReceive/0">ns:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset='utf-8'</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://127.0.0.1/esb/ottxRmsOrderReceive/0">ns:Response</con:element></con:representation><con:request name="Request 1" id="9057376a-1355-4a51-9f45-2cd5f6c6b709" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://127.0.0.1:8099</con:endpoint><con:request>{
+	"params":{
+		"time": 212323232
+	}
+}
+</con:request><con:originalUri>http://127.0.0.1/esb/ottxRmsOrderReceive/0</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="authcode" value="U1hfQ01TTl9STVMjQGF1dGhAI3YwdEFVQk9C" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>authcode</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:restMockService id="9e7668f7-2279-4cb3-990b-8e04870a4d3b" port="8099" path="/" host="N-20S1PF2STR6P" name="REST MockService ShangXiZhuangWei" docroot=""><con:settings/><con:properties/><con:restMockAction name="/esb/ottxRmsOrderReceive/0" method="POST" resourcePath="/esb/ottxRmsOrderReceive/0" id="66e4e7c6-68b2-4018-9c08-21ab3ed96079"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*&#13;
+// Script dispatcher is used to select a response based on the incoming request.&#13;
+// Here are few examples showing how to match based on path, query param, header and body&#13;
+&#13;
+// Match based on path&#13;
+def requestPath = mockRequest.getPath()&#13;
+log.info "Path: "+ requestPath&#13;
+&#13;
+if( requestPath.contains("json") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "JSON Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on query parameter&#13;
+def queryString = mockRequest.getRequest().getQueryString()&#13;
+log.info "QueryString: " + queryString&#13;
+&#13;
+if( queryString.contains("stockholm") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response Stockholm"&#13;
+}&#13;
+else if( queryString.contains("london") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response London"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on header&#13;
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")&#13;
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList&#13;
+&#13;
+if( acceptEncodingHeaderList.contains("gzip,deflate") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "GZiped Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on body&#13;
+def requestBody = mockRequest.getRequestContent()&#13;
+log.info "Request body: " + requestBody&#13;
+&#13;
+if( requestBody.contains("some data") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response N"&#13;
+}&#13;
+*/&#13;
+</con:dispatchPath><con:response name="Response 1" id="e6c561c8-907a-4729-98af-909b26e51261" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+ "rtnCode": "0",
+"rtnMsg": "success"
+}
+</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

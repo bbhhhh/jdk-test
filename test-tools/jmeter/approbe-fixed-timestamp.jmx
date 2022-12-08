@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="2G" elementType="Argument">
+            <stringProp name="Argument.name">2G</stringProp>
+            <stringProp name="Argument.value">2.4G</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="5G" elementType="Argument">
+            <stringProp name="Argument.name">5G</stringProp>
+            <stringProp name="Argument.value">5G</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phone" elementType="Argument">
+            <stringProp name="Argument.name">phone</stringProp>
+            <stringProp name="Argument.value">phone</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pc" elementType="Argument">
+            <stringProp name="Argument.name">pc</stringProp>
+            <stringProp name="Argument.value">pc</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pad" elementType="Argument">
+            <stringProp name="Argument.name">pad</stringProp>
+            <stringProp name="Argument.value">pad</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="wlan" elementType="Argument">
+            <stringProp name="Argument.name">wlan</stringProp>
+            <stringProp name="Argument.value">WLAN</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="eth" elementType="Argument">
+            <stringProp name="Argument.name">eth</stringProp>
+            <stringProp name="Argument.value">Ethernet</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="plc" elementType="Argument">
+            <stringProp name="Argument.name">plc</stringProp>
+            <stringProp name="Argument.value">PLC</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cable" elementType="Argument">
+            <stringProp name="Argument.name">cable</stringProp>
+            <stringProp name="Argument.value">Cable</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="time-stamp" elementType="Argument">
+            <stringProp name="Argument.name">time-stamp</stringProp>
+            <stringProp name="Argument.value">${__time()}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="approbe-periodic-message" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">500</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="uplinkStatus-request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:999999999999,&#xd;
+    &quot;data&quot;:&#xd;
+    {&#xd;
+	&quot;UplinkType&quot;: &quot;${__RandomFromMultipleVars(wlan|eth|plc|cable)}&quot;,&#xd;
+	&quot;WorkingMode&quot;: ${__Random(0, 2)},&#xd;
+	&quot;RunningTime&quot;: &quot;${__Random(100,1400000)}&quot;,&#xd;
+	&quot;CPUOccupancyRate&quot;: &quot;${__Random(2,60)}&quot;,&#xd;
+	&quot;RamOccupancyRate&quot;: &quot;${__Random(2,70)}&quot;,&#xd;
+	&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+	&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
+	&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
+	&quot;Noise&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
+	&quot;SNR&quot;: &quot;${__Random(10,99)}&quot;,&#xd;
+	&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
+	&quot;RxRate&quot;: &quot;${__Random(100,1200)}&quot;,&#xd;
+	&quot;TxRate&quot;: &quot;${__Random(100,1200)}&quot;,&#xd;
+	&quot;AverRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+	&quot;AverTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+	&quot;MaxRxRate&quot;: &quot;${__Random(100,1200)}&quot;,&#xd;
+	&quot;MaxTxRate&quot;: &quot;${__Random(100,1200)}&quot;&#xd;
+    }&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">rest/softprobe/periodic-message/uplinkStatus</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="staInfo" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+	&quot;MAC&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:999999999999,&#xd;
+	&quot;data&quot;: {&#xd;
+		&quot;STANumber&quot;: 1,&#xd;
+		&quot;Devices&quot;: [{&#xd;
+				&quot;IPAddress&quot;: &quot;192.168.10.${__Random(10,200)}&quot;,&#xd;
+				&quot;STAIPv6IPAddress&quot;: &quot;&quot;,&#xd;
+				&quot;HostName&quot;: &quot;${__RandomString(6,0123456789abcdef)}&quot;,&#xd;
+				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+				&quot;VMacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+				&quot;STAType&quot;: &quot;${__RandomFromMultipleVars(phone|pc|pad)}&quot;,&#xd;
+				&quot;UpTime&quot;: &quot;${__Random(100,9999)}&quot;,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G)}&quot;,&#xd;
+				&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
+				&quot;RxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;TxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;AverRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;AverTxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;MaxRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;MaxTxRate&quot;: &quot;${__Random(100,100)}&quot;&#xd;
+			}&#xd;
+		]&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/rest/softprobe/periodic-message/staInfo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="WifiStatus-Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+	&quot;MAC&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+	&quot;data&quot;: {&#xd;
+		&quot;Radios&quot;: [{&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;Enable&quot;: 1,&#xd;
+				&quot;TransmitPower &quot;: &quot;${__Random(10,99)}&quot;,&#xd;
+				&quot;Channel&quot;: &quot;1,6&quot;&#xd;
+			},&#xd;
+			{&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;Enable&quot;: 1,&#xd;
+				&quot;TransmitPower &quot;: &quot;${__Random(10,99)}&quot;,&#xd;
+				&quot;Channel&quot;: &quot;36&quot;&#xd;
+			}&#xd;
+		],&#xd;
+		&quot;Configurations&quot;: [{&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;Index&quot;: 1,&#xd;
+				&quot;Enable&quot;: 1,&#xd;
+				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
+				&quot;SecurityMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
+				&quot;Pwd &quot;: &quot;*******&quot;,&#xd;
+				&quot;MaxAssociateNum&quot;:  ${__Random(1, 20)},&#xd;
+				&quot;SSIDAdvertisementEnabled&quot;: 1&#xd;
+			},&#xd;
+			{&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;Index&quot;: 1,&#xd;
+				&quot;Enable&quot;: 1,&#xd;
+				&quot;SSID&quot;: &quot;CMCC-2341-5G&quot;,&#xd;
+				&quot;SecurityMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
+				&quot;Pwd&quot;: &quot;*******&quot;,&#xd;
+				&quot;MaxAssociateNum&quot;: ${__Random(1, 20)},&#xd;
+				&quot;SSIDAdvertisementEnabled&quot;: 1&#xd;
+			}&#xd;
+		]&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/rest/softprobe/periodic-message/WiFiStatus</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="wlanNeighbor-Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+	&quot;MAC&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:999999999999,&#xd;
+	&quot;data&quot;: {&#xd;
+		&quot;Number&quot;: 3,&#xd;
+		&quot;Radios&quot;: [{&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
+				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+				&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
+			},&#xd;
+			{&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
+				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+				&quot;Channel&quot;: &quot;3,6&quot;,&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
+			},&#xd;
+			{&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
+				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+				&quot;Channel&quot;: &quot;3,7&quot;,&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
+			}&#xd;
+		]&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/rest/softprobe/periodic-message/wlanNeighbor</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="serviceDataInfo-Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+	&quot;MAC&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+	&quot;data&quot;: {&#xd;
+		&quot;ServiceNumber&quot;: 1,&#xd;
+		&quot;ServiceBaseInfo&quot;: [{&#xd;
+			&quot;MacEntries&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+			&quot;StartTime&quot;: &quot;${__dateTimeConvert(${__time()},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
+			&quot;RuningTime&quot;: &quot;${__Random(100,99999)}&quot;,&#xd;
+			&quot;URL&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
+			&quot;Protocol&quot;: &quot;TCP&quot;,&#xd;
+			&quot;AverTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+			&quot;AverRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+			&quot;MaxTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+			&quot;MaxRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+			&quot;UpStaticstics&quot;: ${__Random(100, 1000000)},&#xd;
+			&quot;DownStaticstics&quot;: ${__Random(100, 100000000)},&#xd;
+			&quot;TcpConnectTimes&quot;: ${__Random(1, 10)},&#xd;
+			&quot;TcpSucessTimes&quot;: ${__Random(1, 10)},&#xd;
+			&quot;TcpAvgTime&quot;: ${__Random(10, 100)},&#xd;
+			&quot;TcpReconnectRate&quot;: ${__Random(10, 100)},&#xd;
+			&quot;HttpResponesDelay&quot;: ${__Random(10, 100)},&#xd;
+			&quot;HttpRequestErrorList&quot;: &quot;404,401,501&quot;,&#xd;
+			&quot;HttpRequestTimes&quot;: ${__Random(1, 10)},&#xd;
+			&quot;HttpRequestFailTimes&quot;: ${__Random(1, 10)},&#xd;
+			&quot;DnsParseResponesDelay&quot;: ${__Random(10, 100)}&#xd;
+&#xd;
+		}]&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/rest/softprobe/periodic-message/serviceDataInfo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ap-diagnose-message" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ping test" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:999999999999,&#xd;
+&quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
+&quot;data&quot;: {&#xd;
+&quot;HostIp&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
+&quot;AverResponseTime&quot;: ${__Random(1,50)},&#xd;
+&quot;MaxResponseTime&quot;: ${__Random(1,100)},&#xd;
+&quot;MinResponseTime&quot;: ${__Random(1,100)},&#xd;
+&quot;MTU&quot;: 32,&#xd;
+&quot;PingNumber&quot;: ${__Random(1,10)},&#xd;
+&quot;PingSucessNumber&quot;: ${__Random(1,10)}&#xd;
+}&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">rest/softprobe/diagnose-message/ping</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="traceroute" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">rest/softprobe/diagnose-message/traceroute</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="httpdownload" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:999999999999,&#xd;
+&quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
+&quot;data&quot;: {&#xd;
+&quot;DownloadRate&quot;: &quot;${__Random(40,100)}&quot;&#xd;
+}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">rest/softprobe/diagnose-message/httpdownload</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="web" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{	&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:999999999999,&#xd;
+&quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
+&quot;data&quot;: {&#xd;
+&quot;URL&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
+&quot;ConnectDelay&quot;: ${__Random(1,45)},&#xd;
+&quot;FirstResponseDelay&quot;: ${__Random(1,50)},&#xd;
+&quot;FirstPageTime&quot;: ${__Random(1,100)},&#xd;
+&quot;PingDelay&quot;: ${__Random(1,100)},&#xd;
+&quot;DnsParseDelay&quot;: ${__Random(1,100)},&#xd;
+&quot;DnsParseResult&quot;: &quot;xxxxxxxx&quot;&#xd;
+}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">rest/softprobe/diagnose-message/web</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="video" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:999999999999,&#xd;
+&quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
+&quot;data&quot;: {&#xd;
+&quot;VideoServer&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
+&quot;ResponseTime&quot;: ${__Random(1,50)}&#xd;
+}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">rest/softprobe/diagnose-message/video</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="game" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+&quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
+&quot;data&quot;: {&#xd;
+&quot;GameServer&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
+&quot;NetDelay&quot;: ${__Random(1,100)},&#xd;
+&quot;JitterDelay&quot;: ${__Random(1,100)},&#xd;
+&quot;PacketLostRate&quot;: ${__Random(1,100)}&#xd;
+}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.port">9008</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">rest/softprobe/diagnose-message/game</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+      </hashTree>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="areaCSV" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="filename">C:/Data/github-folders/java/jdk-test/test-tools/jmeter/area.txt</stringProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.thread</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">areaCode,areaName</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="vendor-model-firmware-CSV" enabled="true">
+        <stringProp name="filename">C:/Data/github-folders/java/jdk-test/test-tools/jmeter/ap_vendor_model_firmware.txt</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="variableNames">vendor,model,firmware</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <stringProp name="delimiter">,</stringProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

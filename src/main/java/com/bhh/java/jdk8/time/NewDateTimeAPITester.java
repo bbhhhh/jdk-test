@@ -34,13 +34,17 @@ public class NewDateTimeAPITester {
         long now = System.currentTimeMillis();
         Instant ins = Instant.ofEpochMilli(now);
 
+
         logger.info(DateTimeFormatter.ISO_INSTANT.format(ins));
 
         LocalDateTime ldtt = LocalDateTime.ofEpochSecond(now / 1000, 0, ZoneOffset.ofHours(8));
         logger.info(formatter.format(ldtt));
         logger.info(LocalDateTime.now().toString());
         logger.info(ins.toString());
+        ldtt = LocalDateTime.now();
+        logger.info(ldtt.format(formatter));
         logger.info("----------");
+
 
         LocalDateTime ldt = LocalDateTime.ofInstant(ins, ZoneId.systemDefault());
         logger.info("ldt={}", ldt.toString());
