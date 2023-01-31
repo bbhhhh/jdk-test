@@ -124,88 +124,8 @@
 		"version": "3.0.0"
 	},
 	"subDeviceInfo": {
-		"subDeviceNumber": 10,
+		"subDeviceNumber": 2,
 		"deviceInfo": [{
-		     "IP":"192.169.1.231",
-		     "LanPort":"LAN1",
-			"deviceType": "PC",
-			"deviceName": "",
-			"manufacture":"Apple",
-			"model": "macbook",
-			"Mac": "54:E1:AD:BF:F1:EE",
-			"WLANRadioType":"2.4G",
-			"WLANRadioPower":"12"
-		},{
-		     "IP":"192.169.1.231",
-		     "LanPort":"LAN1",
-			"deviceType": "PC",
-			"deviceName": "",
-			"manufacture":"Apple",
-			"model": "macbook",
-			"Mac": "54:E1:AD:BF:F1:EE",
-			"WLANRadioType":"2.4G",
-			"WLANRadioPower":"12"
-		},{
-		     "IP":"192.169.1.231",
-		     "LanPort":"LAN1",
-			"deviceType": "PC",
-			"deviceName": "",
-			"manufacture":"Apple",
-			"model": "macbook",
-			"Mac": "54:E1:AD:BF:F1:EE",
-			"WLANRadioType":"2.4G",
-			"WLANRadioPower":"12"
-		},{
-		     "IP":"192.169.1.231",
-		     "LanPort":"LAN1",
-			"deviceType": "PC",
-			"deviceName": "",
-			"manufacture":"Apple",
-			"model": "macbook",
-			"Mac": "54:E1:AD:BF:F1:EE",
-			"WLANRadioType":"2.4G",
-			"WLANRadioPower":"12"
-		},{
-		     "IP":"192.169.1.231",
-		     "LanPort":"LAN1",
-			"deviceType": "PC",
-			"deviceName": "",
-			"manufacture":"Apple",
-			"model": "macbook",
-			"Mac": "54:E1:AD:BF:F1:EE",
-			"WLANRadioType":"2.4G",
-			"WLANRadioPower":"12"
-		},{
-		     "IP":"192.169.1.231",
-		     "LanPort":"LAN1",
-			"deviceType": "PC",
-			"deviceName": "",
-			"manufacture":"Apple",
-			"model": "macbook",
-			"Mac": "54:E1:AD:BF:F1:EE",
-			"WLANRadioType":"2.4G",
-			"WLANRadioPower":"12"
-		},{
-		     "IP":"192.169.1.231",
-		     "LanPort":"LAN1",
-			"deviceType": "PC",
-			"deviceName": "",
-			"manufacture":"Apple",
-			"model": "macbook",
-			"Mac": "54:E1:AD:BF:F1:EE",
-			"WLANRadioType":"2.4G",
-			"WLANRadioPower":"12"
-		},{
-		     "IP":"192.169.1.231",
-		     "LanPort":"LAN1",
-			"deviceType": "PC",
-			"deviceName": "",
-			"manufacture":"Apple",
-			"model": "macbook",
-			"Mac": "54:E1:AD:BF:F1:EE",
-			"WLANRadioType":"2.4G",
-			"WLANRadioPower":"12"
-		},{
 		     "IP":"192.169.1.231",
 		     "LanPort":"LAN1",
 			"deviceType": "PC",
@@ -263,66 +183,6 @@
 				"SSIDStandard": "11bgn",
 				"SSID": 2,
 				"SSIDAdvertisement": "TRUE"
-			},
-			{
-				"SSIDMAC": "",
-				"channel": "10",
-				"SSIDEnable": "FALSE",
-				"SSIDEncryptionMode": "MIXED-WPAPSK2",
-				"SSIDname": "CMCC-wl3",
-				"SSIDStandard": "11bgn",
-				"SSID": 3,
-				"SSIDAdvertisement": "TRUE"
-			},
-			{
-				"SSIDMAC": "",
-				"channel": "10",
-				"SSIDEnable": "FALSE",
-				"SSIDEncryptionMode": "OPEN",
-				"SSIDname": "CMCC-QLINK",
-				"SSIDStandard": "11bgn",
-				"SSID": 4,
-				"SSIDAdvertisement": "FALSE"
-			},
-			{
-				"SSIDMAC": "40:62:ea:fb:c1:41",
-				"channel": "149",
-				"SSIDEnable": "TRUE",
-				"SSIDEncryptionMode": "MIXED-WPAPSK2",
-				"SSIDname": "CMCC-f3uj-5G",
-				"SSIDStandard": "11ac",
-				"SSID": 5,
-				"SSIDAdvertisement": "TRUE"
-			},
-			{
-				"SSIDMAC": "",
-				"channel": "149",
-				"SSIDEnable": "FALSE",
-				"SSIDEncryptionMode": "MIXED-WPAPSK2",
-				"SSIDname": "CMCC-wl6",
-				"SSIDStandard": "11ac",
-				"SSID": 6,
-				"SSIDAdvertisement": "TRUE"
-			},
-			{
-				"SSIDMAC": "",
-				"channel": "149",
-				"SSIDEnable": "FALSE",
-				"SSIDEncryptionMode": "MIXED-WPAPSK2",
-				"SSIDname": "CMCC-wl7",
-				"SSIDStandard": "11ac",
-				"SSID": 7,
-				"SSIDAdvertisement": "TRUE"
-			},
-			{
-				"SSIDMAC": "",
-				"channel": "149",
-				"SSIDEnable": "FALSE",
-				"SSIDEncryptionMode": "MIXED-WPAPSK2",
-				"SSIDname": "CMCC-wl8",
-				"SSIDStandard": "11ac",
-				"SSID": 8,
-				"SSIDAdvertisement": "TRUE"
 			}
 		],
 		"cpu": "EN7526",
@@ -330,7 +190,7 @@
 		"hardwareVersion": "HWVer-C101",
 		"firmwareVersion": "V1.1.1.00.02",
 		"flashSize": 256,
-		"deviceId": "FHTT1B4E0380",
+		"deviceId": "liuyuprefix10",
 		"mac": "40:62:EA:FB:C1:40",
 		"manufacturer": "CMDC",
 		"style":"style-a"

@@ -34,7 +34,6 @@ public class NewDateTimeAPITester {
         long now = System.currentTimeMillis();
         Instant ins = Instant.ofEpochMilli(now);
 
-
         logger.info(DateTimeFormatter.ISO_INSTANT.format(ins));
 
         LocalDateTime ldtt = LocalDateTime.ofEpochSecond(now / 1000, 0, ZoneOffset.ofHours(8));

@@ -17,6 +17,9 @@ import com.sun.org.apache.xml.internal.serializer.ToTextSAXHandler;
 public class StringTester {
     private static final Logger logger = LoggerFactory.getLogger(StringTester.class);
 
+    static String strNull ;
+    static Long longNull ;
+
     public static void main(String[] args) {
         String a = "1c:39:47:11:96:5e";
         System.out.println(a.replace(":", "").toUpperCase());
@@ -38,6 +41,9 @@ public class StringTester {
         StringBuilder sb = new StringBuilder("adsfadf");
         sb.deleteCharAt(1);
         System.out.println(sb.toString());
+        sb.append(longNull);
+        System.out.println(sb.toString());
+
         String sss = "   ";
         System.out.println(sss.split(" ").length);
 
@@ -48,5 +54,7 @@ public class StringTester {
 
         toReplace = toReplace.replaceAll("(\\r\\n|\\n|\\^|\\||\")","");
         logger.info("toR={}", toReplace);
+
+
     }
 }
