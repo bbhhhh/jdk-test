@@ -38,6 +38,176 @@
             <stringProp name="Argument.value">FALSE</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="Mobile" elementType="Argument">
+            <stringProp name="Argument.name">Mobile</stringProp>
+            <stringProp name="Argument.value">Mobile</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PC" elementType="Argument">
+            <stringProp name="Argument.name">PC</stringProp>
+            <stringProp name="Argument.value">PC</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PAD" elementType="Argument">
+            <stringProp name="Argument.name">PAD</stringProp>
+            <stringProp name="Argument.value">PAD</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="AP" elementType="Argument">
+            <stringProp name="Argument.name">AP</stringProp>
+            <stringProp name="Argument.value">AP</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Other" elementType="Argument">
+            <stringProp name="Argument.name">Other</stringProp>
+            <stringProp name="Argument.value">Other</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="LAN" elementType="Argument">
+            <stringProp name="Argument.name">LAN</stringProp>
+            <stringProp name="Argument.value">LAN</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="WIFI" elementType="Argument">
+            <stringProp name="Argument.name">WIFI</stringProp>
+            <stringProp name="Argument.value">WIFI</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="APLAN" elementType="Argument">
+            <stringProp name="Argument.name">APLAN</stringProp>
+            <stringProp name="Argument.value">APLAN</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="APWIFI" elementType="Argument">
+            <stringProp name="Argument.name">APWIFI</stringProp>
+            <stringProp name="Argument.value">APWIFI</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ONLINE" elementType="Argument">
+            <stringProp name="Argument.name">ONLINE</stringProp>
+            <stringProp name="Argument.value">ONLINE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="OFFLINE" elementType="Argument">
+            <stringProp name="Argument.name">OFFLINE</stringProp>
+            <stringProp name="Argument.value">OFFLINE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BLOCK" elementType="Argument">
+            <stringProp name="Argument.name">BLOCK</stringProp>
+            <stringProp name="Argument.value">BLOCK</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Half" elementType="Argument">
+            <stringProp name="Argument.name">Half</stringProp>
+            <stringProp name="Argument.value">Half</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Full" elementType="Argument">
+            <stringProp name="Argument.name">Full</stringProp>
+            <stringProp name="Argument.value">Full</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Auto" elementType="Argument">
+            <stringProp name="Argument.name">Auto</stringProp>
+            <stringProp name="Argument.value">Auto</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="2G" elementType="Argument">
+            <stringProp name="Argument.name">2G</stringProp>
+            <stringProp name="Argument.value">2.4G</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="5G" elementType="Argument">
+            <stringProp name="Argument.name">5G</stringProp>
+            <stringProp name="Argument.value">5G</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PHONE" elementType="Argument">
+            <stringProp name="Argument.name">PHONE</stringProp>
+            <stringProp name="Argument.value">PHONE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="STB" elementType="Argument">
+            <stringProp name="Argument.name">STB</stringProp>
+            <stringProp name="Argument.value">STB</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="OTHER" elementType="Argument">
+            <stringProp name="Argument.name">OTHER</stringProp>
+            <stringProp name="Argument.value">OTHER</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="11ac" elementType="Argument">
+            <stringProp name="Argument.name">11ac</stringProp>
+            <stringProp name="Argument.value">11ac</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="11n" elementType="Argument">
+            <stringProp name="Argument.name">11n</stringProp>
+            <stringProp name="Argument.value">11n</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="11bg" elementType="Argument">
+            <stringProp name="Argument.name">11bg</stringProp>
+            <stringProp name="Argument.value">11bg</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="11bgn" elementType="Argument">
+            <stringProp name="Argument.name">11bgn</stringProp>
+            <stringProp name="Argument.value">11bgn</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="11gn" elementType="Argument">
+            <stringProp name="Argument.name">11gn</stringProp>
+            <stringProp name="Argument.value">11gn</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="11a" elementType="Argument">
+            <stringProp name="Argument.name">11a</stringProp>
+            <stringProp name="Argument.value">11a</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="11na" elementType="Argument">
+            <stringProp name="Argument.name">11na</stringProp>
+            <stringProp name="Argument.value">11na</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="11ax" elementType="Argument">
+            <stringProp name="Argument.name">11ax</stringProp>
+            <stringProp name="Argument.value">11ax</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Video" elementType="Argument">
+            <stringProp name="Argument.name">Video</stringProp>
+            <stringProp name="Argument.value">Video</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Web" elementType="Argument">
+            <stringProp name="Argument.name">Web</stringProp>
+            <stringProp name="Argument.value">Web</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Game" elementType="Argument">
+            <stringProp name="Argument.name">Game</stringProp>
+            <stringProp name="Argument.value">Game</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="IMS" elementType="Argument">
+            <stringProp name="Argument.name">IMS</stringProp>
+            <stringProp name="Argument.value">IMS</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ERROR_NONE" elementType="Argument">
+            <stringProp name="Argument.name">ERROR_NONE</stringProp>
+            <stringProp name="Argument.value">ERROR_NONE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ERROR_404" elementType="Argument">
+            <stringProp name="Argument.name">ERROR_404</stringProp>
+            <stringProp name="Argument.value">ERROR_404</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
@@ -47,7 +217,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">50</stringProp>
+          <stringProp name="LoopController.loops">200</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time"></stringProp>
@@ -75,22 +245,22 @@
 	},&#xd;
 	&quot;deviceInfo&quot;: {&#xd;
 		&quot;cpu&quot;: &quot;EN7526GT&quot;,&#xd;
-		&quot;model&quot;: &quot;GM619&quot;,&#xd;
+		&quot;model&quot;: &quot;model_${__Random(1,99)}&quot;,&#xd;
 		&quot;style&quot;: &quot;Model3&quot;,&#xd;
 		&quot;hardwareVersion&quot;: &quot;HV1.0.00.092&quot;,&#xd;
 		&quot;flashSize&quot;: 256,&#xd;
 		&quot;firmwareVersion&quot;: &quot;V1.6.10.052&quot;,&#xd;
-		&quot;deviceId&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\sn.txt,,,)}&quot;,&#xd;
+		&quot;deviceId&quot;: &quot;${sn}&quot;,&#xd;
 		&quot;mac&quot;: &quot;${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}&quot;,&#xd;
-		&quot;manufacturer&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\vendor.txt,,,)}&quot;,&#xd;
+		&quot;manufacturer&quot;: &quot;${vendor}&quot;,&#xd;
 		&quot;ram_size&quot;: 512,&#xd;
 		&quot;province&quot;: &quot;NMG&quot;,&#xd;
 		&quot;nfcSupport&quot;: &quot;NO&quot;,&#xd;
 		&quot;wifiInfoList&quot;: [{&#xd;
 			&quot;channel&quot;: &quot;${__Random(1,9)}&quot;,&#xd;
 			&quot;SSIDEnable&quot;: &quot;TRUE&quot;,&#xd;
-			&quot;SSIDname&quot;: &quot;CMCC-${__Random(1,9)}&quot;,&#xd;
-			&quot;SSIDStandard&quot;: &quot;11bgn&quot;,&#xd;
+			&quot;SSIDname&quot;: &quot;ssid-${__Random(1,9)}&quot;,&#xd;
+			&quot;SSIDStandard&quot;: &quot;${__RandomFromMultipleVars(11bgn|11n|11ac|11gb|11gn|11a|11na|11ax)}&quot;,&#xd;
 			&quot;IdlePercent&quot;: ${__Random(1,99)},&#xd;
 			&quot;interferencePercent&quot;: ${__Random(1,99)},&#xd;
 			&quot;noiseLevel&quot;: &quot;${__Random(-100,-40)}&quot;,&#xd;
@@ -106,8 +276,8 @@
 		}, {&#xd;
 			&quot;channel&quot;: &quot;${__Random(1,9)}&quot;,&#xd;
 			&quot;SSIDEnable&quot;: &quot;TRUE&quot;,&#xd;
-			&quot;SSIDname&quot;: &quot;CMCC-${__Random(1,9)}&quot;,&#xd;
-			&quot;SSIDStandard&quot;: &quot;11bgn&quot;,&#xd;
+			&quot;SSIDname&quot;: &quot;ssid-${__Random(1,9)}&quot;,&#xd;
+			&quot;SSIDStandard&quot;: &quot;${__RandomFromMultipleVars(11bgn|11n|11ac|11gb|11gn|11a|11na|11ax)}&quot;,&#xd;
 			&quot;IdlePercent&quot;: ${__Random(1,99)},&#xd;
 			&quot;interferencePercent&quot;: ${__Random(1,99)},&#xd;
 			&quot;noiseLevel&quot;: &quot;${__Random(-100,-40)}&quot;,&#xd;
@@ -123,52 +293,33 @@
 		}&#xd;
 		]&#xd;
 	},&#xd;
-	&quot;subDeviceInfo&quot;: {&#xd;
-		&quot;subDeviceNumber&quot;: 2,&#xd;
-		&quot;deviceInfo&quot;: [&#xd;
-		{&#xd;
-			&quot;dhcpDeviceType&quot;: &quot;OTHER&quot;,&#xd;
-			&quot;downStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-			&quot;connectStatus&quot;: &quot;ONLINE&quot;,&#xd;
-			&quot;averRxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
-			&quot;connectType&quot;: &quot;LAN&quot;,&#xd;
-			&quot;detailOffLineTimes&quot;: &quot;[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]&quot;,&#xd;
-			&quot;IP&quot;: &quot;192.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
-			&quot;IPv6Address&quot;: &quot;fe80::7a91:e9ff:fe20:8473&quot;,&#xd;
-			&quot;LanPort&quot;: &quot;LAN${__Random(1,4)}&quot;,&#xd;
-			&quot;upStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-			&quot;deviceName&quot;: &quot;device_${__Random(1,9)}&quot;,&#xd;
-			&quot;Mac&quot;: &quot;${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}&quot;,&#xd;
-			&quot;offLineTimes&quot;: 0,&#xd;
-			&quot;lanNegBitRate&quot;: &quot;${__RandomFromMultipleVars(_hundred|_thousand)}&quot;,&#xd;
-			&quot;upTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-			&quot;maxTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-			&quot;averTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
-			&quot;duplexMode&quot;: &quot;Full&quot;,&#xd;
-			&quot;maxRxRate&quot;: &quot;${__Random(100,999999)}&quot;&#xd;
-		},&#xd;
-		{&#xd;
-			&quot;dhcpDeviceType&quot;: &quot;OTHER&quot;,&#xd;
-			&quot;downStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-			&quot;connectStatus&quot;: &quot;ONLINE&quot;,&#xd;
-			&quot;averRxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
-			&quot;connectType&quot;: &quot;LAN&quot;,&#xd;
-			&quot;detailOffLineTimes&quot;: &quot;[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]&quot;,&#xd;
-			&quot;IP&quot;: &quot;192.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
-			&quot;IPv6Address&quot;: &quot;fe80::7a91:e9ff:fe20:8473&quot;,&#xd;
-			&quot;LanPort&quot;: &quot;LAN${__Random(1,4)}&quot;,&#xd;
-			&quot;upStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-			&quot;deviceName&quot;: &quot;device_${__Random(1,9)}&quot;,&#xd;
-			&quot;Mac&quot;: &quot;${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}&quot;,&#xd;
-			&quot;offLineTimes&quot;: 0,&#xd;
-			&quot;lanNegBitRate&quot;: &quot;${__RandomFromMultipleVars(_hundred|_thousand)}&quot;,&#xd;
-			&quot;upTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-			&quot;maxTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-			&quot;averTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
-			&quot;duplexMode&quot;: &quot;Full&quot;,&#xd;
-			&quot;maxRxRate&quot;: &quot;${__Random(100,999999)}&quot;&#xd;
-		}&#xd;
-		]&#xd;
+	&quot;deviceStatus&quot;: {&#xd;
+		&quot;bootTime&quot;: &quot;${__dateTimeConvert(${__timeShift(,${__time()},-PT${__Random(1,10)}m,)},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
+		&quot;runingTime&quot;: ${__Random(100,9999)},&#xd;
+		&quot;sampleTime&quot;: &quot;${__time(yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
+		&quot;lan1ConnectStatus&quot;: &quot;CONNECTED&quot;,&#xd;
+		&quot;lan2ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
+		&quot;lan3ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
+		&quot;lan4ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
+		&quot;CPU&quot;: ${__Random(0,100)},&#xd;
+		&quot;RAM&quot;: ${__Random(0,100)},&#xd;
+          &quot;MainChipTemperature&quot;: &quot;${__Random(30,100)}&quot;,		&#xd;
+		&quot;WAN&quot;: &quot;CONNECTED&quot;,&#xd;
+		&quot;WIFI&quot;: &quot;DISCONNECTED&quot;,&#xd;
+		&quot;lanIP&quot;: &quot;${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
+          &quot;lanIPV6&quot;: &quot;23:23:23:23:23:23&quot;,&#xd;
+		&quot;wanIP&quot;: &quot;${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
+          &quot;wanIPV6&quot;: &quot;44:44:44:44:44:44&quot;,&#xd;
+		&quot;PPPOEError&quot;: &quot;${__RandomFromMultipleVars(&quot;&quot;|ERROR_NONE|ERROR_404)}&quot;,&#xd;
+		&quot;PPPOEStatus&quot;: &quot;CONNECTED&quot;,&#xd;
+		&quot;PPPOEUpTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+		&quot;Username&quot;: &quot;${__Random(18900100101,18999999999)}&quot;,&#xd;
+		&quot;reportFailInfo&quot;:{},&#xd;
+		&quot;pppoeConnectInfo&quot;:{&#xd;
+			&quot;pppoeInfoHead&quot;:[],&#xd;
+			&quot;pppoeInfo&quot;:[]&#xd;
+			},&#xd;
+		&quot;detailsWANIfInfo&quot;:[]&#xd;
 	},&#xd;
 	&quot;wanTrafficData&quot;: {&#xd;
 		&quot;wanNumber&quot;: 2,&#xd;
@@ -192,143 +343,232 @@
 			&quot;wanIndex&quot;: 2&#xd;
 		}]&#xd;
 	},&#xd;
-	&quot;ponInfo&quot;: {&#xd;
-		&quot;PONRXPower&quot;: ${__Random(100,999999)},&#xd;
-		&quot;PONTXPower&quot;: ${__Random(100,999999)}&#xd;
-	},&#xd;
-	&quot;dnsRequestInfo&quot;: {&#xd;
-		&quot;dnsInfoList&quot;: [{&#xd;
-			&quot;dnsRequestTime&quot;: ${__timeShift(,${__time()},-PT${__Random(10,999)}S,)},&#xd;
-			&quot;dnsAddress&quot;: &quot;${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
-			&quot;dnsResponseTime&quot;: ${__Random(10,100)},&#xd;
-			&quot;domain&quot;: &quot;s.url.cn&quot;,&#xd;
-			&quot;ipAddress&quot;: []&#xd;
-		}, {&#xd;
-			&quot;dnsRequestTime&quot;: ${__timeShift(,${__time()},-PT${__Random(10,999)}S,)},&#xd;
-			&quot;dnsAddress&quot;: &quot;${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
-			&quot;dnsResponseTime&quot;: ${__Random(10,100)},&#xd;
-			&quot;domain&quot;: &quot;sqimg.qq.com&quot;,&#xd;
-			&quot;ipAddress&quot;: []&#xd;
-		}]&#xd;
+	&quot;subDeviceInfo&quot;: {&#xd;
+		&quot;subDeviceNumber&quot;: 2,&#xd;
+		&quot;deviceInfo&quot;: [&#xd;
+		{&#xd;
+			&quot;deviceType&quot;: &quot;${__RandomFromMultipleVars(Mobile|PC|PAD|AP|Other)}&quot;,&#xd;
+			&quot;connectType&quot;: &quot;${__RandomFromMultipleVars(LAN|WIFI|AP|APLAN|APWIFI)}&quot;,&#xd;
+			&quot;upTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;connectStatus&quot;: &quot;${__RandomFromMultipleVars(ONLINE|OFFLINE|BLOCK)}&quot;,&#xd;
+			&quot;offLineTimes&quot;: ${__Random(0,99)},&#xd;
+			&quot;detailOffLineTimes&quot;: &quot;[${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}]&quot;,&#xd;
+			&quot;deviceName&quot;: &quot;device_${__Random(1,9)}&quot;,&#xd;
+               &quot;manufacture&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\vendor.txt,,,)}&quot;,&#xd;
+               &quot;model&quot;: &quot;model_${__Random(1,99)}&quot;,&#xd;
+			&quot;Mac&quot;: &quot;${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}&quot;,&#xd;
+			&quot;averTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+			&quot;averRxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+			&quot;maxTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;maxRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;upStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;downStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;lanNegBitRate&quot;: &quot;${__RandomFromMultipleVars(_hundred|_thousand)}&quot;,&#xd;
+			&quot;duplexMode&quot;: &quot;${__RandomFromMultipleVars(Full|Half|Auto)}&quot;,&#xd;
+			&quot;SSIDName&quot;:&quot;ssid_${__Random(1,9)}&quot;,&#xd;
+               &quot;WLANRadioPower&quot;: &quot;${__Random(10,99)}&quot;,&#xd;
+               &quot;WLANRadioType&quot;: &quot;${__RandomFromMultipleVars(5G|2G)}&quot;,&#xd;
+               &quot;wlanNegRxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+               &quot;wlanNegTxRate&quot;: &quot;${__Random(10,99)}&quot;,&#xd;
+                &quot;IP&quot;: &quot;192.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
+			&quot;IPv6Address&quot;: &quot;fe80::7a91:e9ff:fe20:8473&quot;,&#xd;
+			&quot;LanPort&quot;: &quot;LAN${__Random(1,4)}&quot;,&#xd;
+			&quot;dhcpDeviceType&quot;:&quot;${__RandomFromMultipleVars(PHONE|PAD|PC|STB|AP|OTHER)}&quot;&#xd;
+		},&#xd;
+		{&#xd;
+			&quot;deviceType&quot;: &quot;${__RandomFromMultipleVars(Mobile|PC|PAD|AP|Other)}&quot;,&#xd;
+			&quot;connectType&quot;: &quot;${__RandomFromMultipleVars(LAN|WIFI|AP|APLAN|APWIFI)}&quot;,&#xd;
+			&quot;upTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;connectStatus&quot;: &quot;${__RandomFromMultipleVars(ONLINE|OFFLINE|BLOCK)}&quot;,&#xd;
+			&quot;offLineTimes&quot;: ${__Random(0,99)},&#xd;
+			&quot;detailOffLineTimes&quot;: &quot;[${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}, ${__Random(0,9)}]&quot;,&#xd;
+			&quot;deviceName&quot;: &quot;device_${__Random(1,9)}&quot;,&#xd;
+               &quot;manufacture&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\vendor.txt,,,)}&quot;,&#xd;
+               &quot;model&quot;: &quot;model_${__Random(1,99)}&quot;,&#xd;
+			&quot;Mac&quot;: &quot;${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}&quot;,&#xd;
+			&quot;averTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+			&quot;averRxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+			&quot;maxTxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;maxRxRate&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;upStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;downStaticstics&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+			&quot;lanNegBitRate&quot;: &quot;${__RandomFromMultipleVars(_hundred|_thousand)}&quot;,&#xd;
+			&quot;duplexMode&quot;: &quot;${__RandomFromMultipleVars(Full|Half|Auto)}&quot;,&#xd;
+			&quot;SSIDName&quot;:&quot;ssid_${__Random(1,9)}&quot;,&#xd;
+               &quot;WLANRadioPower&quot;: &quot;${__Random(10,99)}&quot;,&#xd;
+               &quot;WLANRadioType&quot;: &quot;${__RandomFromMultipleVars(5G|2G)}&quot;,&#xd;
+               &quot;wlanNegRxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+               &quot;wlanNegTxRate&quot;: &quot;${__Random(10,99)}&quot;,&#xd;
+                &quot;IP&quot;: &quot;192.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
+			&quot;IPv6Address&quot;: &quot;fe80::7a91:e9ff:fe20:8473&quot;,&#xd;
+			&quot;LanPort&quot;: &quot;LAN${__Random(1,4)}&quot;,&#xd;
+			&quot;dhcpDeviceType&quot;:&quot;${__RandomFromMultipleVars(PHONE|PAD|PC|STB|AP|OTHER)}&quot;&#xd;
+		}&#xd;
+		]&#xd;
 	},&#xd;
 	&quot;potsInfo&quot;: {&#xd;
 		&quot;potsStatus&quot;: &quot;SUCCESS&quot;,&#xd;
 		&quot;potsPhoneNumber&quot;: &quot;+${__Random(8647100000001,8647199999999)}&quot;,&#xd;
 		&quot;potsIndex&quot;: 1&#xd;
 	},&#xd;
-	&quot;deviceStatus&quot;: {&#xd;
-		&quot;bootTime&quot;: &quot;${__dateTimeConvert(${__timeShift(,${__time()},-PT${__Random(1,99)}H,)},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
-		&quot;runingTime&quot;: ${__Random(100,999999)},&#xd;
-		&quot;sampleTime&quot;: &quot;${__time(yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
-		&quot;lan1ConnectStatus&quot;: &quot;CONNECTED&quot;,&#xd;
-		&quot;lan2ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
-		&quot;lan3ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
-		&quot;lan4ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
-		&quot;CPU&quot;: ${__Random(0,100)},&#xd;
-		&quot;RAM&quot;: ${__Random(0,100)},&#xd;
-          &quot;MainChipTemperature&quot;: &quot;${__Random(30,100)}&quot;,		&#xd;
-		&quot;PPPOEError&quot;: &quot;ERROR_NONE&quot;,&#xd;
-		&quot;PPPOEStatus&quot;: &quot;CONNECTED&quot;,&#xd;
-		&quot;PPPOEUpTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-		&quot;Username&quot;: &quot;${__Random(18900100101,18999999999)}&quot;,&#xd;
-		&quot;WAN&quot;: &quot;CONNECTED&quot;,&#xd;
-		&quot;WIFI&quot;: &quot;DISCONNECTED&quot;,&#xd;
-		&quot;lanIP&quot;: &quot;${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
-          &quot;lanIPV6&quot;: &quot;23:23:23:23:23:23&quot;,&#xd;
-		&quot;wanIP&quot;: &quot;${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
-          &quot;wanIPV6&quot;: &quot;44:44:44:44:44:44&quot;&#xd;
+	&quot;ponInfo&quot;: {&#xd;
+		&quot;PONRXPower&quot;: ${__Random(100,999999)},&#xd;
+		&quot;PONTXPower&quot;: ${__Random(100,999999)}&#xd;
 	},&#xd;
   &quot;WLANNeighbor&quot;: {&#xd;
     &quot;number&quot;: 2,&#xd;
     &quot;radioInfo&quot;: [&#xd;
       {&#xd;
-        &quot;radioType&quot;: &quot;5G&quot;,&#xd;
-        &quot;SSIDName&quot;: &quot;asdfd&quot;,&#xd;
+        &quot;radioType&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+        &quot;SSIDName&quot;: &quot;ssid_${__Random(1,9)}&quot;,&#xd;
         &quot;Mac&quot;: &quot;D8:C4:97:3D:D4:69&quot;,&#xd;
-        &quot;channel&quot;: &quot;c1&quot;,&#xd;
-        &quot;WLANRadioPower&quot;: &quot;10&quot;&#xd;
+        &quot;channel&quot;: &quot;chan_${__Random(1,9)}&quot;,&#xd;
+        &quot;WLANRadioPower&quot;: &quot;${__Random(10,99)}&quot;&#xd;
       },&#xd;
       {&#xd;
-        &quot;radioType&quot;: &quot;5G&quot;,&#xd;
-        &quot;SSIDName&quot;: &quot;asdfd&quot;,&#xd;
+        &quot;radioType&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+        &quot;SSIDName&quot;: &quot;ssid_${__Random(1,9)}&quot;,&#xd;
         &quot;Mac&quot;: &quot;D8:C4:97:3D:D4:69&quot;,&#xd;
-        &quot;channel&quot;: &quot;c1&quot;,&#xd;
-        &quot;WLANRadioPower&quot;: &quot;10&quot;&#xd;
+        &quot;channel&quot;: &quot;chan_${__Random(1,9)}&quot;,&#xd;
+        &quot;WLANRadioPower&quot;: &quot;${__Random(10,99)}&quot;&#xd;
       }&#xd;
       ]&#xd;
   },&#xd;
   &quot;serviceData&quot;: {&#xd;
-    &quot;serviceNumber&quot;: 2,&#xd;
+    &quot;serviceNumber&quot;: 3,&#xd;
     &quot;serviceBasicInfo&quot;: [&#xd;
       {&#xd;
-        &quot;serviceType&quot;: &quot;NA&quot;,&#xd;
-        &quot;downStaticstics&quot;: &quot;5982&quot;,&#xd;
-        &quot;averRxRate&quot;: &quot;0.16&quot;,&#xd;
-        &quot;upStaticstics&quot;: &quot;2536&quot;,&#xd;
-        &quot;runningTime&quot;: 65,&#xd;
+        &quot;mac&quot;: &quot;40:00:80:06:86:0b&quot;,&#xd;
+        &quot;startTime&quot;: ${__time()},&#xd;
+        &quot;runningTime&quot;: ${__Random(10,9999999)},&#xd;
+        &quot;url&quot;: &quot;url_${__Random(10,9999)}&quot;,&#xd;
+        &quot;domain&quot;: &quot;domain_${__Random(10,9999)}&quot;,&#xd;
+        &quot;protocol&quot;: &quot;TCP&quot;,&#xd;
+        &quot;serviceType&quot;: &quot;${__RandomFromMultipleVars(Video|Game|Web|IMS)}&quot;,&#xd;
+        &quot;averTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+        &quot;averRxRate&quot;: &quot;${__Random(10,999999)}&quot;,&#xd;
+        &quot;maxTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+        &quot;maxRxRate&quot;: &quot;${__Random(10,999999)}&quot;,&#xd;
+        &quot;downStaticstics&quot;: &quot;${__Random(10,9999999)}&quot;,&#xd;
+        &quot;upStaticstics&quot;: &quot;${__Random(10,9999999)}&quot;,&#xd;
         &quot;dnsInfo&quot;: {&#xd;
-          &quot;dnsResponseTime&quot;: 3,&#xd;
+          &quot;dnsResponseTime&quot;: ${__Random(1,99)},&#xd;
           &quot;ipAddress&quot;: &quot;[221.179.172.167]&quot;&#xd;
         },&#xd;
-        &quot;url&quot;: &quot;www.4399.com&quot;,&#xd;
-        &quot;mac&quot;: &quot;40:00:80:06:86:0b&quot;,&#xd;
         &quot;httpConnectInfo&quot;: {&#xd;
-          &quot;httpRequestErrorList&quot;: &quot; &quot;,&#xd;
-          &quot;httpRequestTimes&quot;: 3,&#xd;
-          &quot;httpDownloadRate&quot;: 20,&#xd;
-          &quot;httpResponesDelay&quot;: 113,&#xd;
-          &quot;httpRequestFailTimes&quot;: 0&#xd;
+          &quot;httpResponesDelay&quot;: ${__Random(1,99)},&#xd;
+          &quot;httpRequestErrorList&quot;: &quot;400|501|404&quot;,&#xd;
+          &quot;httpDownloadRate&quot;: ${__Random(1,99)},&#xd;
+          &quot;httpRequestTimes&quot;: ${__Random(1,9)},&#xd;
+          &quot;httpRequestFailTimes&quot;: ${__Random(1,9)}&#xd;
         },&#xd;
-        &quot;maxTxRate&quot;: &quot;0.306&quot;,&#xd;
-        &quot;protocol&quot;: &quot;TCP&quot;,&#xd;
-        &quot;averTxRate&quot;: &quot;0.067&quot;,&#xd;
-        &quot;domain&quot;: &quot;www.4399.com&quot;,&#xd;
-        &quot;startTime&quot;: 1528775884724,&#xd;
-        &quot;maxRxRate&quot;: &quot;0.697&quot;,&#xd;
         &quot;tcpConnectInfo&quot;: {&#xd;
-          &quot;tcpConnectAvgTime1&quot;: 372,&#xd;
-          &quot;tcpConnectAvgTime2&quot;: 50,&#xd;
-          &quot;tcpConnectTimes&quot;: 2,&#xd;
+          &quot;tcpConnectTimes&quot;: ${__Random(1,99)},&#xd;
+          &quot;upTcpConnectTimes&quot;:${__Random(1,99)},&#xd;
+          &quot;tcpConnectSuccessTimes&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpConnectAvgTime1&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpConnectAvgTime2&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpReconnectRate&quot;: ${__Random(1,99)},&#xd;
+          &quot;upTcpReconnectRate&quot;: ${__Random(1,99)},&#xd;
           &quot;tcpTTLInfo&quot;: &quot;{52=8,63=3}&quot;,&#xd;
-          &quot;tcpConnectSuccessTimes&quot;: 2,&#xd;
-          &quot;tcpReconnectRate&quot;: 86&#xd;
+          &quot;upTcpTTLInfo&quot;: &quot;{50=4,60=7}&quot;&#xd;
         }&#xd;
       },&#xd;
       {&#xd;
-        &quot;serviceType&quot;: &quot;NA&quot;,&#xd;
-        &quot;downStaticstics&quot;: &quot;1138488&quot;,&#xd;
-        &quot;averRxRate&quot;: &quot;30.461&quot;,&#xd;
-        &quot;upStaticstics&quot;: &quot;418114&quot;,&#xd;
-        &quot;runningTime&quot;: 65,&#xd;
-        &quot;dnsInfo&quot;: {&#xd;
-          &quot;dnsResponseTime&quot;: 5,&#xd;
-          &quot;ipAddress&quot;: &quot;[106.11.211.206]&quot;&#xd;
-        },&#xd;
-        &quot;url&quot;: &quot;www.youku.com&quot;,&#xd;
-        &quot;mac&quot;: &quot;40:00:40:06:3c:ea&quot;,&#xd;
-        &quot;httpConnectInfo&quot;: {&#xd;
-          &quot;httpRequestErrorList&quot;: &quot; &quot;,&#xd;
-          &quot;httpRequestTimes&quot;: 3,&#xd;
-          &quot;httpDownloadRate&quot;: 3807,&#xd;
-          &quot;httpResponesDelay&quot;: 11547,&#xd;
-          &quot;httpRequestFailTimes&quot;: 0&#xd;
-        },&#xd;
-        &quot;maxTxRate&quot;: &quot;53.455&quot;,&#xd;
+        &quot;mac&quot;: &quot;40:00:80:06:86:0b&quot;,&#xd;
+        &quot;startTime&quot;: ${__time()},&#xd;
+        &quot;runningTime&quot;: ${__Random(10,9999999)},&#xd;
+        &quot;url&quot;: &quot;url_${__Random(10,9999)}&quot;,&#xd;
+        &quot;domain&quot;: &quot;domain_${__Random(10,9999)}&quot;,&#xd;
         &quot;protocol&quot;: &quot;TCP&quot;,&#xd;
-        &quot;averTxRate&quot;: &quot;11.186&quot;,&#xd;
-        &quot;domain&quot;: &quot;www.youku.com&quot;,&#xd;
-        &quot;startTime&quot;: 1528775884710,&#xd;
-        &quot;maxRxRate&quot;: &quot;150.352&quot;,&#xd;
+        &quot;serviceType&quot;: &quot;${__RandomFromMultipleVars(Video|Game|Web|IMS)}&quot;,&#xd;
+        &quot;averTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+        &quot;averRxRate&quot;: &quot;${__Random(10,999999)}&quot;,&#xd;
+        &quot;maxTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+        &quot;maxRxRate&quot;: &quot;${__Random(10,999999)}&quot;,&#xd;
+        &quot;downStaticstics&quot;: &quot;${__Random(10,9999999)}&quot;,&#xd;
+        &quot;upStaticstics&quot;: &quot;${__Random(10,9999999)}&quot;,&#xd;
+        &quot;dnsInfo&quot;: {&#xd;
+          &quot;dnsResponseTime&quot;: ${__Random(1,99)},&#xd;
+          &quot;ipAddress&quot;: &quot;[221.179.172.167]&quot;&#xd;
+        },&#xd;
+        &quot;httpConnectInfo&quot;: {&#xd;
+          &quot;httpResponesDelay&quot;: ${__Random(1,99)},&#xd;
+          &quot;httpRequestErrorList&quot;: &quot;400|501|404&quot;,&#xd;
+          &quot;httpDownloadRate&quot;: ${__Random(1,99)},&#xd;
+          &quot;httpRequestTimes&quot;: ${__Random(1,9)},&#xd;
+          &quot;httpRequestFailTimes&quot;: ${__Random(1,9)}&#xd;
+        },&#xd;
         &quot;tcpConnectInfo&quot;: {&#xd;
-          &quot;tcpConnectAvgTime1&quot;: 261,&#xd;
-          &quot;tcpConnectAvgTime2&quot;: 47,&#xd;
-          &quot;tcpConnectTimes&quot;: 4,&#xd;
+          &quot;tcpConnectTimes&quot;: ${__Random(1,99)},&#xd;
+          &quot;upTcpConnectTimes&quot;:${__Random(1,99)},&#xd;
+          &quot;tcpConnectSuccessTimes&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpConnectAvgTime1&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpConnectAvgTime2&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpReconnectRate&quot;: ${__Random(1,99)},&#xd;
+          &quot;upTcpReconnectRate&quot;: ${__Random(1,99)},&#xd;
           &quot;tcpTTLInfo&quot;: &quot;{52=8,63=3}&quot;,&#xd;
-          &quot;tcpConnectSuccessTimes&quot;: 3,&#xd;
-          &quot;tcpReconnectRate&quot;: 49&#xd;
+          &quot;upTcpTTLInfo&quot;: &quot;{50=4,60=7}&quot;&#xd;
+        }&#xd;
+      },&#xd;
+      {&#xd;
+        &quot;mac&quot;: &quot;40:00:80:06:86:0b&quot;,&#xd;
+        &quot;startTime&quot;: ${__time()},&#xd;
+        &quot;runningTime&quot;: ${__Random(10,9999999)},&#xd;
+        &quot;url&quot;: &quot;url_${__Random(10,9999)}&quot;,&#xd;
+        &quot;domain&quot;: &quot;domain_${__Random(10,9999)}&quot;,&#xd;
+        &quot;protocol&quot;: &quot;TCP&quot;,&#xd;
+        &quot;serviceType&quot;: &quot;${__RandomFromMultipleVars(Video|Game|Web|IMS)}&quot;,&#xd;
+        &quot;averTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+        &quot;averRxRate&quot;: &quot;${__Random(10,999999)}&quot;,&#xd;
+        &quot;maxTxRate&quot;: &quot;${__Random(10,9999)}&quot;,&#xd;
+        &quot;maxRxRate&quot;: &quot;${__Random(10,999999)}&quot;,&#xd;
+        &quot;downStaticstics&quot;: &quot;${__Random(10,9999999)}&quot;,&#xd;
+        &quot;upStaticstics&quot;: &quot;${__Random(10,9999999)}&quot;,&#xd;
+        &quot;dnsInfo&quot;: {&#xd;
+          &quot;dnsResponseTime&quot;: ${__Random(1,99)},&#xd;
+          &quot;ipAddress&quot;: &quot;[221.179.172.167]&quot;&#xd;
+        },&#xd;
+        &quot;httpConnectInfo&quot;: {&#xd;
+          &quot;httpResponesDelay&quot;: ${__Random(1,99)},&#xd;
+          &quot;httpRequestErrorList&quot;: &quot;400|501|404&quot;,&#xd;
+          &quot;httpDownloadRate&quot;: ${__Random(1,99)},&#xd;
+          &quot;httpRequestTimes&quot;: ${__Random(1,9)},&#xd;
+          &quot;httpRequestFailTimes&quot;: ${__Random(1,9)}&#xd;
+        },&#xd;
+        &quot;tcpConnectInfo&quot;: {&#xd;
+          &quot;tcpConnectTimes&quot;: ${__Random(1,99)},&#xd;
+          &quot;upTcpConnectTimes&quot;:${__Random(1,99)},&#xd;
+          &quot;tcpConnectSuccessTimes&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpConnectAvgTime1&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpConnectAvgTime2&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpReconnectRate&quot;: ${__Random(1,99)},&#xd;
+          &quot;upTcpReconnectRate&quot;: ${__Random(1,99)},&#xd;
+          &quot;tcpTTLInfo&quot;: &quot;{52=8,63=3}&quot;,&#xd;
+          &quot;upTcpTTLInfo&quot;: &quot;{50=4,60=7}&quot;&#xd;
         }&#xd;
       }&#xd;
       ]&#xd;
+  },&#xd;
+	&quot;dnsRequestInfo&quot;: {&#xd;
+		&quot;dnsInfoList&quot;: [{&#xd;
+			&quot;domain&quot;: &quot;domain_${__Random(1,99)}&quot;,&#xd;
+			&quot;ipAddress&quot;: [&quot;221.179.172.167&quot;],&#xd;
+			&quot;dnsAddress&quot;: &quot;${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
+			&quot;dnsRequestTime&quot;: ${__timeShift(,${__time()},-PT${__Random(10,999)}S,)},&#xd;
+			&quot;dnsResponseTime&quot;: ${__Random(10,100)},&#xd;
+			&quot;errorInfo&quot;:&quot;&quot;&#xd;
+		}, {&#xd;
+			&quot;domain&quot;: &quot;domain_${__Random(1,99)}&quot;,&#xd;
+			&quot;ipAddress&quot;: [&quot;221.179.172.167&quot;],&#xd;
+			&quot;dnsAddress&quot;: &quot;${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}.${__Random(100,200)}&quot;,&#xd;
+			&quot;dnsRequestTime&quot;: ${__timeShift(,${__time()},-PT${__Random(10,999)}S,)},&#xd;
+			&quot;dnsResponseTime&quot;: ${__Random(10,100)},&#xd;
+			&quot;errorInfo&quot;:&quot;&quot;&#xd;
+		}]&#xd;
+	},&#xd;
+  &quot;tcpInfo&quot;:{&#xd;
+  	&quot;tcpInfoList&quot;:[]&#xd;
   }&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -366,7 +606,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">50</stringProp>
+          <stringProp name="LoopController.loops">100</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time"></stringProp>
@@ -391,7 +631,7 @@
 	&quot;taskSource&quot;: 1,&#xd;
 	&quot;taskId&quot;: ${__time()},&#xd;
 	&quot;deviceInfo&quot;: {&#xd;
-		&quot;deviceId&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\sn.txt,,,)}&quot;&#xd;
+		&quot;deviceId&quot;: &quot;${sn}&quot;&#xd;
 	},&#xd;
 	&quot;dpiVersionInfo&quot;: {&#xd;
 		&quot;version&quot;: &quot;3.0.0&quot;,&#xd;
@@ -560,7 +800,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">50</stringProp>
+          <stringProp name="LoopController.loops">300</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time"></stringProp>
@@ -581,7 +821,7 @@
 		&quot;eventCode&quot;: 1,&#xd;
 		&quot;subEvent&quot;: 0&#xd;
 	},&#xd;
-     &quot;timeOffset&quot;: ${__Random(0,99)},&#xd;
+     &quot;timeOffset&quot;: ${__Random(0,29)},&#xd;
 	&quot;dpiVersionInfo&quot;: {&#xd;
 		&quot;interfaceVersion&quot;: &quot;V4.0.0.JiaKuan&quot;,&#xd;
 		&quot;version&quot;: &quot;4.0.1.JiaKuan&quot;&#xd;
@@ -593,9 +833,9 @@
 		&quot;hardwareVersion&quot;: &quot;HV1.0.00.092&quot;,&#xd;
 		&quot;flashSize&quot;: 256,&#xd;
 		&quot;firmwareVersion&quot;: &quot;V1.6.10.052&quot;,&#xd;
-		&quot;deviceId&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\sn.txt,,,)}&quot;,&#xd;
+		&quot;deviceId&quot;: &quot;${sn}&quot;,&#xd;
 		&quot;mac&quot;: &quot;${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}:${__RandomString(2,0123456789abcdef)}&quot;,&#xd;
-		&quot;manufacturer&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\vendor.txt,,,)}&quot;,&#xd;
+		&quot;manufacturer&quot;: &quot;${vendor}&quot;,&#xd;
 		&quot;ram_size&quot;: 512,&#xd;
 		&quot;province&quot;: &quot;NMG&quot;,&#xd;
 		&quot;nfcSupport&quot;: &quot;NO&quot;,&#xd;
@@ -682,8 +922,8 @@
 		&quot;lan2ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
 		&quot;lan3ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
 		&quot;lan4ConnectStatus&quot;: &quot;DISCONNECTED&quot;,&#xd;
-		&quot;bootTime&quot;: &quot;${__dateTimeConvert(${__timeShift(,${__time()},-PT${__Random(1,99)}H,)},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
-		&quot;runingTime&quot;: ${__Random(100,999999)},&#xd;
+		&quot;bootTime&quot;: &quot;${__dateTimeConvert(${__timeShift(,${__time()},-PT${__Random(1,5)}m,)},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
+		&quot;runingTime&quot;: ${__Random(10,300)},&#xd;
 		&quot;WAN&quot;: &quot;CONNECTED&quot;,&#xd;
 		&quot;WIFI&quot;: &quot;DISCONNECTED&quot;,&#xd;
 		&quot;CPU&quot;: ${__Random(0,100)},&#xd;
@@ -730,7 +970,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">50</stringProp>
+          <stringProp name="LoopController.loops">200</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time"></stringProp>
@@ -753,7 +993,7 @@
   },&#xd;
   &quot;actualTime&quot;: ${__time()},&#xd;
   &quot;deviceInfo&quot;: {&#xd;
-    &quot;deviceId&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\sn.txt,,,)}&quot;&#xd;
+    &quot;deviceId&quot;: &quot;${sn}&quot;&#xd;
   },&#xd;
   &quot;dpiVersionInfo&quot;: {&#xd;
 	&quot;interfaceVersion&quot;: &quot;V4.0.0.JiaKuan&quot;,&#xd;
@@ -830,6 +1070,18 @@
           <hashTree/>
         </hashTree>
       </hashTree>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="sn-vendor-csv" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="filename">C:/Data/github-folders/java/jdk-test/test-tools/jmeter/sn-vendor.csv</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">sn,vendor</stringProp>
+      </CSVDataSet>
+      <hashTree/>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
