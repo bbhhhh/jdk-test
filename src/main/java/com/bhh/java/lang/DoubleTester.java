@@ -34,13 +34,8 @@ public class DoubleTester {
         Logger.info("{}",(double)aaa/bbb);
         Logger.info("{}",ccc<=((double)aaa/bbb));
 
-        try {
-            TimeUnit.SECONDS.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-            Logger.error(e.getMessage(), e);
-        }
-
+        double ddd = 1.8;
+        Logger.info("{}",(int)ddd);
     }
 
 

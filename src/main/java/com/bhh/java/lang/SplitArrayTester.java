@@ -3,6 +3,7 @@
  */
 package com.bhh.java.lang;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,5 +27,15 @@ public class SplitArrayTester {
         logger.info("{},{}",a.split("\\|"),a.split("\\|").length);
 
         logger.info("{},{}", StringUtils.split(a,"|"),StringUtils.split(a,"|").length);
+        String b = "a";
+        logger.info("{},{}",b.split(","),b.split(",").length);
+        logger.info("{},{}",StringUtils.split(b,","),StringUtils.split(b,",").length);
+        logger.info("{},{}",StringUtils.splitByWholeSeparator(b,","),StringUtils.splitByWholeSeparator(b,",").length);
+        String c = "c,";
+        String[] ca = org.springframework.util.StringUtils.split(c,",");
+        logger.info("{},{}",ca,ca.length);
+        String d = "d";
+        String[] da = org.springframework.util.StringUtils.split(d,",");
+        logger.info("{}",da == null);
     }
 }

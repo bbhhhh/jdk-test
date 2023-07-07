@@ -1,11 +1,15 @@
 package com.bhh.java.lang;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
 import org.apache.commons.lang3.StringUtils;
+
+import com.bhh.java.lang.json.JsonUtils;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
  * @Project: jdk-test
@@ -36,6 +40,18 @@ public class TimeTester {
 
     public static void main(String[] args){
         logger.info("{}",parseTime("2021-05-08T02:13:22.78Z"));
+
+        logger.info("{}",(new Timestamp(System.currentTimeMillis())).toString());
 //        logger.info("{}",parseTime("2021-05-08T02:13:22Z"));
+
+        DateClass dc = new DateClass();
+        logger.info("{}", JsonUtils.objectToJson(dc));
     }
+
+
+}
+
+class DateClass{
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    Date dateF = new Date() ;
 }

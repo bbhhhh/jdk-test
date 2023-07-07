@@ -58,91 +58,6 @@
             <stringProp name="Argument.value">${__time()}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="tv" elementType="Argument">
-            <stringProp name="Argument.name">tv</stringProp>
-            <stringProp name="Argument.value">TV</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="router" elementType="Argument">
-            <stringProp name="Argument.name">router</stringProp>
-            <stringProp name="Argument.value">Router</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="iot" elementType="Argument">
-            <stringProp name="Argument.name">iot</stringProp>
-            <stringProp name="Argument.value">IoT</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="ipc" elementType="Argument">
-            <stringProp name="Argument.name">ipc</stringProp>
-            <stringProp name="Argument.value">IPC</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="5G-2" elementType="Argument">
-            <stringProp name="Argument.name">5G-2</stringProp>
-            <stringProp name="Argument.value">5G-2</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="optical-ethernet" elementType="Argument">
-            <stringProp name="Argument.name">optical-ethernet</stringProp>
-            <stringProp name="Argument.value">Optical Ethernet</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="gpon" elementType="Argument">
-            <stringProp name="Argument.name">gpon</stringProp>
-            <stringProp name="Argument.value">GPON</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="xgpon" elementType="Argument">
-            <stringProp name="Argument.name">xgpon</stringProp>
-            <stringProp name="Argument.value">XGPON</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="poe" elementType="Argument">
-            <stringProp name="Argument.name">poe</stringProp>
-            <stringProp name="Argument.value">PoE</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="None" elementType="Argument">
-            <stringProp name="Argument.name">None</stringProp>
-            <stringProp name="Argument.value">None</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="WEP-64" elementType="Argument">
-            <stringProp name="Argument.name">WEP-64</stringProp>
-            <stringProp name="Argument.value">WEP-64</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="WEP-128" elementType="Argument">
-            <stringProp name="Argument.name">WEP-128</stringProp>
-            <stringProp name="Argument.value">WEP-128</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="WPA-Personal" elementType="Argument">
-            <stringProp name="Argument.name">WPA-Personal</stringProp>
-            <stringProp name="Argument.value">WPA-Personal</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="WPA2-Personal" elementType="Argument">
-            <stringProp name="Argument.name">WPA2-Personal</stringProp>
-            <stringProp name="Argument.value">WPA2-Personal</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="MIXED-WPAPSK2" elementType="Argument">
-            <stringProp name="Argument.name">MIXED-WPAPSK2</stringProp>
-            <stringProp name="Argument.value">MIXED-WPAPSK2</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="WPA3-SAE" elementType="Argument">
-            <stringProp name="Argument.name">WPA3-SAE</stringProp>
-            <stringProp name="Argument.value">WPA3-SAE</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="MIXED-WPA2WPA3" elementType="Argument">
-            <stringProp name="Argument.name">MIXED-WPA2WPA3</stringProp>
-            <stringProp name="Argument.value">MIXED-WPA2WPA3</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
@@ -152,7 +67,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">200</stringProp>
+          <stringProp name="LoopController.loops">2</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
@@ -169,35 +84,32 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
     &quot;data&quot;:&#xd;
     {&#xd;
-	&quot;UplinkType&quot;: &quot;${__RandomFromMultipleVars(wlan|eth|plc|cable|optical-ethernet|gpon|xgpon|poe)}&quot;,&#xd;
+	&quot;UplinkType&quot;: &quot;${__RandomFromMultipleVars(wlan|eth|plc|cable)}&quot;,&#xd;
 	&quot;WorkingMode&quot;: ${__Random(0, 2)},&#xd;
 	&quot;RunningTime&quot;: &quot;${__Random(100,1400000)}&quot;,&#xd;
-	&quot;CPUOccupancyRate&quot;: ${__Random(2,60)},&#xd;
-	&quot;RamOccupancyRate&quot;: ${__Random(2,70)},&#xd;
-	&quot;ipAddress&quot;:&quot;192.168.10.${__Random(10,200)}&quot;,&#xd;
-	&quot;IPv6Status&quot;:${__Random(0,1)},&#xd;
-	&quot;IPv6IPAddress&quot;:&quot;2001:DA8:1000::${__RandomString(4,0123456789ABCDEF)}&quot;,&#xd;
-	&quot;apUplinkMac&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-	&quot;LockNetStatus&quot;:${__Random(0,1)},&#xd;
-	&quot;userBind&quot;:${__Random(0,1)},&#xd;
+	&quot;CPUOccupancyRate&quot;: &quot;${__Random(2,60)}&quot;,&#xd;
+	&quot;RamOccupancyRate&quot;: &quot;${__Random(2,70)}&quot;,&#xd;
 	&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 	&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
 	&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
 	&quot;Noise&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
 	&quot;SNR&quot;: &quot;${__Random(10,99)}&quot;,&#xd;
 	&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
-	&quot;FiberTXPower&quot;:&quot;${__Random(-100,-20)}&quot;,&#xd;
-	&quot;FiberRXPower&quot;:&quot;${__Random(-100,-20)}&quot;,&#xd;
 	&quot;RxRate&quot;: &quot;${__Random(100,1200)}&quot;,&#xd;
 	&quot;TxRate&quot;: &quot;${__Random(100,1200)}&quot;,&#xd;
 	&quot;AverRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
 	&quot;AverTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-	&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
-	&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;&#xd;
+	&quot;MaxRxRate&quot;: &quot;${__Random(100,1200)}&quot;,&#xd;
+	&quot;MaxTxRate&quot;: &quot;${__Random(100,1200)}&quot;&#xd;
     }&#xd;
 }&#xd;
 </stringProp>
@@ -228,59 +140,33 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 	&quot;data&quot;: {&#xd;
-		&quot;TotalBytesSent&quot;:${__Random(100,999999999)},&#xd;
-		&quot;TotalBytesReceived&quot;:${__Random(100,999999999)},&#xd;
-		&quot;TotalPacketsSent&quot;:${__Random(100,999999999)},&#xd;
-		&quot;TotalPacketsReceived&quot;:${__Random(100,999999999)},&#xd;
-		&quot;ErrorsSent&quot;:${__Random(100,999999999)},&#xd;
-		&quot;ErrorsReceived&quot;:${__Random(100,999999999)},&#xd;
-		&quot;DiscardPacketsSent&quot;:${__Random(100,999999999)},&#xd;
-		&quot;DiscardPacketsReceived&quot;:${__Random(100,999999999)},&#xd;
 		&quot;STANumber&quot;: 2,&#xd;
-		&quot;Devices&quot;: [&#xd;
-		       {&#xd;
+		&quot;Devices&quot;: [{&#xd;
 				&quot;IPAddress&quot;: &quot;192.168.10.${__Random(10,200)}&quot;,&#xd;
-				&quot;STAIPv6IPAddress&quot;: &quot;2001:DA8:1000::${__RandomString(4,0123456789ABCDEF)}&quot;,&#xd;
+				&quot;STAIPv6IPAddress&quot;: &quot;&quot;,&#xd;
 				&quot;HostName&quot;: &quot;${__RandomString(6,0123456789abcdef)}&quot;,&#xd;
 				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
 				&quot;VMacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;STAType&quot;: &quot;${__RandomFromMultipleVars(phone|pc|pad|router|tv|iot|ipc)}&quot;,&#xd;
-				&quot;UpTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
+				&quot;STAType&quot;: &quot;${__RandomFromMultipleVars(phone|pc|pad)}&quot;,&#xd;
+				&quot;UpTime&quot;: &quot;${__Random(100,9999)}&quot;,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 				&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
 				&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
 				&quot;RxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
 				&quot;TxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
 				&quot;AverRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
 				&quot;AverTxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
-				&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
-				&quot;BytesSent&quot;:${__Random(100,99999999)},&#xd;
-				&quot;BytesReceived&quot;:${__Random(100,99999999)}&#xd;
-			},&#xd;
-		       {&#xd;
-				&quot;IPAddress&quot;: &quot;192.168.10.${__Random(10,200)}&quot;,&#xd;
-				&quot;STAIPv6IPAddress&quot;: &quot;2001:DA8:1000::${__RandomString(4,0123456789ABCDEF)}&quot;,&#xd;
-				&quot;HostName&quot;: &quot;${__RandomString(6,0123456789abcdef)}&quot;,&#xd;
-				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;VMacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;STAType&quot;: &quot;${__RandomFromMultipleVars(phone|pc|pad|router|tv|iot|ipc)}&quot;,&#xd;
-				&quot;UpTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
-				&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
-				&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
-				&quot;RxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-				&quot;TxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;AverRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;AverTxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
-				&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
-				&quot;BytesSent&quot;:${__Random(100,99999999)},&#xd;
-				&quot;BytesReceived&quot;:${__Random(100,99999999)}&#xd;
-			}			&#xd;
+				&quot;MaxRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;MaxTxRate&quot;: &quot;${__Random(100,1000)}&quot;&#xd;
+			}&#xd;
 		]&#xd;
 	}&#xd;
 }</stringProp>
@@ -310,47 +196,46 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 	&quot;data&quot;: {&#xd;
 		&quot;Radios&quot;: [{&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
-				&quot;Enable&quot;: ${__Random(0,1)},&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;Enable&quot;: 1,&#xd;
 				&quot;TransmitPower &quot;: &quot;${__Random(10,99)}&quot;,&#xd;
-				&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
-				&quot;LoadRate&quot;:${__Random(10,99)},&#xd;
-				&quot;Bandwidth&quot;:${__Random(0,5)}&#xd;
+				&quot;Channel&quot;: &quot;1,6&quot;&#xd;
 			},&#xd;
 			{&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
-				&quot;Enable&quot;: ${__Random(0,1)},&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;Enable&quot;: 1,&#xd;
 				&quot;TransmitPower &quot;: &quot;${__Random(10,99)}&quot;,&#xd;
-				&quot;Channel&quot;: &quot;2,7&quot;,&#xd;
-				&quot;LoadRate&quot;:${__Random(10,99)},&#xd;
-				&quot;Bandwidth&quot;:${__Random(0,5)}&#xd;
+				&quot;Channel&quot;: &quot;36&quot;&#xd;
 			}&#xd;
 		],&#xd;
 		&quot;Configurations&quot;: [{&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 				&quot;Index&quot;: 1,&#xd;
-				&quot;Enable&quot;: ${__Random(0,1)},&#xd;
+				&quot;Enable&quot;: 1,&#xd;
 				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
-				&quot;SecurityMode&quot;: &quot;${__RandomFromMultipleVars(None|WEP-64|WEP-128|WPA-Personal|WPA2-Personal|MIXED-WPAPSK2|WPA3-SAE|MIXED-WPA2WPA3)}&quot;,&#xd;
-				&quot;Encrypt&quot;:${__Random(0,3)},&#xd;
+				&quot;SecurityMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
 				&quot;Pwd &quot;: &quot;*******&quot;,&#xd;
 				&quot;MaxAssociateNum&quot;:  ${__Random(1, 20)},&#xd;
-				&quot;SSIDAdvertisementEnabled&quot;: ${__Random(0,1)}&#xd;
+				&quot;SSIDAdvertisementEnabled&quot;: 1&#xd;
 			},&#xd;
 			{&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 				&quot;Index&quot;: 1,&#xd;
-				&quot;Enable&quot;: ${__Random(0,1)},&#xd;
-				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
-				&quot;SecurityMode&quot;: &quot;${__RandomFromMultipleVars(None|WEP-64|WEP-128|WPA-Personal|WPA2-Personal|MIXED-WPAPSK2|WPA3-SAE|MIXED-WPA2WPA3)}&quot;,&#xd;
-				&quot;Encrypt&quot;:${__Random(0,3)},&#xd;
-				&quot;Pwd &quot;: &quot;*******&quot;,&#xd;
-				&quot;MaxAssociateNum&quot;:  ${__Random(1, 20)},&#xd;
-				&quot;SSIDAdvertisementEnabled&quot;: ${__Random(0,1)}&#xd;
+				&quot;Enable&quot;: 1,&#xd;
+				&quot;SSID&quot;: &quot;CMCC-2341-5G&quot;,&#xd;
+				&quot;SecurityMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
+				&quot;Pwd&quot;: &quot;*******&quot;,&#xd;
+				&quot;MaxAssociateNum&quot;: ${__Random(1, 20)},&#xd;
+				&quot;SSIDAdvertisementEnabled&quot;: 1&#xd;
 			}&#xd;
 		]&#xd;
 	}&#xd;
@@ -390,7 +275,12 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 	&quot;data&quot;: {&#xd;
 		&quot;Number&quot;: 3,&#xd;
@@ -399,27 +289,21 @@
 				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
 				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
 				&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
-				&quot;Bandwidth&quot;:${__Random(1,5)},&#xd;
-				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;,&#xd;
-				&quot;Wifistandard&quot;:${__Random(1,4)}&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
 			},&#xd;
 			{&#xd;
 				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
 				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
-				&quot;Bandwidth&quot;:${__Random(1,5)},&#xd;
-				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;,&#xd;
-				&quot;Wifistandard&quot;:${__Random(1,4)}&#xd;
+				&quot;Channel&quot;: &quot;3,6&quot;,&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
 			},&#xd;
 			{&#xd;
 				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
 				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
-				&quot;Bandwidth&quot;:${__Random(1,5)},&#xd;
-				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;,&#xd;
-				&quot;Wifistandard&quot;:${__Random(1,4)}&#xd;
+				&quot;Channel&quot;: &quot;3,7&quot;,&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
 			}&#xd;
 		]&#xd;
 	}&#xd;
@@ -450,25 +334,29 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 	&quot;data&quot;: {&#xd;
-		&quot;ServiceNumber&quot;: 2,&#xd;
-		&quot;ServiceBaseInfo&quot;: [&#xd;
-		  {&#xd;
-			&quot;MacEntries&quot;: &quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
+		&quot;ServiceNumber&quot;: 1,&#xd;
+		&quot;ServiceBaseInfo&quot;: [{&#xd;
+			&quot;MacEntries&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
 			&quot;StartTime&quot;: &quot;${__dateTimeConvert(${__time()},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
 			&quot;RuningTime&quot;: &quot;${__Random(100,99999)}&quot;,&#xd;
 			&quot;URL&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
 			&quot;Protocol&quot;: &quot;TCP&quot;,&#xd;
 			&quot;AverTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
 			&quot;AverRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-			&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
-			&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
+			&quot;MaxTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+			&quot;MaxRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
 			&quot;UpStaticstics&quot;: ${__Random(100, 1000000)},&#xd;
 			&quot;DownStaticstics&quot;: ${__Random(100, 100000000)},&#xd;
-			&quot;TcpConnectTimes&quot;: ${__Random(90, 100)},&#xd;
-			&quot;TcpSucessTimes&quot;: ${__Random(90, 95)},&#xd;
+			&quot;TcpConnectTimes&quot;: ${__Random(1, 10)},&#xd;
+			&quot;TcpSucessTimes&quot;: ${__Random(1, 10)},&#xd;
 			&quot;TcpAvgTime&quot;: ${__Random(10, 100)},&#xd;
 			&quot;TcpReconnectRate&quot;: ${__Random(10, 100)},&#xd;
 			&quot;HttpResponesDelay&quot;: ${__Random(10, 100)},&#xd;
@@ -476,30 +364,8 @@
 			&quot;HttpRequestTimes&quot;: ${__Random(1, 10)},&#xd;
 			&quot;HttpRequestFailTimes&quot;: ${__Random(1, 10)},&#xd;
 			&quot;DnsParseResponesDelay&quot;: ${__Random(10, 100)}&#xd;
-		},&#xd;
-		  {&#xd;
-			&quot;MacEntries&quot;: &quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-			&quot;StartTime&quot;: &quot;${__dateTimeConvert(${__time()},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
-			&quot;RuningTime&quot;: &quot;${__Random(100,99999)}&quot;,&#xd;
-			&quot;URL&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
-			&quot;Protocol&quot;: &quot;TCP&quot;,&#xd;
-			&quot;AverTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-			&quot;AverRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-			&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
-			&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
-			&quot;UpStaticstics&quot;: ${__Random(100, 1000000)},&#xd;
-			&quot;DownStaticstics&quot;: ${__Random(100, 100000000)},&#xd;
-			&quot;TcpConnectTimes&quot;: ${__Random(90, 100)},&#xd;
-			&quot;TcpSucessTimes&quot;: ${__Random(90, 95)},&#xd;
-			&quot;TcpAvgTime&quot;: ${__Random(10, 100)},&#xd;
-			&quot;TcpReconnectRate&quot;: ${__Random(10, 100)},&#xd;
-			&quot;HttpResponesDelay&quot;: ${__Random(10, 100)},&#xd;
-			&quot;HttpRequestErrorList&quot;: &quot;404,401,501&quot;,&#xd;
-			&quot;HttpRequestTimes&quot;: ${__Random(1, 10)},&#xd;
-			&quot;HttpRequestFailTimes&quot;: ${__Random(1, 10)},&#xd;
-			&quot;DnsParseResponesDelay&quot;: ${__Random(10, 100)}&#xd;
-		}&#xd;
-		]&#xd;
+&#xd;
+		}]&#xd;
 	}&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -543,8 +409,12 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-	&quot;RPCMethod&quot;: &quot;PingTest&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
@@ -586,8 +456,12 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-	&quot;RPCMethod&quot;: &quot;TracerouteTest&quot;,&#xd;
-	&quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
@@ -628,8 +502,12 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-	&quot;RPCMethod&quot;: &quot;HttpDownloadTest&quot;,&#xd;
-	&quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
@@ -664,8 +542,12 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{	&#xd;
-	&quot;RPCMethod&quot;: &quot;WebTest&quot;,&#xd;
-	&quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
@@ -706,8 +588,12 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-	&quot;RPCMethod&quot;: &quot;VideoQualityTest&quot;,&#xd;
-	&quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
@@ -743,8 +629,12 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-	&quot;RPCMethod&quot;: &quot;GameQualityTest&quot;,&#xd;
-	&quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+	&quot;areaCode&quot;:&quot;${areaCode}&quot;,&#xd;
+	&quot;areaName&quot;:&quot;${areaName}&quot;,&#xd;
+	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
+	&quot;model&quot;:&quot;${model}&quot;,&#xd;
+	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
+    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
     &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
@@ -797,10 +687,10 @@
         <stringProp name="variableNames">areaCode,areaName</stringProp>
       </CSVDataSet>
       <hashTree/>
-      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="ap-mac-cmei-firmware-vendor-model-sn-CSV" enabled="true">
-        <stringProp name="filename">C:/Data/github-folders/java/jdk-test/test-tools/jmeter/ap-mac-cmei-firmware-vendor-model-sn.csv</stringProp>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="vendor-model-firmware-CSV" enabled="true">
+        <stringProp name="filename">C:/Data/github-folders/java/jdk-test/test-tools/jmeter/ap_vendor_model_firmware.txt</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="variableNames">mac,cmei,firmware,vendor,model,sn</stringProp>
+        <stringProp name="variableNames">vendor,model,firmware</stringProp>
         <boolProp name="ignoreFirstLine">false</boolProp>
         <stringProp name="delimiter">,</stringProp>
         <boolProp name="quotedData">false</boolProp>
@@ -809,11 +699,11 @@
         <stringProp name="shareMode">shareMode.all</stringProp>
       </CSVDataSet>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ap-control-msg" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ap-manager-msg" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">200</stringProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
@@ -840,41 +730,40 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
 	&quot;RPCMethod&quot;: &quot;boot&quot;,&#xd;
-	&quot;DevRND&quot;: &quot;${__RandomString(32,0123456789ABCDEF)}&quot;,&#xd;
-	&quot;deviceMac&quot;: &quot;${mac}&quot;,&#xd;
-	&quot;cmei&quot;: &quot;${cmei}&quot;,&#xd;
+	&quot;DevRND&quot;: &quot;011CB9249F81239A225D23CDA27EA24C&quot;,&#xd;
+	&quot;deviceMac&quot;: &quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
+	&quot;cmei&quot;: &quot;XXXXXXXXX&quot;,&#xd;
 	&quot;deviceType&quot;: &quot;30103&quot;,&#xd;
 	&quot;firmwareVersion&quot;: &quot;${firmware}&quot;,&#xd;
-	&quot;softwareVersion&quot;: &quot;v-${__Random(0,3)}&quot;,&#xd;
+	&quot;softwareVersion&quot;: &quot;3.2&quot;,&#xd;
 	&quot;networkPluginVersion&quot;: &quot;V1.5.0&quot;,&#xd;
-	&quot;bootType&quot;: ${__Random(0,2)},&#xd;
-	&quot;PPPOEuser&quot;: &quot;${__RandomString(10,0123456789)}&quot;,&#xd;
-	&quot;WorkingMode&quot;: ${__Random(0,2)},&#xd;
-	&quot;ipAddress&quot;: &quot;192.168.1.${__Random(1,254)}&quot;,&#xd;
-	&quot;IPv6Status&quot;: ${__Random(0,1)},&#xd;
-	&quot;IPv6IPAddress&quot;: &quot;2001:DA8:1000::${__RandomString(4,0123456789ABCDEF)}&quot;,&#xd;
-	&quot;timestamp&quot;: ${__time()},&#xd;
+	&quot;bootType&quot;: 1,&#xd;
+	&quot;PPPOEuser&quot;: &quot;xxxx&quot;,&#xd;
+	&quot;WorkingMode&quot;: 0,&#xd;
+	&quot;ipAddress&quot;: &quot;192.168.1.111&quot;,&#xd;
+	&quot;IPv6Status&quot;: 1,&#xd;
+	&quot;IPv6IPAddress&quot;: &quot;2001:DA8:1000::F1&quot;,&#xd;
+	&quot;timestamp&quot;: 1628562566021,&#xd;
 	&quot;XData&quot;: {&#xd;
-		&quot;deviceVendor&quot;: &quot;${vendor}&quot;,&#xd;
+		&quot;deviceVendor&quot;:&quot;${vendor}&quot;,&#xd;
 		&quot;deviceModel&quot;: &quot;${model}&quot;,&#xd;
-		&quot;deviceSn&quot;: &quot;${sn}&quot;,&#xd;
+		&quot;deviceSn&quot;: &quot;011101xxxxxxxxxx&quot;,&#xd;
 		&quot;cpuType&quot;: &quot;MT7621DA&quot;,&#xd;
 		&quot;FlashSize&quot;: 128,&#xd;
 		&quot;RamSize&quot;: 256,&#xd;
-		&quot;apUplinkType&quot;: &quot;${__RandomFromMultipleVars(wlan|ethernet|plc|cable|optical-ethernet|gpon|xgpon|poe)}&quot;,&#xd;
-		&quot;radio5&quot;: ${__Random(0,2)},&#xd;
-		&quot;factorySetting&quot;: ${__Random(0,1)},&#xd;
-		&quot;apUplinkMac&quot;: &quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-		&quot;andlinkVersion&quot;: &quot;V${__Random(1,4)}&quot;,&#xd;
-		&quot;UplinkMac&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-		&quot;meshRole&quot;: ${__Random(0,4)}&#xd;
+		&quot;apUplinkType&quot;: &quot;Ethernet&quot;,&#xd;
+		&quot;radio5&quot;: 1,&#xd;
+		&quot;factorySetting&quot;: 1,&#xd;
+		&quot;apUplinkMac&quot;: &quot;******&quot;,&#xd;
+		&quot;andlinkVersion&quot;: &quot;V2.6&quot;,&#xd;
+		&quot;meshRole&quot;: 1&#xd;
 	}&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
+          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
           <stringProp name="HTTPSampler.port">9008</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>

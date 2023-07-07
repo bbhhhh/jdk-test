@@ -30,5 +30,8 @@ public class FilesApiTester {
                 log.error(e.getMessage(), e);
             }
         }
+
+        Path filePath = Paths.get("/home","a.gz") ;
+        log.info("{},{},{}",filePath.getFileName().toString(), filePath.toString(), filePath.toFile().getName());
     }
 }
