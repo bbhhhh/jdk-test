@@ -526,7 +526,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
+          <stringProp name="LoopController.loops">100</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
@@ -843,7 +843,7 @@
 	&quot;DevRND&quot;: &quot;${__RandomString(32,0123456789ABCDEF)}&quot;,&#xd;
 	&quot;deviceMac&quot;: &quot;${mac}&quot;,&#xd;
 	&quot;cmei&quot;: &quot;${cmei}&quot;,&#xd;
-	&quot;deviceType&quot;: &quot;30103&quot;,&#xd;
+	&quot;deviceType&quot;: &quot;${model}&quot;,&#xd;
 	&quot;firmwareVersion&quot;: &quot;${firmware}&quot;,&#xd;
 	&quot;softwareVersion&quot;: &quot;v-${__Random(0,3)}&quot;,&#xd;
 	&quot;networkPluginVersion&quot;: &quot;V1.5.0&quot;,&#xd;
