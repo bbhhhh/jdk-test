@@ -27,5 +27,12 @@ public class PropertiesTester {
         Properties p2 = (Properties) p1.clone();
 
         p2.forEach((k, v) -> logger.info("{}:{}", k, v));
+
+        try{
+            p2.setProperty("k3",null);
+        }catch (Exception e){
+            logger.info("{}",e==null);
+            logger.info(e.getMessage(),e);
+        }
     }
 }

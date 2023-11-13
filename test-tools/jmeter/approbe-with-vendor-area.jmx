@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.1">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
-      <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -60,14 +59,13 @@
           </elementProp>
         </collectionProp>
       </elementProp>
-      <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="approbe-periodic-message" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">1</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">2</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
@@ -75,6 +73,7 @@
         <stringProp name="ThreadGroup.duration">500</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="uplinkStatus-request" enabled="true">
@@ -89,27 +88,35 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
     &quot;data&quot;:&#xd;
     {&#xd;
-	&quot;UplinkType&quot;: &quot;${__RandomFromMultipleVars(wlan|eth|plc|cable)}&quot;,&#xd;
+	&quot;UplinkType&quot;: &quot;${__RandomFromMultipleVars(wlan|eth|plc|cable|optical-ethernet|gpon|xgpon|poe)}&quot;,&#xd;
 	&quot;WorkingMode&quot;: ${__Random(0, 2)},&#xd;
 	&quot;RunningTime&quot;: &quot;${__Random(100,1400000)}&quot;,&#xd;
-	&quot;CPUOccupancyRate&quot;: &quot;${__Random(2,60)}&quot;,&#xd;
-	&quot;RamOccupancyRate&quot;: &quot;${__Random(2,70)}&quot;,&#xd;
+	&quot;CPUOccupancyRate&quot;: ${__Random(2,60)},&#xd;
+	&quot;RamOccupancyRate&quot;: ${__Random(2,70)},&#xd;
+	&quot;ipAddress&quot;:&quot;192.168.10.${__Random(10,200)}&quot;,&#xd;
+	&quot;IPv6Status&quot;:${__Random(0,1)},&#xd;
+	&quot;IPv6IPAddress&quot;:&quot;2001:DA8:1000::${__RandomString(4,0123456789ABCDEF)}&quot;,&#xd;
+	&quot;apUplinkMac&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
+	&quot;LockNetStatus&quot;:${__Random(0,1)},&#xd;
+	&quot;userBind&quot;:${__Random(0,1)},&#xd;
 	&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 	&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
 	&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
 	&quot;Noise&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
 	&quot;SNR&quot;: &quot;${__Random(10,99)}&quot;,&#xd;
 	&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
+	&quot;FiberTXPower&quot;:&quot;${__Random(-100,-20)}&quot;,&#xd;
+	&quot;FiberRXPower&quot;:&quot;${__Random(-100,-20)}&quot;,&#xd;
 	&quot;RxRate&quot;: &quot;${__Random(100,1200)}&quot;,&#xd;
 	&quot;TxRate&quot;: &quot;${__Random(100,1200)}&quot;,&#xd;
 	&quot;AverRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
 	&quot;AverTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-	&quot;MaxRxRate&quot;: &quot;${__Random(100,1200)}&quot;,&#xd;
-	&quot;MaxTxRate&quot;: &quot;${__Random(100,1200)}&quot;&#xd;
+	&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
+	&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;&#xd;
     }&#xd;
 }&#xd;
 </stringProp>
@@ -127,10 +134,13 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
           <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="staInfo" enabled="true">
@@ -145,28 +155,59 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
-	&quot;data&quot;: {&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
+&quot;data&quot;: {&#xd;
+		&quot;TotalBytesSent&quot;:${__Random(100,999999999)},&#xd;
+		&quot;TotalBytesReceived&quot;:${__Random(100,999999999)},&#xd;
+		&quot;TotalPacketsSent&quot;:${__Random(100,999999999)},&#xd;
+		&quot;TotalPacketsReceived&quot;:${__Random(100,999999999)},&#xd;
+		&quot;ErrorsSent&quot;:${__Random(100,999999999)},&#xd;
+		&quot;ErrorsReceived&quot;:${__Random(100,999999999)},&#xd;
+		&quot;DiscardPacketsSent&quot;:${__Random(100,999999999)},&#xd;
+		&quot;DiscardPacketsReceived&quot;:${__Random(100,999999999)},&#xd;
 		&quot;STANumber&quot;: 2,&#xd;
-		&quot;Devices&quot;: [{&#xd;
+		&quot;Devices&quot;: [&#xd;
+		       {&#xd;
 				&quot;IPAddress&quot;: &quot;192.168.10.${__Random(10,200)}&quot;,&#xd;
-				&quot;STAIPv6IPAddress&quot;: &quot;&quot;,&#xd;
+				&quot;STAIPv6IPAddress&quot;: &quot;2001:DA8:1000::${__RandomString(4,0123456789ABCDEF)}&quot;,&#xd;
 				&quot;HostName&quot;: &quot;${__RandomString(6,0123456789abcdef)}&quot;,&#xd;
 				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
 				&quot;VMacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;STAType&quot;: &quot;${__RandomFromMultipleVars(phone|pc|pad)}&quot;,&#xd;
-				&quot;UpTime&quot;: &quot;${__Random(100,9999)}&quot;,&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;STAType&quot;: &quot;${__RandomFromMultipleVars(phone|pc|pad|router|tv|iot|ipc)}&quot;,&#xd;
+				&quot;UpTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
 				&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
 				&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
 				&quot;RxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
 				&quot;TxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
 				&quot;AverRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
 				&quot;AverTxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;MaxRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
-				&quot;MaxTxRate&quot;: &quot;${__Random(100,1000)}&quot;&#xd;
-			}&#xd;
+				&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
+				&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
+				&quot;BytesSent&quot;:${__Random(100,99999999)},&#xd;
+				&quot;BytesReceived&quot;:${__Random(100,99999999)}&#xd;
+			},&#xd;
+		       {&#xd;
+				&quot;IPAddress&quot;: &quot;192.168.10.${__Random(10,200)}&quot;,&#xd;
+				&quot;STAIPv6IPAddress&quot;: &quot;2001:DA8:1000::${__RandomString(4,0123456789ABCDEF)}&quot;,&#xd;
+				&quot;HostName&quot;: &quot;${__RandomString(6,0123456789abcdef)}&quot;,&#xd;
+				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+				&quot;VMacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+				&quot;STAType&quot;: &quot;${__RandomFromMultipleVars(phone|pc|pad|router|tv|iot|ipc)}&quot;,&#xd;
+				&quot;UpTime&quot;: &quot;${__Random(100,999999)}&quot;,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
+				&quot;SSID&quot;: &quot;CMCC-${__Random(100,9999)}&quot;,&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-100,-20)}&quot;,&#xd;
+				&quot;RxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+				&quot;TxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;AverRxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;AverTxRate&quot;: &quot;${__Random(100,100)}&quot;,&#xd;
+				&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
+				&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
+				&quot;BytesSent&quot;:${__Random(100,99999999)},&#xd;
+				&quot;BytesReceived&quot;:${__Random(100,99999999)}&#xd;
+			}			&#xd;
 		]&#xd;
 	}&#xd;
 }</stringProp>
@@ -184,9 +225,12 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="WifiStatus-Request" enabled="true">
@@ -201,41 +245,47 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
-	&quot;data&quot;: {&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
+&quot;data&quot;: {&#xd;
 		&quot;Radios&quot;: [{&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
-				&quot;Enable&quot;: 1,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
+				&quot;Enable&quot;: ${__Random(0,1)},&#xd;
 				&quot;TransmitPower &quot;: &quot;${__Random(10,99)}&quot;,&#xd;
-				&quot;Channel&quot;: &quot;1,6&quot;&#xd;
+				&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
+				&quot;LoadRate&quot;:${__Random(10,99)},&#xd;
+				&quot;Bandwidth&quot;:${__Random(0,5)}&#xd;
 			},&#xd;
 			{&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
-				&quot;Enable&quot;: 1,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
+				&quot;Enable&quot;: ${__Random(0,1)},&#xd;
 				&quot;TransmitPower &quot;: &quot;${__Random(10,99)}&quot;,&#xd;
-				&quot;Channel&quot;: &quot;36&quot;&#xd;
+				&quot;Channel&quot;: &quot;2,7&quot;,&#xd;
+				&quot;LoadRate&quot;:${__Random(10,99)},&#xd;
+				&quot;Bandwidth&quot;:${__Random(0,5)}&#xd;
 			}&#xd;
 		],&#xd;
 		&quot;Configurations&quot;: [{&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
 				&quot;Index&quot;: 1,&#xd;
-				&quot;Enable&quot;: 1,&#xd;
+				&quot;Enable&quot;: ${__Random(0,1)},&#xd;
 				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
-				&quot;SecurityMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
+				&quot;SecurityMode&quot;: &quot;${__RandomFromMultipleVars(None|WEP-64|WEP-128|WPA-Personal|WPA2-Personal|MIXED-WPAPSK2|WPA3-SAE|MIXED-WPA2WPA3)}&quot;,&#xd;
+				&quot;Encrypt&quot;:${__Random(0,3)},&#xd;
 				&quot;Pwd &quot;: &quot;*******&quot;,&#xd;
 				&quot;MaxAssociateNum&quot;:  ${__Random(1, 20)},&#xd;
-				&quot;SSIDAdvertisementEnabled&quot;: 1&#xd;
+				&quot;SSIDAdvertisementEnabled&quot;: ${__Random(0,1)}&#xd;
 			},&#xd;
 			{&#xd;
-				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
+				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G|5G-2)}&quot;,&#xd;
 				&quot;Index&quot;: 1,&#xd;
-				&quot;Enable&quot;: 1,&#xd;
-				&quot;SSID&quot;: &quot;CMCC-2341-5G&quot;,&#xd;
-				&quot;SecurityMode&quot;: &quot;MIXED-WPAPSK2&quot;,&#xd;
-				&quot;Pwd&quot;: &quot;*******&quot;,&#xd;
-				&quot;MaxAssociateNum&quot;: ${__Random(1, 20)},&#xd;
-				&quot;SSIDAdvertisementEnabled&quot;: 1&#xd;
+				&quot;Enable&quot;: ${__Random(0,1)},&#xd;
+				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
+				&quot;SecurityMode&quot;: &quot;${__RandomFromMultipleVars(None|WEP-64|WEP-128|WPA-Personal|WPA2-Personal|MIXED-WPAPSK2|WPA3-SAE|MIXED-WPA2WPA3)}&quot;,&#xd;
+				&quot;Encrypt&quot;:${__Random(0,3)},&#xd;
+				&quot;Pwd &quot;: &quot;*******&quot;,&#xd;
+				&quot;MaxAssociateNum&quot;:  ${__Random(1, 20)},&#xd;
+				&quot;SSIDAdvertisementEnabled&quot;: ${__Random(0,1)}&#xd;
 			}&#xd;
 		]&#xd;
 	}&#xd;
@@ -254,9 +304,12 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -280,8 +333,8 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
 	&quot;data&quot;: {&#xd;
 		&quot;Number&quot;: 3,&#xd;
 		&quot;Radios&quot;: [{&#xd;
@@ -289,21 +342,27 @@
 				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
 				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
 				&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
-				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
+				&quot;Bandwidth&quot;:${__Random(1,5)},&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;,&#xd;
+				&quot;Wifistandard&quot;:${__Random(1,4)}&#xd;
 			},&#xd;
 			{&#xd;
 				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
 				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;Channel&quot;: &quot;3,6&quot;,&#xd;
-				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
+				&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
+				&quot;Bandwidth&quot;:${__Random(1,5)},&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;,&#xd;
+				&quot;Wifistandard&quot;:${__Random(1,4)}&#xd;
 			},&#xd;
 			{&#xd;
 				&quot;Radio&quot;: &quot;${__RandomFromMultipleVars(2G|5G)}&quot;,&#xd;
 				&quot;SSID&quot;: &quot;CMCC-${__Random(1000,9999)}&quot;,&#xd;
 				&quot;MacAddress&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
-				&quot;Channel&quot;: &quot;3,7&quot;,&#xd;
-				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;&#xd;
+				&quot;Channel&quot;: &quot;1,6&quot;,&#xd;
+				&quot;Bandwidth&quot;:${__Random(1,5)},&#xd;
+				&quot;RSSI&quot;: &quot;${__Random(-75,-10)}&quot;,&#xd;
+				&quot;Wifistandard&quot;:${__Random(1,4)}&#xd;
 			}&#xd;
 		]&#xd;
 	}&#xd;
@@ -322,9 +381,12 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="serviceDataInfo-Request" enabled="true">
@@ -339,24 +401,25 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
 	&quot;data&quot;: {&#xd;
-		&quot;ServiceNumber&quot;: 1,&#xd;
-		&quot;ServiceBaseInfo&quot;: [{&#xd;
-			&quot;MacEntries&quot;: &quot;${__RandomString(12,0123456789abcdef)}&quot;,&#xd;
+		&quot;ServiceNumber&quot;: 2,&#xd;
+		&quot;ServiceBaseInfo&quot;: [&#xd;
+		  {&#xd;
+			&quot;MacEntries&quot;: &quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
 			&quot;StartTime&quot;: &quot;${__dateTimeConvert(${__time()},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
 			&quot;RuningTime&quot;: &quot;${__Random(100,99999)}&quot;,&#xd;
 			&quot;URL&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
 			&quot;Protocol&quot;: &quot;TCP&quot;,&#xd;
 			&quot;AverTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
 			&quot;AverRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-			&quot;MaxTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
-			&quot;MaxRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+			&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
+			&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
 			&quot;UpStaticstics&quot;: ${__Random(100, 1000000)},&#xd;
 			&quot;DownStaticstics&quot;: ${__Random(100, 100000000)},&#xd;
-			&quot;TcpConnectTimes&quot;: ${__Random(1, 10)},&#xd;
-			&quot;TcpSucessTimes&quot;: ${__Random(1, 10)},&#xd;
+			&quot;TcpConnectTimes&quot;: ${__Random(90, 100)},&#xd;
+			&quot;TcpSucessTimes&quot;: ${__Random(90, 95)},&#xd;
 			&quot;TcpAvgTime&quot;: ${__Random(10, 100)},&#xd;
 			&quot;TcpReconnectRate&quot;: ${__Random(10, 100)},&#xd;
 			&quot;HttpResponesDelay&quot;: ${__Random(10, 100)},&#xd;
@@ -364,8 +427,30 @@
 			&quot;HttpRequestTimes&quot;: ${__Random(1, 10)},&#xd;
 			&quot;HttpRequestFailTimes&quot;: ${__Random(1, 10)},&#xd;
 			&quot;DnsParseResponesDelay&quot;: ${__Random(10, 100)}&#xd;
-&#xd;
-		}]&#xd;
+		},&#xd;
+		  {&#xd;
+			&quot;MacEntries&quot;: &quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
+			&quot;StartTime&quot;: &quot;${__dateTimeConvert(${__time()},,yyyy-MM-dd HH:mm:ss,)}&quot;,&#xd;
+			&quot;RuningTime&quot;: &quot;${__Random(100,99999)}&quot;,&#xd;
+			&quot;URL&quot;: &quot;${__StringFromFile(C:\\Data\\github-folders\\java\\jdk-test\\test-tools\\jmeter\\url.txt,,,)}&quot;,&#xd;
+			&quot;Protocol&quot;: &quot;TCP&quot;,&#xd;
+			&quot;AverTxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+			&quot;AverRxRate&quot;: &quot;${__Random(100,1000)}&quot;,&#xd;
+			&quot;MaxTxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
+			&quot;MaxRxRate&quot;: &quot;${__Random(400,1200)}&quot;,&#xd;
+			&quot;UpStaticstics&quot;: ${__Random(100, 1000000)},&#xd;
+			&quot;DownStaticstics&quot;: ${__Random(100, 100000000)},&#xd;
+			&quot;TcpConnectTimes&quot;: ${__Random(90, 100)},&#xd;
+			&quot;TcpSucessTimes&quot;: ${__Random(90, 95)},&#xd;
+			&quot;TcpAvgTime&quot;: ${__Random(10, 100)},&#xd;
+			&quot;TcpReconnectRate&quot;: ${__Random(10, 100)},&#xd;
+			&quot;HttpResponesDelay&quot;: ${__Random(10, 100)},&#xd;
+			&quot;HttpRequestErrorList&quot;: &quot;404,401,501&quot;,&#xd;
+			&quot;HttpRequestTimes&quot;: ${__Random(1, 10)},&#xd;
+			&quot;HttpRequestFailTimes&quot;: ${__Random(1, 10)},&#xd;
+			&quot;DnsParseResponesDelay&quot;: ${__Random(10, 100)}&#xd;
+		}&#xd;
+		]&#xd;
 	}&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -382,17 +467,20 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ap-diagnose-message" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
@@ -400,6 +488,7 @@
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ping test" enabled="true">
@@ -414,8 +503,8 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
 &quot;respCont&quot;:&quot;Success&quot;,&#xd;
@@ -444,9 +533,12 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="traceroute" enabled="true">
@@ -461,8 +553,8 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
 &quot;respCont&quot;:&quot;Success&quot;,&#xd;
@@ -490,9 +582,12 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="httpdownload" enabled="true">
@@ -507,8 +602,8 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
 &quot;respCont&quot;:&quot;Success&quot;,&#xd;
@@ -530,9 +625,12 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="web" enabled="true">
@@ -547,8 +645,8 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
 &quot;respCont&quot;:&quot;Success&quot;,&#xd;
@@ -576,9 +674,12 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="video" enabled="true">
@@ -593,8 +694,8 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
 &quot;respCont&quot;:&quot;Success&quot;,&#xd;
@@ -617,9 +718,12 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="game" enabled="true">
@@ -634,8 +738,8 @@
 	&quot;vendor&quot;: &quot;${vendor}&quot;,&#xd;
 	&quot;model&quot;:&quot;${model}&quot;,&#xd;
 	&quot;firmware&quot;:&quot;${firmware}&quot;,&#xd;
-    &quot;MAC&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-    &quot;timestamp&quot;:${__timeShift(,${time-stamp},PT0.050S,,time-stamp)},&#xd;
+    &quot;MAC&quot;:&quot;${mac}&quot;,&#xd;
+    &quot;timestamp&quot;:${__time()},&#xd;
 &quot;ID&quot;: &quot;${__time()}&quot;,&#xd;
 &quot;respCode&quot;:0,&#xd;
 &quot;respCont&quot;:&quot;Success&quot;,&#xd;
@@ -660,9 +764,12 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -675,35 +782,11 @@
         </HeaderManager>
         <hashTree/>
       </hashTree>
-      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="areaCSV" enabled="true">
-        <stringProp name="delimiter">,</stringProp>
-        <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="filename">C:/Data/github-folders/java/jdk-test/test-tools/jmeter/area.txt</stringProp>
-        <boolProp name="ignoreFirstLine">true</boolProp>
-        <boolProp name="quotedData">false</boolProp>
-        <boolProp name="recycle">true</boolProp>
-        <stringProp name="shareMode">shareMode.thread</stringProp>
-        <boolProp name="stopThread">false</boolProp>
-        <stringProp name="variableNames">areaCode,areaName</stringProp>
-      </CSVDataSet>
-      <hashTree/>
-      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="vendor-model-firmware-CSV" enabled="true">
-        <stringProp name="filename">C:/Data/github-folders/java/jdk-test/test-tools/jmeter/ap_vendor_model_firmware.txt</stringProp>
-        <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="variableNames">vendor,model,firmware</stringProp>
-        <boolProp name="ignoreFirstLine">false</boolProp>
-        <stringProp name="delimiter">,</stringProp>
-        <boolProp name="quotedData">false</boolProp>
-        <boolProp name="recycle">true</boolProp>
-        <boolProp name="stopThread">false</boolProp>
-        <stringProp name="shareMode">shareMode.all</stringProp>
-      </CSVDataSet>
-      <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ap-manager-msg" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">100</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
@@ -711,6 +794,7 @@
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
       </ThreadGroup>
       <hashTree>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -731,39 +815,40 @@
                 <stringProp name="Argument.value">{&#xd;
 	&quot;RPCMethod&quot;: &quot;boot&quot;,&#xd;
 	&quot;DevRND&quot;: &quot;011CB9249F81239A225D23CDA27EA24C&quot;,&#xd;
-	&quot;deviceMac&quot;: &quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
-	&quot;cmei&quot;: &quot;XXXXXXXXX&quot;,&#xd;
-	&quot;deviceType&quot;: &quot;30103&quot;,&#xd;
+	&quot;deviceMac&quot;: &quot;${mac}&quot;,&#xd;
+	&quot;cmei&quot;: &quot;${cmei}&quot;,&#xd;
+	&quot;deviceType&quot;: &quot;${model}&quot;,&#xd;
 	&quot;firmwareVersion&quot;: &quot;${firmware}&quot;,&#xd;
-	&quot;softwareVersion&quot;: &quot;3.2&quot;,&#xd;
+	&quot;softwareVersion&quot;: &quot;v-${__Random(0,3)}&quot;,&#xd;
 	&quot;networkPluginVersion&quot;: &quot;V1.5.0&quot;,&#xd;
-	&quot;bootType&quot;: 1,&#xd;
-	&quot;PPPOEuser&quot;: &quot;xxxx&quot;,&#xd;
-	&quot;WorkingMode&quot;: 0,&#xd;
-	&quot;ipAddress&quot;: &quot;192.168.1.111&quot;,&#xd;
-	&quot;IPv6Status&quot;: 1,&#xd;
-	&quot;IPv6IPAddress&quot;: &quot;2001:DA8:1000::F1&quot;,&#xd;
-	&quot;timestamp&quot;: 1628562566021,&#xd;
+	&quot;bootType&quot;: ${__Random(0,2)},&#xd;
+	&quot;PPPOEuser&quot;: &quot;${__RandomString(10,0123456789)}&quot;,&#xd;
+	&quot;WorkingMode&quot;: ${__Random(0,2)},&#xd;
+	&quot;ipAddress&quot;: &quot;192.168.1.${__Random(1,254)}&quot;,&#xd;
+	&quot;IPv6Status&quot;: ${__Random(0,1)},&#xd;
+	&quot;IPv6IPAddress&quot;: &quot;2001:DA8:1000::${__RandomString(4,0123456789ABCDEF)}&quot;,&#xd;
+	&quot;timestamp&quot;: ${__time()},&#xd;
 	&quot;XData&quot;: {&#xd;
 		&quot;deviceVendor&quot;:&quot;${vendor}&quot;,&#xd;
 		&quot;deviceModel&quot;: &quot;${model}&quot;,&#xd;
-		&quot;deviceSn&quot;: &quot;011101xxxxxxxxxx&quot;,&#xd;
+		&quot;deviceSn&quot;: &quot;${sn}&quot;,&#xd;
 		&quot;cpuType&quot;: &quot;MT7621DA&quot;,&#xd;
 		&quot;FlashSize&quot;: 128,&#xd;
 		&quot;RamSize&quot;: 256,&#xd;
-		&quot;apUplinkType&quot;: &quot;Ethernet&quot;,&#xd;
-		&quot;radio5&quot;: 1,&#xd;
-		&quot;factorySetting&quot;: 1,&#xd;
-		&quot;apUplinkMac&quot;: &quot;******&quot;,&#xd;
-		&quot;andlinkVersion&quot;: &quot;V2.6&quot;,&#xd;
-		&quot;meshRole&quot;: 1&#xd;
+		&quot;apUplinkType&quot;: &quot;${__RandomFromMultipleVars(wlan|ethernet|plc|cable|optical-ethernet|gpon|xgpon|poe)}&quot;,&#xd;
+		&quot;radio5&quot;: ${__Random(0,2)},&#xd;
+		&quot;factorySetting&quot;: ${__Random(0,1)},&#xd;
+		&quot;apUplinkMac&quot;: &quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
+		&quot;andlinkVersion&quot;: &quot;V${__Random(1,4)}&quot;,&#xd;
+     	&quot;UplinkMac&quot;:&quot;${__RandomString(12,0123456789ABCDEF)}&quot;,&#xd;
+		&quot;meshRole&quot;: ${__Random(0,4)}&#xd;
 	}&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+          <stringProp name="HTTPSampler.domain">135.251.218.88</stringProp>
           <stringProp name="HTTPSampler.port">9008</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
@@ -773,12 +858,101 @@
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="ap-mac-cmei-firmware-vendor-model-sn-CSV" enabled="true">
+        <stringProp name="filename">C:/Data/github-folders/java/jdk-test/test-tools/jmeter/ap-mac-cmei-firmware-vendor-model-sn.csv</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="variableNames">areaCode,areaName,mac,cmei,firmware,vendor,model,sn</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <stringProp name="delimiter">,</stringProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>

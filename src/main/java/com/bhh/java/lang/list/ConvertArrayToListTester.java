@@ -18,11 +18,16 @@ public class ConvertArrayToListTester {
     private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(ConvertArrayToListTester.class);
 
     public static void main(String[] args) {
+        System.out.println("xxx");
 
         List<String> stringList = Arrays.asList("a", "b", "c");
         // wrong code
         //java.lang.UnsupportedOperationException
-        //stringList.add("sdf");
+        try {
+            stringList.add("sdf");
+        }catch (Exception e){
+            logger.error(e.getMessage(), e);
+        }
         logger.info("the class name={}", stringList.getClass().getSimpleName());
 
         Integer[] a = {1, 2, 3};
@@ -60,5 +65,12 @@ public class ConvertArrayToListTester {
         //wrong code,
         //Collections.addAll(list2, Arrays.copyOfRange(input, 0, 3));
 
+        List lll = new ArrayList();
+        lll.add("a");
+        lll.add(null);
+        lll.add("b");
+        logger.info("lll size={}",lll.size());
+        String[] lllArr = (String[]) lll.toArray(new String[lll.size()]);
+        logger.info("lllArr len={}",lllArr.length);
     }
 }

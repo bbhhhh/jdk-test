@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error" strict="true" name="nbitktfile" monitorInterval="10">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY" />
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS}|%-5level|%thread| %msg%xEx |%class(%line)%n" />
+		</Console>
+		<RollingFile name="AllLog" fileName="${sys:conf.dir}/../log/svr.log" filePattern="${sys:conf.dir}/../log/svr.%d{yyyy-MM-dd}.log.%i">
+			<ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY" />
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS}|%-5level|%thread| %msg%xEx |%class(%line)%n" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="10MB" />
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+			<DefaultRolloverStrategy max="99">
+				<Delete basePath="${sys:conf.dir}/../log">
+					<IfFileName glob="svr*log*">
+						<!-- accepts a path if one of the nested conditions accept it (logical OR) -->
+						<IfAny>
+							<!--  delete files 7 days before -->
+							<IfLastModified age="10d" />
+							<!--  delete files when total size > 10GB -->
+							<IfAccumulatedFileSize exceeds="1GB" />
+						</IfAny>
+					</IfFileName>
+				</Delete>
+			</DefaultRolloverStrategy>
+		</RollingFile>
+		<RollingFile name="ErrorLog" fileName="${sys:conf.dir}/../log/error.log" filePattern="${sys:conf.dir}/../log/error.%d{yyyy-MM-dd}.log.%i">
+			<ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY" />
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS}|%-5level|%thread| %msg%xEx |%class(%line)%n" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="10MB" />
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+			<DefaultRolloverStrategy max="99">
+				<Delete basePath="${sys:conf.dir}/../log">
+					<IfFileName glob="error*log*">
+						<!-- accepts a path if one of the nested conditions accept it (logical OR) -->
+						<IfAny>
+							<!--  delete files 30 days before -->
+							<IfLastModified age="20d" />
+							<!--  delete files when total size > 5GB -->
+							<IfAccumulatedFileSize exceeds="1GB" />
+						</IfAny>
+					</IfFileName>
+				</Delete>
+			</DefaultRolloverStrategy>
+		</RollingFile>
+	</Appenders>
+	<!--然后定义logger，只有定义了logger并引入的appender，appender才会生效 -->
+	<Loggers>
+		<!--建立一个默认的root的logger -->
+		<Root level="info" includeLocation="true">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="AllLog" />
+			<AppenderRef ref="ErrorLog" />
+		</Root>
+
+	</Loggers>
+
+</Configuration>

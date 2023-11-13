@@ -7,6 +7,11 @@ public class IntegerTester {
     private static final Logger logger = LoggerFactory.getLogger(IntegerTester.class);
 
     public static void main(String... args) {
+        Integer aa = null;
+        Object xx = null ;
+        aa = (Integer)xx;
+        logger.info("aa={}",aa);
+
         Integer IntegerVar1 = 1;
         int intVar1 = 1;
         logger.info("1==IntegerVar1 is: {}", 1 == IntegerVar1);

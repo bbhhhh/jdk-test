@@ -22,6 +22,8 @@ public class ApacheCommonsLang3StringUtilsTester {
         logger.info("{}",StringUtils.containsAny(b,c));
         logger.info("{}",StringUtils.contains(b,c));
         logger.info("{}",StringUtils.containsAny(b,'\r','\n'));
+        String d = "章****";
+        logger.info("{}",StringUtils.contains(d,"*"));
 
     }
 }
